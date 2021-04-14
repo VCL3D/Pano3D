@@ -155,7 +155,7 @@
             </div>
 
             <div class="teaser-image">
-                <img src="pano3d/teaser.png" style="width:100%;">
+                <img src="images/teaser.png" style="width:100%;">
                 <p class="caption">Preserving depth's piece-wise smoothness should be the primary goal of data-driven depth estimation models.
                     Yet most works only assess direct depth performance neglecting secondary traits like smoothness or boundary preservation.
                     Different architectures (UNet -- left, or Pnas -- right) exhibit different inference characteristics skewed towards boundaries (UNet) or smoothness (Pnas).
@@ -840,11 +840,6 @@
                 "panoramas/color_7.png",
                 "panoramas/color_21.png",
             ];
-            // var human_control = show_group(
-            //     document.getElementById("humans").getElementsByClassName("render_window"),
-            //     [humans[0], humans[1], humans[2]],
-            //     6
-            // );
 
             var panos = show_group_panos(
                 document.getElementById("input_panoramas").getElementsByClassName("render_window"),
@@ -854,9 +849,9 @@
 
             //meshes
             var meshes_paths = [
-                "ply/pred_0_mesh.obj",
-                "ply/pred_7_mesh.obj",
-                "ply/pred_21_mesh.obj",
+                "meshes/pred_0_mesh.obj",
+                "meshes/pred_7_mesh.obj",
+                "meshes/pred_21_mesh.obj",
             ];
             var non_coloured_meshes = show_group(
                 document.getElementById("pred_meshes").getElementsByClassName("render_window"),
