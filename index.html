@@ -6,7 +6,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="author" content="Georgios Albanis">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link rel="icon" type="image/png" href="data/bunny.png"/> -->
 
         <link rel="stylesheet" type="text/css" href="style_project_page.css?cache=7733391418498779679">
         <link href="https://fonts.googleapis.com/css?family=Arvo|Roboto&display=swap" rel="stylesheet">
@@ -138,19 +137,19 @@
                     <i class="fa fa-github"></i> <br/>
                     Code
                 </a>
-                <!--<a href="https://www.youtube.com/watch?v=QgD0NHbWVlU&vq=hd1080&autoplay=1">
+                <!--<a href="https://">
                     <i class="fa fa-youtube-play"></i> <br/>
                     Video
                 </a>-->
-                <!--<a href="https://paschalidoud.github.io/data/Paschalidou2020CVPR_poster.pdf">
+                <!--<a href="https://">
                     <i class="fa fa-picture-o"></i> <br/>
                     Poster
                 </a>
-                <a href="http://www.cvlibs.net/publications/Paschalidou2020CVPR_slides.pdf">
+                <a href="http://">
                     <i class="fa fa-file-powerpoint-o"></i> <br/>
                     Slides
                 </a>
-                <a href="https://autonomousvision.github.io/hierarchical-primitives/">
+                <a href="https://">
                     <i class="fa fa-newspaper-o"></i> <br/>
                     Blog
                 </a>-->
@@ -162,76 +161,7 @@
                     Yet most works only assess direct depth performance neglecting secondary traits like smoothness or boundary preservation.
                     Different architectures (UNet -- left, or Pnas -- right) exhibit different inference characteristics skewed towards boundaries (UNet) or smoothness (Pnas).
                     The Pano3D benchmark descends from a holistic perspective taking into account all performance traits, and additionally focuses on an orthogonal performance direction, generalization to unseen data from different distributions, contexts or domains. </p>
-                <!-- <figure style="width: 49%;">
-                    <video class="centered" width="100%" controls muted loop autoplay>
-                        <source src="projects/neural_parts/motivation_cvxnet.mp4" type="video/mp4"/>
-                    </video>
-                    <p class="caption">Existing primitive-based methods rely on
-                    simple shapes for decomposing complex 3D shapes into
-                    parts. As a result, they <strong>require a large number of primitives</strong>
-                    for extracting accurate reconstructions. However, this results in <strong>
-                    less interpretable shape abstractions</strong>, namely
-                    <strong>primitives are not semantically meaningful parts</strong>.</p>
-                </figure>
-                <figure style="width: 49%;">
-                    <video class="centered" width="100%" controls muted loop autoplay>
-                        <source src="projects/neural_parts/motivation_ours.mp4" type="video/mp4"/>
-                    </video>
-                    <p class="caption">Neural Parts is a novel 3D primitive representation that can 
-                    <strong>represent arbitrarily complex genus-zero shapes
-                    </strong> and thus yield more <strong>geometrically accurate</strong> and
-                    <strong>semantically meaningful</strong> shape abstractions compared to simpler primitives.</p>
-                </figure> -->
             </div>
-
-            <!-- <div class="section-title">Approach Overview</div>
-            <div class="content">
-                <div class="side-text"><p>Primitive-based representations seek to infer
-                <strong>semantically consistent part arrangements across
-                different object instances</strong>. Existing primitive-based
-                methods rely on simple shapes for decomposing complex objects
-                into parts such as cuboids, superquadrics, spheres or
-                convexes. <strong>Due to their simple parametrization, these primitives
-                have limited expressivity and cannot capture arbitrarily
-                complex geometries</strong>. Therefore, <strong>existing part-based methods
-                require a large number of primitives for extracting
-                geometrically accurate reconstructions</strong>. However, using <strong>more
-                primitives comes at the expense of less interpretable
-                reconstructions</strong>. Namely, a primitive is not an identifiable
-                part anymore.</p></div>
-                <div class="side-image"><img src="pano3d/teaser.png" style="width:100%;"></div>
-                <p>We introduce a novel 3D primitive representation that is
-                defined as <strong>a deformation between shapes</strong> and is
-                <strong>parametrized as a learned homeomorphic mapping</strong>
-                implemented with an <strong>Invertible Neural Network
-                (INN)</strong>. We argue that a primitive should be a non
-                trivial genus-zero shape with well defined implicit and explicit representations. Using an INN allows us to efficiently compute
-                the implicit and explicit representation of the predicted shape
-                and impose various constraints on the predicted parts. In contrast to prior work,
-                that directly predict the primitive parameters (i.e. centroids and sizes for cuboids
-                and superquadrics and hyperplanes for convexes), we employ the INN to fully define each primitive.
-                This allows us to have primitives that capture arbitrarily
-                complex geometries, hence the ability of our model to parse
-                objects into expressive shape abstractions that are more
-                geometrically accurate using an order of magnitude fewer
-                primitives compared to approaches that rely on simple convex
-                shape primitives.
-                </p>
-                <img src="pano3d/teaser.png" style="width:100%;">
-                <p class="caption">Given an input image and a watertight mesh
-                of the target object we seek to learn a representation with M
-                primitives that best describes the target object. We define our
-                primitives via a deformation between shapes that is
-                parametrized as a learned homeomorphism implemented with an
-                Invertible Neural Network (INN). For each primitive, we seek to
-                learn a homeomorphism between the 3D space of a simple
-                genus-zero shape and the 3D space of the target object, such
-                that the deformed shape matches a part of the target object. Due
-                to its simple implicit surface definition and tesselation, we
-                employ a sphere as our genus-zero shape. Note that using an INN
-                allows us to efficiently compute the implicit and explicit representation of
-                the predicted shape and impose various constraints on the predicted parts.</p>
-            </div> -->
 
             <div class="section-title">Results</div>
             <div class="content">
@@ -250,106 +180,7 @@
                         <div data-size="400" class="render_window"></div><div data-size="400" class="render_window"></div><div data-size="400" class="render_window"></div>
                     </div>
                 </div>
-
-                <!-- <h3>Textured meshes</h3>
-                <div id="point_clouds">
-                    <div class="render_container">
-                        <div data-size="400" class="render_window"></div><div data-size="400" class="render_window"></div><div data-size="400" class="render_window"></div>
-                    </div>
-                </div> -->
-                
-                <!-- <h3>Humans</h3>
-                <div id="humans">
-                    <div class="controls">
-                        <div class="left-controls">
-                            Show
-                            <input type="checkbox" id="humans_all" checked><label for="humans_all">all parts</label>
-                            <input type="checkbox" id="humans_head"><label for="humans_head">heads</label>
-                            <input type="checkbox" id="humans_body"><label for="humans_body">bodies</label>
-                            <input type="checkbox" id="humans_left_hand"><label for="humans_left_hand">left-arms</label>
-                            <input type="checkbox" id="humans_right_hand"><label for="humans_right_hand">right-arms</label>
-                            <input type="checkbox" id="humans_left_leg"><label for="humans_left_leg">left-legs</label>
-                            <input type="checkbox" id="humans_right_leg"><label for="humans_right_leg">right-legs</label>
-                        </div>
-                        <div class="right-controls">
-                            <button>Randomize</button>
-                        </div>
-                    </div>
-                    <div class="render_container">
-                        <div data-size="400" class="render_window"></div><div data-size="400" class="render_window"></div><div data-size="400" class="render_window"></div>
-                    </div>
-                </div>
-
-                <h3>Planes</h3>
-                <div id="planes">
-                    <div class="controls">
-                        <div class="left-controls">
-                            Show
-                            <input type="checkbox" id="planes_all" checked><label for="planes_all">all parts</label>
-                            <input type="checkbox" id="planes_nose"><label for="planes_nose">noses</label>
-                            <input type="checkbox" id="planes_body"><label for="planes_body">bodies</label>
-                            <input type="checkbox" id="planes_left_wing"><label for="planes_left_wing">left-wings</label>
-                            <input type="checkbox" id="planes_right_wing"><label for="planes_right_wing">right-wings</label>
-                            <input type="checkbox" id="planes_tail"><label for="planes_tail">tails</label>
-                        </div>
-                        <div class="right-controls">
-                            <button>Randomize</button>
-                        </div>
-                    </div>
-                    <div class="render_container">
-                        <div data-size="400" class="render_window"></div><div data-size="400" class="render_window"></div><div data-size="400" class="render_window"></div>
-                    </div>
-                </div> -->
             </div>
-
-            <!-- <div class="section-title">Comparison to Primitive-based Methods</div>
-            <div class="content">
-                <p>
-                    We compare the representation power of Neural Parts to
-                    other primitive-based methods by evaluating the
-                    reconstruction quality with varying number of primitives on
-                    three datasets. We observe that our model is <strong>more
-                    geometrically accurate, more semantically consistent and
-                    yields more meaningful parts</strong> (i.e. primitives are
-                    identifiable parts such as thumbs, legs, wings, tires,
-                    etc.) compared to simpler primitives.
-                </p>
-                <div class="glide">
-                    <div class="glide__bullets" data-glide-el="controls[nav]">
-                        <button class="glide__bullet" data-glide-dir="=0">Humans</button>
-                        <button class="glide__bullet" data-glide-dir="=1">Hands</button>
-                        <button class="glide__bullet" data-glide-dir="=2">Chairs</button>
-                        <button class="glide__bullet" data-glide-dir="=3">Planes</button>
-                        <button class="glide__bullet" data-glide-dir="=4">Cars</button>
-                        <button class="glide__bullet" data-glide-dir="=5">Lamps</button>
-                    </div>
-                    <div class="glide__track" data-glide-el="track">
-                        <ul class="glide__slides">
-                            <li class="glide__slide"><img src="projects/neural_parts/comparison/humans.png"></li>
-                            <li class="glide__slide"><img src="projects/neural_parts/comparison/hands.png"></li>
-                            <li class="glide__slide"><img src="projects/neural_parts/comparison/chairs.png"></li>
-                            <li class="glide__slide"><img src="projects/neural_parts/comparison/planes.png"></li>
-                            <li class="glide__slide"><img src="projects/neural_parts/comparison/cars.png"></li>
-                            <li class="glide__slide"><img src="projects/neural_parts/comparison/lamps.png"></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section-title">Semantic Consistency</div>
-            <div class="content">
-                We observe that Neural Parts consistently use the same
-                primitive for representing the same object part regardless of
-                the breadth of the part's motion. Notably, this
-                <strong>temporal consistency is an emergent property</strong>
-                of our method and <strong>not one that is enforced with any
-                kind of loss</strong>.
-                <video class="centered" width="100%" controls muted loop autoplay>
-                    <source
-                        src="projects/neural_parts/semantic-consistency-shorter.mp4"
-                        type="video/mp4" />
-                </video>
-            </div> -->
 
             <div class="section-title">Acknowledgements</div>
             <div class="content">
@@ -769,8 +600,6 @@
 
 			}
 
-
-
             function show_group_panos(elements, objects, N) {
                 var controls = [];
                 for (var i=0; i<objects.length; i++) {
@@ -812,8 +641,6 @@
                     }
                 };
             }
-
-
 
             function show_group(elements, objects, N) {
                 var controls = [];
@@ -860,137 +687,6 @@
                 [meshes_paths[0], meshes_paths[1], meshes_paths[2]],
                 6
             );
-            // var meshes = show_group_meshes(
-            //     document.getElementById("point_clouds").getElementsByClassName("render_window"),
-            //     [meshes_paths[0], meshes_paths[1], meshes_paths[2]],
-            //     6
-            // );
-            
-            // var human_checkboxes = document.querySelectorAll("#humans .controls input");
-            // reset_checkboxes(human_checkboxes);
-            // document.querySelector("#humans .controls").addEventListener(
-            //     "change",
-            //     function (ev) {
-            //         if (ev.target.id == "humans_all") {
-            //             Array.prototype.filter.call(
-            //                 human_checkboxes,
-            //                 (el) => el.id != "humans_all"
-            //             ).forEach(function (el) {el.checked = false;});
-            //         } else if (ev.target.checked) {
-            //             human_checkboxes[0].checked = false;
-            //         }
-
-            //         var ids = new Set();
-            //         if (human_checkboxes[0].checked) {
-            //             ids = new Set([0, 1, 2, 3, 4, 5]);
-            //         }
-            //         var part_ids = [1, 2, 0, 4, 3, 5];
-            //         for (var i=1; i<human_checkboxes.length; i++) {
-            //             if (human_checkboxes[i].checked) {
-            //                 ids.add(part_ids[i-1]);
-            //             }
-            //         }
-
-            //         human_control.show(Array.from(ids));
-            //     }
-            // );
-            // document.querySelector("#humans .controls button").addEventListener(
-            //     "click",
-            //     function (ev) {
-            //         reset_checkboxes(human_checkboxes);
-            //         var new_humans = random_choice(humans, 3);
-            //         var render_windows = document.getElementById("humans").getElementsByClassName("render_window");
-            //         Array.prototype.forEach.call(render_windows, function (r) {r.innerHTML = "";});
-            //         human_control = show_group(
-            //             render_windows,
-            //             new_humans,
-            //             6
-            //         );
-            //     }
-            // );
-
-            // // Planes
-            // var planes = [
-            //     "https://superquadrics.com/neural_parts/planes/10af5de930178a161596c26b5af806fe",
-            //     "https://superquadrics.com/neural_parts/planes/1a32f10b20170883663e90eaf6b4ca52",
-            //     "https://superquadrics.com/neural_parts/planes/1a6ad7a24bb89733f412783097373bdc",
-            //     "https://superquadrics.com/neural_parts/planes/1b3c6b2fbcf834cf62b600da24e0965",
-            //     "https://superquadrics.com/neural_parts/planes/1c26ecb4cd01759dc1006ed55bc1a3fc",
-            //     "https://superquadrics.com/neural_parts/planes/284e6431669d46fd44797ce00623b3fd",
-            //     "https://superquadrics.com/neural_parts/planes/2c3ba3f35c5d2b0ce77e43d0a92bdc06",
-            //     "https://superquadrics.com/neural_parts/planes/315f523d0a924fb7ef70df8610b582b2",
-            //     "https://superquadrics.com/neural_parts/planes/343a607d1604335fb4f192eea1889928",
-            //     "https://superquadrics.com/neural_parts/planes/347d86d7001cef01232236eecec447b",
-            //     "https://superquadrics.com/neural_parts/planes/351c9235749e398162147e00e97e28b5",
-            //     "https://superquadrics.com/neural_parts/planes/3716ed4fa80dbf5f41392ab7a601818b",
-            //     "https://superquadrics.com/neural_parts/planes/384e72f69e6f24404cb288947cda4a2c",
-            //     "https://superquadrics.com/neural_parts/planes/440ac1b4ac3cbe114c3a35cee92bb95b",
-            //     "https://superquadrics.com/neural_parts/planes/440e5ba74ac8124e9751c7a6f15617f4",
-            //     "https://superquadrics.com/neural_parts/planes/48706d323b9041d5438a95791ca4064d",
-            //     "https://superquadrics.com/neural_parts/planes/563cef4df464ddb1e153dd90dac45a6d",
-            //     "https://superquadrics.com/neural_parts/planes/5c6590461085c93ea91e80f26309099e",
-            //     "https://superquadrics.com/neural_parts/planes/60b5f5da40e0dd33579f6385fdd4245b",
-            //     "https://superquadrics.com/neural_parts/planes/7b134f6573e7270fb0a79e28606cb167",
-            //     "https://superquadrics.com/neural_parts/planes/92a83ecaa10e8d3f78e919a72d9a39e7",
-            //     "https://superquadrics.com/neural_parts/planes/ed2aaca045fb1714cd4229f38ad0d015",
-            //     "https://superquadrics.com/neural_parts/planes/f12eefbbefabe566ca8607f540cc62ba",
-            // ];
-            // var plane_control = show_group(
-            //     document.getElementById("planes").getElementsByClassName("render_window"),
-            //     [planes[7], planes[1], planes[2]],
-            //     5
-            // );
-            // var plane_checkboxes = document.querySelectorAll("#planes .controls input");
-            // reset_checkboxes(plane_checkboxes);
-            // document.querySelector("#planes .controls").addEventListener(
-            //     "change",
-            //     function (ev) {
-            //         if (ev.target.id == "planes_all") {
-            //             Array.prototype.filter.call(
-            //                 plane_checkboxes,
-            //                 (el) => el.id != "planes_all"
-            //             ).forEach(function (el) {el.checked = false;});
-            //         } else if (ev.target.checked) {
-            //             plane_checkboxes[0].checked = false;
-            //         }
-
-            //         var ids = new Set();
-            //         if (plane_checkboxes[0].checked) {
-            //             ids = new Set([0, 1, 2, 3, 4]);
-            //         }
-            //         var part_ids = [4, 0, 3, 2, 1];
-            //         for (var i=1; i<plane_checkboxes.length; i++) {
-            //             if (plane_checkboxes[i].checked) {
-            //                 ids.add(part_ids[i-1]);
-            //             }
-            //         }
-
-            //         plane_control.show(Array.from(ids));
-            //     }
-            // );
-            // document.querySelector("#planes .controls button").addEventListener(
-            //     "click",
-            //     function (ev) {
-            //         reset_checkboxes(plane_checkboxes);
-            //         var new_planes = random_choice(planes, 3);
-            //         var render_windows = document.getElementById("planes").getElementsByClassName("render_window");
-            //         Array.prototype.forEach.call(render_windows, function (r) {r.innerHTML = "";});
-            //         plane_control = show_group(
-            //             render_windows,
-            //             new_planes,
-            //             5
-            //         );
-            //     }
-            // );
         </script>
-        <!-- <script>
-            // Make the carousel for the comparisons
-            var glide = new Glide(".glide", {
-                type: "carousel",
-                startAt: 0,
-                perView: 1,
-                autoplay: 2000
-            }).mount();
-        </script> -->
     </body>
 </html>
