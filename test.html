@@ -6,9 +6,27 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link type="text/css" rel="stylesheet" href="./css/main.css">
 	</head>
+
+    <style>
+        .container {
+          height: 200px;
+          position: relative;
+          border: 3px solid green;
+        }
+        
+        .center {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+    </style>
+
 	<body>
 
-		<div id="container" class=".center"></div>
+		<div id="container" class="container center"></div>
 		<div id="info">
 			Please have a look at the object highlighted with red colour. <br>
 			After that close the tab and continue with the form evaluation.
