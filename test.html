@@ -52,7 +52,8 @@
 
 				renderer = new THREE.WebGLRenderer();
 				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( window.innerWidth, window.innerHeight );
+				// renderer.setSize( window.innerWidth, window.innerHeight );
+                renderer.setSize( 800, 600 );
 				container.appendChild( renderer.domElement );
 
 				container.style.touchAction = 'none';
@@ -106,10 +107,13 @@
 
 			function onWindowResize() {
 
-				camera.aspect = window.innerWidth / window.innerHeight;
+				// camera.aspect = window.innerWidth / window.innerHeight;
+				camera.aspect = 800 / 600;
+
 				camera.updateProjectionMatrix();
 
-				renderer.setSize( window.innerWidth, window.innerHeight );
+				// renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.setSize( 800, 600 );
 
 			}
 
