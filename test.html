@@ -24,7 +24,8 @@
 				onPointerDownMouseX = 0, onPointerDownMouseY = 0,
 				lon = -106.20, onPointerDownLon = 0,
 				lat = -48.40, onPointerDownLat = 0,
-				phi = 0, theta = 0;
+				phi = 0, theta = 0,
+                width = 800, height = 600;
 
 			init();
 			animate();
@@ -34,7 +35,7 @@
 
 				const container = document.getElementById( 'container' );
 
-				camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.5, 550 );
+				camera = new THREE.PerspectiveCamera( 50, width / height, 0.5, 550 );
 
 				scene = new THREE.Scene();
 
@@ -53,7 +54,7 @@
 				renderer = new THREE.WebGLRenderer();
 				renderer.setPixelRatio( window.devicePixelRatio );
 				// renderer.setSize( window.innerWidth, window.innerHeight );
-                renderer.setSize( 800, 600 );
+                renderer.setSize( width, height );
 				container.appendChild( renderer.domElement );
 
 				container.style.touchAction = 'none';
@@ -108,12 +109,12 @@
 			function onWindowResize() {
 
 				// camera.aspect = window.innerWidth / window.innerHeight;
-				camera.aspect = 800 / 600;
+				camera.aspect = width / height;
 
 				camera.updateProjectionMatrix();
 
 				// renderer.setSize( window.innerWidth, window.innerHeight );
-				renderer.setSize( 800, 600 );
+				renderer.setSize( width, height );
 
 			}
 
