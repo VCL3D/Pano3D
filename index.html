@@ -489,7 +489,7 @@
                 <h3>Best Models per Architecture</h3>
                 <p>
                     From the above analysis, we define the best performing models of each architecture, with the only 
-                    conflicting choice being the ResNet_skip selected model where a balanced performer was chosen. 
+			conflicting choice being the ResNet<sub>skip</sub> selected model where a balanced performer was chosen. 
                     Qualitative results follow with the images on the left allowing for a transition between the input color 
                     image and the normal maps from the predicted depth, accompanied by Poisson 3D reconstruction [17] of the 
                     estimated depth maps.
@@ -606,7 +606,7 @@
                     We use a specialized guided stacked hourglass architecture as a refinement module that is trained 
                     using a pretrained depth model. Apart from the dual (guided) input encoder path, the guided stacked 
                     hourglass model exchanges information between the color and depth features using 
-                    Adaptive Instance Normalization (AdaIn) [REF]. <br>
+                    Adaptive Instance Normalization (AdaIn) [19]. <br>
                     <mark>GUIDED STACKED HOURGLASS image to be added</mark> <br>
                     The periodic displacement fields consistently improve the boundary preservation performance
                     of all models apart from the UNet one, which nonetheless, already exhibits the best boundary preservation performance.
@@ -669,7 +669,7 @@
                 </table>
 
                 <p class="caption">
-                    Qualitative comparison between \(ResNet\) \(and\) \(ResNet_{skip}\). 
+                    Qualitative comparison between \(\color{#E3D10A}{ResNet}\) \(and\) \(\color{#FF00FF}{ResNet_{skip}}\). 
                     It is apparent that the addition of skip connections allows \(ResNet_{skip}\) to capture finer-grained details.
                 </p>
 
@@ -694,8 +694,8 @@
 
                 </table>
                 <p class="caption">
-                    Qualitative comparison between \(\color{#FFA600}{UNet}\) \(and\) \(\color{#00FFFF}{PNAS}\). 
-                    Apparenntly,  \(\color{#00FFFF}{PNAS}\) provides smoother results while it is clear that \(\color{#FFA600}{UNet}\) is able to capture finer-grained details.
+                    Qualitative comparison between \(\color{#FFA600}{UNet}\) and \(\color{#00FFFF}{PNAS}\). 
+                    Apparently,  \(\color{#00FFFF}{PNAS}\) provides smoother results while it is clear that \(\color{#FFA600}{UNet}\) is able to capture finer-grained details.
                 </p>
                 
             </div>
@@ -706,7 +706,7 @@
                     with the following samples showing the BiFuse [21] predictions, compared to the UNet ones, when applied to in-the-wild panoramas 
                     acquired via both 360 cameras and stitched mobile phone captures.
                    </p>
-                   <h3>\({UNet}\) \(vs\) \({BiFuse [21]}\)</h3>
+                   <h3>\({UNet}\) \(vs\) \({BiFuse}\) [21]</h3>
                    <div id="container" class="center"></div>
                    <p class="caption">
                     Input Panorama.
@@ -730,7 +730,7 @@
                     </tr>
                     </table>
                     <p class="caption">
-                        Qualitative comparison between \({UNet}\) \(and\) \({BiFuse [21]}\).
+                        Qualitative comparison between \({UNet}\) \(and\) \({BiFuse}\) [21].
                     </p>
                 </div>
 
@@ -795,6 +795,9 @@
                     <li>
                         Ramamonjisoa, M., Du, Y. and Lepetit, V., 2020. Predicting sharp and accurate occlusion boundaries in monocular depth estimation using displacement fields. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 14648-14657).
                     </li>
+		    <li>
+			    Huang, X. and Belongie, S., 2017. Arbitrary style transfer in real-time with adaptive instance normalization. In Proceedings of the IEEE International Conference on Computer Vision (pp. 1501-1510).
+		    </li>
                     <li>
                         Lee, J. and Kim, C.S., 2020, August. Multi-loss Rebalancing Algorithm for Monocular Depth Estimation. In ECCV (17) (pp. 785-801).
                     </li>
