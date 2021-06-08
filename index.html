@@ -229,11 +229,11 @@
 	        
             </div>
             <div class="side-image">
-                <img src="images/depth_estimation.png" style="width:75%;">
+                <img src="images/depth_estimation.png" style="width:50%;">
             </div>
             <div class="section-title">Generalization capacity assessment</div>
             <div class="side-image">
-                <img src="images/generalisation.png" style="width:75%;">
+                <img src="images/generalisation.png" style="width:50%;">
             </div>
             <div class="side-text">
                 <p>
@@ -460,7 +460,7 @@
                 To holistically assess the different models, we employ performance indicators that aggregate metrics across the different dimensions:
                 <ul>
                     <li>\(i_d = \frac{1}{(1 - \delta_{1.25}) \times RMSE}\),</li>
-                    <li>\(i_b = \frac{1}{(1 - \frac{(F_{0.25} + F_{0.5} + F_{1.0})}{3}) \times dbe^{acc}}\), where \(F_{t}\) is the harmonic mean of the corresponding threshold \(t\) precision and recall metrics,</li>
+                    <li>\(i_b = \frac{1}{(1 - \frac{(F_{0.25} + F_{0.5} + F_{1.0})}{3}) \times dbe^{acc}}\), where \(F_{t}=2\frac{prec_{t} \times rec_{t}}{prec_{t} + rec_{t}}\),</li>
                     <li>\(i_s = \frac{1}{(1 - \frac{(\alpha_{11.25^o} + \alpha_{22.5^o} + \alpha_{30^o})}{3}) \times RMSE^o}\),</li>
                 </ul>
                 <div class="indicators">
