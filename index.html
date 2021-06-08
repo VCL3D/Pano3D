@@ -1,7 +1,7 @@
 <!Doctype html>
 <html lang="en">
     <head>
-        <title>Pano3d: A Holistic Benchmark and a Solid Baseline for 360<sup>o</sup> Depth Estimation</title>
+        <title>Pano3D: A Holistic Benchmark and a Solid Baseline for 360<sup>o</sup> Depth Estimation</title>
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="author" content="Georgios Albanis">
@@ -95,8 +95,14 @@
     </head>
     <body>
         <div class="section">
-            <h1 class="project-title">
-                Pano3d: A Holistic Benchmark and a Solid Baseline for 360<sup>o</sup> Depth Estimation
+            <!--<h1 class="project-title">
+                Pano3D: A Holistic Benchmark and a Solid Baseline for 360<sup>o</sup> Depth Estimation
+            </h1>-->
+		<h1 class="project-title">
+                 \(\textbf{Pano3D}\)
+            </h1>
+		<h1 class="project-title" style="margin:0;">
+                A Holistic Benchmark and a Solid Baseline for 360<sup>o</sup> Depth Estimation
             </h1>
             <div class="authors">
                 <a href=https://tzole1155.github.io/>
@@ -126,7 +132,7 @@
             </div>
 
             <div class="affiliations">
-                <span><sup>1</sup> Centre for Research and Technology Hellas (CERTH), Thessaloniki, Greece</span><br>
+                <span><sup>1</sup> Centre for Research and Technology Hellas (CERTH), Thessaloniki, Greece</span> &nbsp; &nbsp;
                 <span><sup>2</sup> Universidad Politécnica de Madrid (UPM), Madrid, Spain</span> <br/>
             </div>
 
@@ -143,24 +149,8 @@
                     <i class="fa fa-github"></i> <br/>
                     Code
                 </a>
-                <!--<a href="https://www.youtube.com/watch?v=QgD0NHbWVlU&vq=hd1080&autoplay=1">
-                    <i class="fa fa-youtube-play"></i> <br/>
-                    Video
-                </a>-->
-                <!--<a href="https://paschalidoud.github.io/data/Paschalidou2020CVPR_poster.pdf">
-                    <i class="fa fa-picture-o"></i> <br/>
-                    Poster
-                </a>
-                <a href="http://www.cvlibs.net/publications/Paschalidou2020CVPR_slides.pdf">
-                    <i class="fa fa-file-powerpoint-o"></i> <br/>
-                    Slides
-                </a>
-                <a href="https://autonomousvision.github.io/hierarchical-primitives/">
-                    <i class="fa fa-newspaper-o"></i> <br/>
-                    Blog
-                </a>-->
             </div>
-            <div class="teaser-image">
+            <!--<div class="teaser-image">
                 <img src="images/teaser_new.png" style="width:50%;">
                 <p class="caption">\(\textbf{Pano3D}\) is a new benchmark for depth estimation from spherical panoramas. 
                     Its goal is to drive progress for this task in a consistent and holistic manner. 
@@ -172,6 +162,15 @@
                     three different axes,  \(\textbf{Pano3D}\) facilitates proper extrapolation assessment under different out-of-training data conditions.
                     Relying on the  \(\textbf{Pano3D}\) holistic benchmark for 360 depth estimation we  perform an  extended  analysis  and derive a solid baseline for the task.
                     </p>
+            </div>-->
+	    <div class="side-image">
+                <img src="images/teaser_new.png" style="width:85%;">
+            </div>
+            <div class="side-text">
+                <p>\(\textbf{Pano3D}\) is a new benchmark for depth estimation from spherical panoramas. Its goal is to drive progress for this task in a consistent and holistic manner. To achieve that we generate a new dataset and integrate evaluation metrics that capture not only depth performance, but also secondary traits like boundary preservation and smoothness. Moreover, \(\textbf{Pano3D}\) takes a step beyond  typical intra-dataset evaluation schemes 
+                    to inter-dataset  performance  assessment. By disentangling generalization to three different axes, \(\textbf{Pano3D}\) facilitates proper extrapolation assessment under different out-of-training data conditions.
+                    Relying on the \(\textbf{Pano3D}\) holistic benchmark for 360 depth estimation we perform an extended analysis and derive a solid baseline for the task.
+                    </p>
             </div>
 
             <div class="section-title">Depth estimation performance evaluation</div>
@@ -179,21 +178,21 @@
                 <p>
                     For evaluating depth from spherical panoramas we show that 
                     without proper weighting the metrics favour performance in distorted areas. 
-                    Apart from the <span style="color: #1c20e6"><b>direct depth performance metrics</b></span>, the Pano3D benchmark also 
-                    includes implementations for metrics measuring <span style="color: #e62a1c"><b>depth boundary preservation</b></span> and 
-                    <span style="color: #05bd14"><b>depth smoothness.</b></span>. Finally, it also includes aggregated 3D metrics that consolidate 
+                    Apart from the <span style="color: #4472c4"><b>direct depth performance metrics</b></span>, the Pano3D benchmark also 
+                    includes implementations for metrics measuring <span style="color: #ff0000"><b>depth boundary preservation</b></span> and 
+                    <span style="color: #00b050"><b>depth smoothness.</b></span>. Finally, it also includes aggregated 3D metrics that consolidate 
                     boundary and smoothness errors in different ways that are more appropriate for 
                     different downstream tasks (e.g. view synthesis or 3D reconstruction).
                 </p>
-                <table style="width:100%" cellspacing="0">
+                <!--<table style="width:100%" cellspacing="0">
                     <tr>
-                        <th style="text-align: center;background-color: #1c1fe671;">
+                        <th style="text-align: center;background-color: #4472c4;">
                             Direct [1,2]
                         </th>
-                        <th style="text-align: center;background-color: #e62a1c9c">
+                        <th style="text-align: center;background-color: #ff0000">
                             Boundary
                         </th>
-                        <th style="text-align: center;background-color:#05bd1485">
+                        <th style="text-align: center;background-color: #00b050">
                             Smoothness[5]
                         </th>
                         <th style="text-align: center;background-color: #05a1bdaf;">
@@ -207,27 +206,27 @@
                                 <li>\(\textit{(w)RMSLE}\)</li>
                                 <li>\(\textit{AbsRel}\)</li>
                                 <li>\(\textit{SqRel}\)</li>
-                                <li>\((w)\delta_{1.05}\)</li>
+                                <li>\((w)\delta_{\{1.05, 1.0, 1.25, 1.25^2, 1.25^3\}}\)</li>
                                 <li>\((w)\delta_{1.25^2}\)</li>
                                 <li>\((w)\delta_{1.25^3}\)</li>
                             </ol>
                         </td>
                         <td style="vertical-align: top;">
                             <ol>
-                                <li>\(\textit{prec}_{0.25}\) [3]</li>
+                                <li>\(\textit{prec}_{\{0.25, 0.5, 1.0\}}\) [3]</li>
                                 <li>\(\textit{prec}_{0.5}\) [3]</li>
                                 <li>\(\textit{prec}_{1.0}\) [3]</li>
-                                <li>\(\textit{rec}_{0.25}\) [3]</li>
+                                <li>\(\textit{rec}_{\{0.25, 0.5, 1.0\}}\) [3]</li>
                                 <li>\(\textit{rec}_{0.5}\) [3]</li>
                                 <li>\(\textit{rec}_{1.0}\)[3]</li>
-                                <li>\(\textit{dbe}^{acc}\) [4]</li>
+                                <li>\(\textit{dbe}^{\{acc, comp\}}\) [4]</li>
                                 <li>\(\textit{dbe}^{comp}\) [4]</li>
                             </ol>
                         </td>
                         <td style="vertical-align: top;">
                             <ol>
                                 <li>\(\textit{RMSE}^o\)</li>
-                                <li>\(\alpha_{11.25^o}\)</li>
+                                <li>\(\alpha_{\{11.25^o, 22.50^o, 30.00^o\}}\)</li>
                                 <li>\(\alpha_{22.50^o}\)</li>
                                 <li>\(\alpha_{30.00^o}\)</li>
                             </ol>
@@ -241,14 +240,15 @@
                         </td>
                     </tr>
                   
-                </table>
+                </table>-->
+	        
             </div>
             <div class="side-image">
-                <img src="images/depth_estimation.png" style="width:100%;">
+                <img src="images/depth_estimation.png" style="width:50%;">
             </div>
             <div class="section-title">Generalization capacity assessment</div>
             <div class="side-image">
-                <img src="images/generalisation.png" style="width:100%;">
+                <img src="images/generalisation.png" style="width:50%;">
             </div>
             <div class="side-text">
                 <p>
@@ -264,7 +264,7 @@
                 </p>
             </div>
 
-            <div class="section-title">Data generation</div>
+            <div class="section-title">Data Generation</div>
                 <div class="content">
                     <p>
                         Using Matterport3D [9] for training and the Pano3D GibsonV2 splits for testing, 
@@ -401,18 +401,90 @@
                             The above combined error is further supported by a global virtual normal loss (VNL) [16]
                         </li>
                     </ul>
+<h3>Metrics</h3>
+<div class="center">
+<style type="text/css">
+.tg  {border:none;border-collapse:collapse;border-spacing:0;align:center;margin-left: auto;margin-right: auto;}
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+  padding:10px 5px;word-break:normal;}
+.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-t77i{background-color:#4472c4;color:#ecf4ff;font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;
+  text-align:center;vertical-align:top}
+.tg .tg-l4lt{background-color:#00b050;font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;
+  text-align:center;vertical-align:top}
+.tg .tg-7n52{background-color:#ff0000;font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;
+  text-align:center;vertical-align:top}
+.tg .tg-m2jw{font-family:"Lucida Console", Monaco, monospace !important;;text-align:center;vertical-align:top}
+.tg .tg-dj31{background-color:#a1bdaf;font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;
+  text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-t77i" style="vertical-align: top;">Direct [1, 2]</td>
+    <td class="tg-7n52" style="vertical-align: top;">Boundary</td>
+  </tr>
+  <tr>
+    <td class="tg-m2jw" style="vertical-align: top;">
+	<ol>
+                                <li>\(\textit{(w)RMSE}\)</li>
+                                <li>\(\textit{(w)RMSLE}\)</li>
+                                <li>\(\textit{AbsRel}\)</li>
+                                <li>\(\textit{SqRel}\)</li>
+                                <li>\((w)\delta_{\{1.05, 1.0, 1.25, 1.25^2, 1.25^3\}}\)</li>
+                                <!--<li>\((w)\delta_{1.25^2}\)</li>
+                                <li>\((w)\delta_{1.25^3}\)</li>-->
+                            </ol>  
+    </td>
+    <td class="tg-m2jw" style="vertical-align: top;">
+	<ol>
+                                <li>\(\textit{prec}_{\{0.25, 0.5, 1.0\}}\) [3]</li>
+                                <!--<li>\(\textit{prec}_{0.5}\) [3]</li>
+                                <li>\(\textit{prec}_{1.0}\) [3]</li>-->
+                                <li>\(\textit{rec}_{\{0.25, 0.5, 1.0\}}\) [3]</li>
+                                <!--<li>\(\textit{rec}_{0.5}\) [3]</li>
+                                <li>\(\textit{rec}_{1.0}\)[3]</li>-->
+                                <li>\(\textit{dbe}^{\{acc, comp\}}\) [4]</li>
+                                <!--<li>\(\textit{dbe}^{comp}\) [4]</li>-->
+                            </ol>  
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-dj31" style="vertical-align: top;">Geometrical</td>
+    <td class="tg-l4lt" style="vertical-align: top;">Smoothness [5]</td>
+  </tr>
+  <tr>
+    <td class="tg-m2jw" style="vertical-align: top;">
+	<ol>
+                                <li>\(\textit{RMSE}^o\)</li>
+                                <li>\(\alpha_{\{11.25^o, 22.50^o, 30.00^o\}}\)</li>
+                                <!--<li>\(\alpha_{22.50^o}\)</li>
+                                <li>\(\alpha_{30.00^o}\)</li>-->
+                            </ol>  
+    </td>
+    <td class="tg-m2jw" style="vertical-align: top;">
+	<ol>
+                                <li>\(\textit{c2c}\) [6]</li>
+                                <li>\(\textit{m2m}\) [7]</li>
+                            </ol>  
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
                 <h3>Indicators</h3>
                 To holistically assess the different models, we employ performance indicators that aggregate metrics across the different dimensions:
                 <ul>
-                    <li>\(i_d = \frac{1}{(1 - \delta_{1.25}) \times RMSE}\)</li>
-                    <li>\(i_b = \frac{1}{(1 - \frac{(F_{0.25} + F_{0.5} + F_{1.0})}{3}) \times dbe^{acc}}\)</li>
-                    <li>\(i_s = \frac{1}{(1 - \frac{(\alpha_{11.25^o} + \alpha_{22.5^o} + \alpha_{30^o})}{3}) \times RMSE^o}\)</li>
+                    <li>\(i_d = \frac{1}{(1 - \delta_{1.25}) \times RMSE}\),</li>
+                    <li>\(i_b = \frac{1}{(1 - \frac{(F_{0.25} + F_{0.5} + F_{1.0})}{3}) \times dbe^{acc}}\), where \(F_{t}=2\frac{prec_{t} \times rec_{t}}{prec_{t} + rec_{t}}\),</li>
+                    <li>\(i_s = \frac{1}{(1 - \frac{(\alpha_{11.25^o} + \alpha_{22.5^o} + \alpha_{30^o})}{3}) \times RMSE^o}\),</li>
                 </ul>
                 <div class="indicators">
                     <figure style="width: 32.00%;">
                         <img src="images/id.svg" style="width:100%;">
                         <p class="caption">For the direct depth performance, it is observed that generally 
-                            the combined loss leads to improved performance (with a notable exception being the ResNet_skip model). 
+                            the combined loss leads to improved performance (with a notable exception being the ResNet<sub>skip</sub> model). 
                             Interestingly the VNL only improves the performance of the UNet model, which can be attributed to the 
                             combined effect of a smaller receptive field than the other models (inferior global context capture), 
                             and of the localised prediction effect that the skip connections introduce.</p>
@@ -432,14 +504,14 @@
                 <h3>Best Models per Architecture</h3>
                 <p>
                     From the above analysis, we define the best performing models of each architecture, with the only 
-                    conflicting choice being the ResNet_skip selected model where a balanced performer was chosen. 
+			conflicting choice being the ResNet<sub>skip</sub> selected model where a balanced performer was chosen. 
                     Qualitative results follow with the images on the left allowing for a transition between the input color 
                     image and the normal maps from the predicted depth, accompanied by Poisson 3D reconstruction [17] of the 
                     estimated depth maps.
                     <!-- ResNet -->
 
-                    <h4>\(\color{#E3D10A}{ResNet}\) </h4>
-                    <table class="center">
+                    <h4 style="margin-left: auto;margin-right: auto;">\(\color{#E3D10A}{ResNet}\) </h4>
+                    <table class="center" style="margin-left: auto;margin-right: auto;">
                         <tr>
                             <td>
                                 <div id="beer-slider" class="beer-slider" data-beer-label="Color" data-beer-start="40">
@@ -460,7 +532,7 @@
                     <!-- DenseNet -->
 
                     <h4>\(\color{#800080}{DenseNet}\)</h4>
-                    <table>
+                    <table style="margin-left: auto;margin-right: auto;">
                         <tr>
                             <td>
                                 <div id="beer-slider" class="beer-slider" data-beer-label="Color" data-beer-start="40">
@@ -480,7 +552,7 @@
 
                     <!-- PNAS -->
                     <h4>\(\color{#00FFFF}{PNAS}\)</h4>
-                    <table>
+                    <table style="margin-left: auto;margin-right: auto;">
                         <tr>
                             <td>
                                 <div id="beer-slider" class="beer-slider" data-beer-label="Color" data-beer-start="40">
@@ -501,7 +573,7 @@
                     <!-- ResNet_skip -->
                     
                     <h4>\(\color{#FF00FF}{ResNet_{skip}}\)</h4>
-                    <table>
+                    <table style="margin-left: auto;margin-right: auto;">
                         <tr>
                             <td>
                                 <div id="beer-slider" class="beer-slider" data-beer-label="Color" data-beer-start="40">
@@ -522,7 +594,7 @@
                     <!-- UNet -->
                     
                     <h4>\(\color{#FFA600}{UNet}\)</h4>
-                    <table>
+                    <table style="margin-left: auto;margin-right: auto;">
                         <tr>
                             <td>
                                 <div id="beer-slider" class="beer-slider" data-beer-label="Color" data-beer-start="40">
@@ -549,7 +621,7 @@
                     We use a specialized guided stacked hourglass architecture as a refinement module that is trained 
                     using a pretrained depth model. Apart from the dual (guided) input encoder path, the guided stacked 
                     hourglass model exchanges information between the color and depth features using 
-                    Adaptive Instance Normalization (AdaIn) [REF]. <br>
+                    Adaptive Instance Normalization (AdaIn) [19]. <br>
                     <mark>GUIDED STACKED HOURGLASS image to be added</mark> <br>
                     The periodic displacement fields consistently improve the boundary preservation performance
                     of all models apart from the UNet one, which nonetheless, already exhibits the best boundary preservation performance.
@@ -589,8 +661,8 @@
             <div class="content">
                 Overall, the Pano3D baseline search shows that skip connections offer higher boundary 
                 preservation performance, naturally at the expense of smoothness, but their direct depth estimation performance 
-                does not suffer from this. The following comparison between the UNet and PNAS architecture (used in [19]) shows this 
-                different, with the advantage figure on the right (similar to [20]) illustrating the areas where each model performers better than the other
+                does not suffer from this. The following comparison between the UNet and PNAS architecture (used in [20]) shows this 
+                different, with the advantage figure on the right (similar to [21]) illustrating the areas where each model performers better than the other
                 <h3>\(ResNet\) \(vs\) \(ResNet_{skip}\)</h3>
                 <table>
                     <tr>
@@ -612,7 +684,7 @@
                 </table>
 
                 <p class="caption">
-                    Qualitative comparison between \(ResNet\) \(and\) \(ResNet_{skip}\). 
+                    Qualitative comparison between \(\color{#E3D10A}{ResNet}\) \(and\) \(\color{#FF00FF}{ResNet_{skip}}\). 
                     It is apparent that the addition of skip connections allows \(ResNet_{skip}\) to capture finer-grained details.
                 </p>
 
@@ -637,8 +709,8 @@
 
                 </table>
                 <p class="caption">
-                    Qualitative comparison between \(\color{#FFA600}{UNet}\) \(and\) \(\color{#00FFFF}{PNAS}\). 
-                    Apparenntly,  \(\color{#00FFFF}{PNAS}\) provides smoother results while it is clear that \(\color{#FFA600}{UNet}\) is able to capture finer-grained details.
+                    Qualitative comparison between \(\color{#FFA600}{UNet}\) and \(\color{#00FFFF}{PNAS}\). 
+                    Apparently,  \(\color{#00FFFF}{PNAS}\) provides smoother results while it is clear that \(\color{#FFA600}{UNet}\) is able to capture finer-grained details.
                 </p>
                 
             </div>
@@ -646,7 +718,7 @@
                 <div class="content">
                    <p>
                     The Pano3D baseline is a solid panorama depth estimation model that is positioned favourably against the state-of-the-art, 
-                    with the following samples showing the BiFuse [21] predictions, compared to the UNet ones, when applied to in-the-wild panoramas 
+                    with the following samples showing the BiFuse [22] predictions, compared to the UNet ones, when applied to in-the-wild panoramas 
                     acquired via both 360 cameras and stitched mobile phone captures.
                    </p>
                    <h3>\({UNet}\) \(vs\) \({BiFuse [21]}\)</h3>
@@ -769,6 +841,9 @@
                     <li>
                         Ramamonjisoa, M., Du, Y. and Lepetit, V., 2020. Predicting sharp and accurate occlusion boundaries in monocular depth estimation using displacement fields. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 14648-14657).
                     </li>
+		    <li>
+			    Huang, X. and Belongie, S., 2017. Arbitrary style transfer in real-time with adaptive instance normalization. In Proceedings of the IEEE International Conference on Computer Vision (pp. 1501-1510).
+		    </li>
                     <li>
                         Lee, J. and Kim, C.S., 2020, August. Multi-loss Rebalancing Algorithm for Monocular Depth Estimation. In ECCV (17) (pp. 785-801).
                     </li>
