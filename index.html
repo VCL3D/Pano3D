@@ -226,75 +226,7 @@
                     </tr>
                   
                 </table>-->
-	        <style type="text/css">
-.tg  {border:none;border-collapse:collapse;border-spacing:0;}
-.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
-  padding:10px 5px;word-break:normal;}
-.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-t77i{background-color:#4472c4;color:#ecf4ff;font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;
-  text-align:center;vertical-align:top}
-.tg .tg-l4lt{background-color:#00b050;font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;
-  text-align:center;vertical-align:top}
-.tg .tg-7n52{background-color:#ff0000;font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;
-  text-align:center;vertical-align:top}
-.tg .tg-m2jw{font-family:"Lucida Console", Monaco, monospace !important;;text-align:center;vertical-align:top}
-.tg .tg-dj31{background-color:#a1bdaf;font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;
-  text-align:center;vertical-align:top}
-</style>
-<table class="tg">
-<tbody>
-  <tr>
-    <td class="tg-t77i" style="vertical-align: top;">Direct [1, 2]</td>
-    <td class="tg-7n52" style="vertical-align: top;">Boundary</td>
-  </tr>
-  <tr>
-    <td class="tg-m2jw" style="vertical-align: top;">
-	<ol>
-                                <li>\(\textit{(w)RMSE}\)</li>
-                                <li>\(\textit{(w)RMSLE}\)</li>
-                                <li>\(\textit{AbsRel}\)</li>
-                                <li>\(\textit{SqRel}\)</li>
-                                <li>\((w)\delta_{\{1.05, 1.0, 1.25, 1.25^2, 1.25^3\}}\)</li>
-                                <!--<li>\((w)\delta_{1.25^2}\)</li>
-                                <li>\((w)\delta_{1.25^3}\)</li>-->
-                            </ol>  
-    </td>
-    <td class="tg-m2jw" style="vertical-align: top;">
-	<ol>
-                                <li>\(\textit{prec}_{\{0.25, 0.5, 1.0\}}\) [3]</li>
-                                <!--<li>\(\textit{prec}_{0.5}\) [3]</li>
-                                <li>\(\textit{prec}_{1.0}\) [3]</li>-->
-                                <li>\(\textit{rec}_{\{0.25, 0.5, 1.0\}}\) [3]</li>
-                                <!--<li>\(\textit{rec}_{0.5}\) [3]</li>
-                                <li>\(\textit{rec}_{1.0}\)[3]</li>-->
-                                <li>\(\textit{dbe}^{\{acc, comp\}}\) [4]</li>
-                                <!--<li>\(\textit{dbe}^{comp}\) [4]</li>-->
-                            </ol>  
-    </td>
-  </tr>
-  <tr>
-    <td class="tg-dj31" style="vertical-align: top;">Geometrical</td>
-    <td class="tg-l4lt" style="vertical-align: top;">Smoothness [5]</td>
-  </tr>
-  <tr>
-    <td class="tg-m2jw" style="vertical-align: top;">
-	<ol>
-                                <li>\(\textit{RMSE}^o\)</li>
-                                <li>\(\alpha_{\{11.25^o, 22.50^o, 30.00^o\}}\)</li>
-                                <!--<li>\(\alpha_{22.50^o}\)</li>
-                                <li>\(\alpha_{30.00^o}\)</li>-->
-                            </ol>  
-    </td>
-    <td class="tg-m2jw" style="vertical-align: top;">
-	<ol>
-                                <li>\(\textit{c2c}\) [6]</li>
-                                <li>\(\textit{m2m}\) [7]</li>
-                            </ol>  
-    </td>
-  </tr>
-</tbody>
-</table>
+	        
             </div>
             <div class="side-image">
                 <img src="images/depth_estimation.png" style="width:75%;">
@@ -317,7 +249,7 @@
                 </p>
             </div>
 
-            <div class="section-title">Data generation</div>
+            <div class="section-title">Data Generation</div>
                 <div class="content">
                     <p>
                         Using Matterport3D [9] for training and the Pano3D GibsonV2 splits for testing, 
@@ -454,12 +386,82 @@
                             The above combined error is further supported by a global virtual normal loss (VNL) [16]
                         </li>
                     </ul>
+<h3>Metrics</h3>
+<style type="text/css">
+.tg  {border:none;border-collapse:collapse;border-spacing:0;}
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+  padding:10px 5px;word-break:normal;}
+.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-t77i{background-color:#4472c4;color:#ecf4ff;font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;
+  text-align:center;vertical-align:top}
+.tg .tg-l4lt{background-color:#00b050;font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;
+  text-align:center;vertical-align:top}
+.tg .tg-7n52{background-color:#ff0000;font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;
+  text-align:center;vertical-align:top}
+.tg .tg-m2jw{font-family:"Lucida Console", Monaco, monospace !important;;text-align:center;vertical-align:top}
+.tg .tg-dj31{background-color:#a1bdaf;font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;
+  text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-t77i" style="vertical-align: top;">Direct [1, 2]</td>
+    <td class="tg-7n52" style="vertical-align: top;">Boundary</td>
+  </tr>
+  <tr>
+    <td class="tg-m2jw" style="vertical-align: top;">
+	<ol>
+                                <li>\(\textit{(w)RMSE}\)</li>
+                                <li>\(\textit{(w)RMSLE}\)</li>
+                                <li>\(\textit{AbsRel}\)</li>
+                                <li>\(\textit{SqRel}\)</li>
+                                <li>\((w)\delta_{\{1.05, 1.0, 1.25, 1.25^2, 1.25^3\}}\)</li>
+                                <!--<li>\((w)\delta_{1.25^2}\)</li>
+                                <li>\((w)\delta_{1.25^3}\)</li>-->
+                            </ol>  
+    </td>
+    <td class="tg-m2jw" style="vertical-align: top;">
+	<ol>
+                                <li>\(\textit{prec}_{\{0.25, 0.5, 1.0\}}\) [3]</li>
+                                <!--<li>\(\textit{prec}_{0.5}\) [3]</li>
+                                <li>\(\textit{prec}_{1.0}\) [3]</li>-->
+                                <li>\(\textit{rec}_{\{0.25, 0.5, 1.0\}}\) [3]</li>
+                                <!--<li>\(\textit{rec}_{0.5}\) [3]</li>
+                                <li>\(\textit{rec}_{1.0}\)[3]</li>-->
+                                <li>\(\textit{dbe}^{\{acc, comp\}}\) [4]</li>
+                                <!--<li>\(\textit{dbe}^{comp}\) [4]</li>-->
+                            </ol>  
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-dj31" style="vertical-align: top;">Geometrical</td>
+    <td class="tg-l4lt" style="vertical-align: top;">Smoothness [5]</td>
+  </tr>
+  <tr>
+    <td class="tg-m2jw" style="vertical-align: top;">
+	<ol>
+                                <li>\(\textit{RMSE}^o\)</li>
+                                <li>\(\alpha_{\{11.25^o, 22.50^o, 30.00^o\}}\)</li>
+                                <!--<li>\(\alpha_{22.50^o}\)</li>
+                                <li>\(\alpha_{30.00^o}\)</li>-->
+                            </ol>  
+    </td>
+    <td class="tg-m2jw" style="vertical-align: top;">
+	<ol>
+                                <li>\(\textit{c2c}\) [6]</li>
+                                <li>\(\textit{m2m}\) [7]</li>
+                            </ol>  
+    </td>
+  </tr>
+</tbody>
+</table>
                 <h3>Indicators</h3>
                 To holistically assess the different models, we employ performance indicators that aggregate metrics across the different dimensions:
                 <ul>
-                    <li>\(i_d = \frac{1}{(1 - \delta_{1.25}) \times RMSE}\)</li>
-                    <li>\(i_b = \frac{1}{(1 - \frac{(F_{0.25} + F_{0.5} + F_{1.0})}{3}) \times dbe^{acc}}\)</li>
-                    <li>\(i_s = \frac{1}{(1 - \frac{(\alpha_{11.25^o} + \alpha_{22.5^o} + \alpha_{30^o})}{3}) \times RMSE^o}\)</li>
+                    <li>\(i_d = \frac{1}{(1 - \delta_{1.25}) \times RMSE}\),</li>
+                    <li>\(i_b = \frac{1}{(1 - \frac{(F_{0.25} + F_{0.5} + F_{1.0})}{3}) \times dbe^{acc}}\), where \(F_{t}\) is the harmonic mean of the corresponding threshold \(t\) precision and recall metrics,</li>
+                    <li>\(i_s = \frac{1}{(1 - \frac{(\alpha_{11.25^o} + \alpha_{22.5^o} + \alpha_{30^o})}{3}) \times RMSE^o}\),</li>
                 </ul>
                 <div class="indicators">
                     <figure style="width: 32.00%;">
