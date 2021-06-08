@@ -227,30 +227,71 @@
                   
                 </table>
 	        <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+.tg  {border:none;border-collapse:collapse;border-spacing:0;}
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+  padding:10px 5px;word-break:normal;}
+.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
   overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-0lax{text-align:left;vertical-align:top}
+.tg .tg-t77i{background-color:#4472c4;color:#ecf4ff;font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;
+  text-align:center;vertical-align:top}
+.tg .tg-l4lt{background-color:#00b050;font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;
+  text-align:center;vertical-align:top}
+.tg .tg-7n52{background-color:#ff0000;font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;
+  text-align:center;vertical-align:top}
+.tg .tg-m2jw{font-family:"Lucida Console", Monaco, monospace !important;;text-align:center;vertical-align:top}
+.tg .tg-dj31{background-color:#a1bdaf;font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;
+  text-align:center;vertical-align:top}
 </style>
 <table class="tg">
 <tbody>
   <tr>
-    <td class="tg-0lax">Direct</td>
-    <td class="tg-0lax">Boundary</td>
+    <td class="tg-t77i" style="vertical-align: top;">Direct</td>
+    <td class="tg-7n52" style="vertical-align: top;">Boundary</td>
   </tr>
   <tr>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <td class="tg-m2jw" style="vertical-align: top;">
+	<ol>
+                                <li>\(\textit{(w)RMSE}\)</li>
+                                <li>\(\textit{(w)RMSLE}\)</li>
+                                <li>\(\textit{AbsRel}\)</li>
+                                <li>\(\textit{SqRel}\)</li>
+                                <li>\((w)\delta_{\{1.05, 1.0, 1.25, 1.25^2, 1.25^3\}}\)</li>
+                                <!--<li>\((w)\delta_{1.25^2}\)</li>
+                                <li>\((w)\delta_{1.25^3}\)</li>-->
+                            </ol>  
+    </td>
+    <td class="tg-m2jw" style="vertical-align: top;">
+	<ol>
+                                <li>\(\textit{prec}_{\{0.25, 0.5, 1.0\}}\) [3]</li>
+                                <!--<li>\(\textit{prec}_{0.5}\) [3]</li>
+                                <li>\(\textit{prec}_{1.0}\) [3]</li>-->
+                                <li>\(\textit{rec}_{\{0.25, 0.5, 1.0\}}\) [3]</li>
+                                <!--<li>\(\textit{rec}_{0.5}\) [3]</li>
+                                <li>\(\textit{rec}_{1.0}\)[3]</li>-->
+                                <li>\(\textit{dbe}^{\{acc, comp\}}\) [4]</li>
+                                <!--<li>\(\textit{dbe}^{comp}\) [4]</li>-->
+                            </ol>  
+    </td>
   </tr>
   <tr>
-    <td class="tg-0lax">Geometrical</td>
-    <td class="tg-0lax">Smoothness</td>
+    <td class="tg-dj31" style="vertical-align: top;">Geometrical</td>
+    <td class="tg-l4lt" style="vertical-align: top;">Smoothness</td>
   </tr>
   <tr>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
+    <td class="tg-m2jw" style="vertical-align: top;">
+	<ol>
+                                <li>\(\textit{RMSE}^o\)</li>
+                                <li>\(\alpha_{\{11.25^o, 22.50^o, 30.00^o\}}\)</li>
+                                <!--<li>\(\alpha_{22.50^o}\)</li>
+                                <li>\(\alpha_{30.00^o}\)</li>-->
+                            </ol>  
+    </td>
+    <td class="tg-m2jw" style="vertical-align: top;">
+	<ol>
+                                <li>\(\textit{c2c}\) [6]</li>
+                                <li>\(\textit{m2m}\) [7]</li>
+                            </ol>  
+    </td>
   </tr>
 </tbody>
 </table>
