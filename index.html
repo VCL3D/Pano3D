@@ -6,15 +6,23 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="author" content="Georgios Albanis">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="icon" type="image/png" href="data/bunny.png"/> -->
 
-        <link rel="stylesheet" type="text/css" href="style_project_page.css?cache=7733391418498779679">
+        <link rel="stylesheet" type="text/css" href="css/style_project_page.css?cache=7733391418498779679">
         <link href="https://fonts.googleapis.com/css?family=Arvo|Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
         <link rel="stylesheet" href="https://unpkg.com/@glidejs/glide/dist/css/glide.core.min.css">
+        <link rel="stylesheet" href="css/BeerSlider.css"/>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
         <script src="https://unpkg.com/@glidejs/glide"></script>
+        <script src="js/BeerSlider.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" id="">
+        </script>
+         <script type="text/x-mathjax-config;executed=true">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
         <style type="text/css">
             .side-text {
                 width:60%;
@@ -62,7 +70,7 @@
                 text-align: center;
             }
             .glide__bullet--active {
-                color: #aaa; 
+                color: #aaa;
             }
 
             @media (max-width: 400px) {
@@ -97,103 +105,682 @@
                 <a href=https://zokin.github.io/>
                     Nikolaos Zioulis <sup>1,2</sup>
                 </a>
-                <a href=https://github.com/pdrak/>
+                <a href=https://github.com/pdrak>
                     Petros Drakoulis <sup>1</sup>
                 </a>
-                <a href=https://github.com/VasilisGks/>
+                <a href=https://github.com/VasilisGks>
                         Vasileios Gkitsas <sup>1</sup>
                 </a>
-                <a href=https://github.com/vladsterz/>
+                <a href=https://github.com/vladsterz>
                         Vladimiros Sterzentsenko  <sup>1</sup>
                 </a>
-                <a href=http://www.gatv.ssr.upm.es//>
+                <a href=http://www.gatv.ssr.upm.es>
                         Federico Alvarez  <sup>2</sup>
                 </a>
-                <a href=https://www.iti.gr/iti/people/Dimitrios_Zarpalas.html/>
+                <a href=https://www.iti.gr/iti/people/Dimitrios_Zarpalas.html>
                         Dimitrios Zarpalas <sup>1</sup>
                 </a>
-                <a href=https://www.iti.gr/iti/people/Petros_Daras.html/>
+                <a href=https://www.iti.gr/iti/people/Petros_Daras.html>
                         Petros Daras <sup>1</sup>
                     </a>
             </div>
 
             <div class="affiliations">
-                <span><sup>1</sup> Centre for Research and Technology Hellas, Thessaloniki, Greece</span><br>
-                <span><sup>2</sup> Universidad Politécnica de Madrid, Madrid, Spain</span> <br/>
+                <span><sup>1</sup> Centre for Research and Technology Hellas (CERTH), Thessaloniki, Greece</span><br>
+                <span><sup>2</sup> Universidad Politécnica de Madrid (UPM), Madrid, Spain</span> <br/>
             </div>
 
             <div class="project-conference">
-                <a href=https://sites.google.com/view/omnicv2021//>
-                    OmniCV 2021
-                </a>
+                <a href=https://sites.google.com/view/omnicv2021/>OmniCV 2021</a>
             </div>
 
             <div class="project-icons">
                 <a href="">
                     <i class="fa fa-file"></i> <br/>
                     Paper
-                </a>
+                <!-- </a> -->
                 <a href="https://github.com/VCL3D/Pano3D">
                     <i class="fa fa-github"></i> <br/>
                     Code
                 </a>
-                <!--<a href="https://">
+                <!--<a href="https://www.youtube.com/watch?v=QgD0NHbWVlU&vq=hd1080&autoplay=1">
                     <i class="fa fa-youtube-play"></i> <br/>
                     Video
                 </a>-->
-                <!--<a href="https://">
+                <!--<a href="https://paschalidoud.github.io/data/Paschalidou2020CVPR_poster.pdf">
                     <i class="fa fa-picture-o"></i> <br/>
                     Poster
                 </a>
-                <a href="http://">
+                <a href="http://www.cvlibs.net/publications/Paschalidou2020CVPR_slides.pdf">
                     <i class="fa fa-file-powerpoint-o"></i> <br/>
                     Slides
                 </a>
-                <a href="https://">
+                <a href="https://autonomousvision.github.io/hierarchical-primitives/">
                     <i class="fa fa-newspaper-o"></i> <br/>
                     Blog
                 </a>-->
             </div>
-
             <div class="teaser-image">
-                <img src="images/teaser.png" style="width:100%;">
-                <p class="caption">Preserving depth's piece-wise smoothness should be the primary goal of data-driven depth estimation models.
-                    Yet most works only assess direct depth performance neglecting secondary traits like smoothness or boundary preservation.
-                    Different architectures (UNet -- left, or Pnas -- right) exhibit different inference characteristics skewed towards boundaries (UNet) or smoothness (Pnas).
-                    The Pano3D benchmark descends from a holistic perspective taking into account all performance traits, and additionally focuses on an orthogonal performance direction, generalization to unseen data from different distributions, contexts or domains. </p>
+                <img src="images/teaser_new.png" style="width:50%;">
+                <p class="caption">\(\textbf{Pano3D}\) is a new benchmark for depth estimation from spherical panoramas. 
+                    Its goal is to drive progress for this task in a consistent and holistic manner. 
+                    To achieve that we generate a new dataset and integrate evaluation metrics that 
+                    capture not only depth performance, 
+                    but also secondary traits like boundary preservation and smoothness. 
+                    Moreover, \(\textbf{Pano3D}\) takes a step beyond  typical intra-dataset evaluation schemes 
+                    to inter-dataset  performance  assessment.   By  disentangling  generalization to 
+                    three different axes,  \(\textbf{Pano3D}\) facilitates proper extrapolation assessment under different out-of-training data conditions.
+                    Relying on the  \(\textbf{Pano3D}\) holistic benchmark for 360 depth estimation we  perform an  extended  analysis  and derive a solid baseline for the task.
+                    </p>
             </div>
 
-            <div class="section-title">Results</div>
+            <div class="section-title">Depth estimation performance evaluation</div>
+            <div class="side-text">
+                <p>
+                    For evaluating depth from spherical panoramas we show that 
+                    without proper weighting the metrics favour performance in distorted areas. 
+                    Apart from the <span style="color: #1c20e6"><b>direct depth performance metrics</b></span>, the Pano3D benchmark also 
+                    includes implementations for metrics measuring <span style="color: #e62a1c"><b>depth boundary preservation</b></span> and 
+                    <span style="color: #05bd14"><b>depth smoothness.</b></span>. Finally, it also includes aggregated 3D metrics that consolidate 
+                    boundary and smoothness errors in different ways that are more appropriate for 
+                    different downstream tasks (e.g. view synthesis or 3D reconstruction).
+                </p>
+                <table style="width:100%" cellspacing="0">
+                    <tr>
+                        <th style="text-align: center;background-color: #1c1fe671;">
+                            Direct [1,2]
+                        </th>
+                        <th style="text-align: center;background-color: #e62a1c9c">
+                            Boundary
+                        </th>
+                        <th style="text-align: center;background-color:#05bd1485">
+                            Smoothness[5]
+                        </th>
+                        <th style="text-align: center;background-color: #05a1bdaf;">
+                            Geometrical
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">
+                            <ol>
+                                <li>\(\textit{(w)RMSE}\)</li>
+                                <li>\(\textit{(w)RMSLE}\)</li>
+                                <li>\(\textit{AbsRel}\)</li>
+                                <li>\(\textit{SqRel}\)</li>
+                                <li>\((w)\delta_{1.05}\)</li>
+                                <li>\((w)\delta_{1.25^2}\)</li>
+                                <li>\((w)\delta_{1.25^3}\)</li>
+                            </ol>
+                        </td>
+                        <td style="vertical-align: top;">
+                            <ol>
+                                <li>\(\textit{prec}_{0.25}\) [3]</li>
+                                <li>\(\textit{prec}_{0.5}\) [3]</li>
+                                <li>\(\textit{prec}_{1.0}\) [3]</li>
+                                <li>\(\textit{rec}_{0.25}\) [3]</li>
+                                <li>\(\textit{rec}_{0.5}\) [3]</li>
+                                <li>\(\textit{rec}_{1.0}\)[3]</li>
+                                <li>\(\textit{dbe}^{acc}\) [4]</li>
+                                <li>\(\textit{dbe}^{comp}\) [4]</li>
+                            </ol>
+                        </td>
+                        <td style="vertical-align: top;">
+                            <ol>
+                                <li>\(\textit{RMSE}^o\)</li>
+                                <li>\(\alpha_{11.25^o}\)</li>
+                                <li>\(\alpha_{22.50^o}\)</li>
+                                <li>\(\alpha_{30.00^o}\)</li>
+                            </ol>
+
+                        </td>
+                        <td style="vertical-align: top;">
+                            <ol>
+                                <li>\(\textit{c2c}\) [6]</li>
+                                <li>\(\textit{m2m}\) [7]</li>
+                            </ol>
+                        </td>
+                    </tr>
+                  
+                </table>
+            </div>
+            <div class="side-image">
+                <img src="images/depth_estimation.png" style="width:100%;">
+            </div>
+            <div class="section-title">Generalization capacity assessment</div>
+            <div class="side-image">
+                <img src="images/generalisation.png" style="width:100%;">
+            </div>
+            <div class="side-text">
+                <p>
+                    Most benchmarks focus on intra-dataset performance assessment, using a dataset’s train and test splits.
+                    Even though careful selection of the test samples can guarantee the quality of the evaluation, the dataset 
+                    generation process may sometimes be biased due to inherent data collection reasons 
+                    (e.g. same camera types, restricted availability of capture targets). 
+                    To overcome such issues and take a step towards measuring progress in in-the-wild settings, we decompose generalization into three different axes: 
+                    i) <span style="color: #f7a206"><b>target depth distribution</b></span>, 
+                    ii) <span style="color: #6206f7"><b>scene context</b></span>, and
+                    iii) <span style="color: #f706cf"><b>varying camera domain</b></span>. 
+                    We render the GibsonV2 dataset [8] and split it to deliver test sets belonging to each axis.
+                </p>
+            </div>
+
+            <div class="section-title">Data generation</div>
+                <div class="content">
+                    <p>
+                        Using Matterport3D [9] for training and the Pano3D GibsonV2 splits for testing, 
+                        the benchmark delivers a zero-shot cross-dataset transfer evaluation that can be 
+                        applied to different generalization settings on-demand. In addition, 
+                        Pano3D offers renders in two resolutions (1024x512 and 512x256). 
+                        We further release a big part of GibsonV2 that has not been used in the Pano3D testing splits, 
+                        and can be used as additional training data.
+
+                    </p>
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                          <!-- <div class="numbertext">1 / 3</div> -->
+                          <img src="images/dataset/tiny3.png" style="width:70%">
+                          <div class="text">GV2 Tiny split</div>
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <!-- <div class="numbertext">2 / 3</div> -->
+                          <img src="images/dataset/medium1.png" style="width:70%">
+                          <div class="text">GV2 Medium split</div>
+                        </div>
+                        
+                        <div class="mySlides fade">
+                            <!-- <div class="numbertext">2 / 3</div> -->
+                            <img src="images/dataset/fullplus1.png" style="width:70%">
+                            <div class="text">GV2 Full+ split</div>
+                          </div>
+                        <div class="mySlides fade">
+                            <!-- <div class="numbertext">2 / 3</div> -->
+                            <img src="images/dataset/filmic3.png" style="width:70%">
+                            <div class="text">GV2 Filmic</div>
+                          </div>
+                        <div class="mySlides fade">
+                            <!-- <div class="numbertext">2 / 3</div> -->
+                            <img src="images/dataset/pano3d.png" style="width:70%">
+                            <div class="text">M3D</div>
+                          </div>
+                        <br>
+                        <div style="text-align:center">
+                            <span class="dot"></span> 
+                            <span class="dot"></span> 
+                            <span class="dot"></span> 
+                            <span class="dot"></span>
+                            <span class="dot"></span>  
+                          </div>
+                        
+                    </div>
+                    <h3>Download</h3>
+                    <p>
+                        To download the Pano3D dataset we follow a two-step process:
+                        <ol>
+                            <li>
+                                Access to the Pano3D dataset requires agreement with the terms and conditions for each of the 3D datasets
+                                that were used to create (i.e. render) it, and more specifically, Matterport3D [9] and GibsonV2 [8]. 
+                                Therefore, in order to grant you access to this dataset, we need you to first fill <a href="" >request form</a>.
+                            </li>
+                            <li>
+                                Then, you need to perform a request for access to the respective Zenodo repositories, 
+                                where the data are hosted (more information can be found in our <a href="" >download page</a>). 
+                                Due to data-size limitations, the dataset is split into six (6) repositories, 
+                                which respectively contain the color image, depth and normal map renders for each image. 
+                                The repositories are split into the two resolutions, with each subgroup of 3 repositories 
+                                containing the entire Matterport3D dataset renders, the entire GibsonV2 test split renders, 
+                                and the remainder of GibsonV2 which is used as additional training data. 
+                                Therefore, a separate request for access needs to be made to each repository in order to download 
+                                the corresponding data. 
+                            </li>
+                        </ol>
+                        <b>Note</b> that only completing one step of the two (i.e. only filling out the form, or only requesting access 
+                        from the Zenodo repositories) <b>will not</b> be enough to get access to the data. 
+                        We will do our best to contact you in such cases and notify you to complete all steps as needed, 
+                        but our mails may be lost (e.g. spam filters/folders). 
+                        The only exception to this, is if you have already filled in the form and need access to another Zenodo repository 
+                        (for example you need extra dataset/splits which are hosted on different Zenodo repositories), then you only need 
+                        to fill in the Zenodo request but please, make sure to mention that the form has already been filled in so that 
+                        we can verify it. <br>
+
+                        Each volume is broken down in several .zip files (2GB each) for more convenient downloading on low 
+                        bandwidth connections. You need all the .zip archives of each volume in order to extract the containing files.
+
+                    </p>
+            </div>
+            <div class="section-title">Searching for a solid baseline</div>
             <div class="content">
-                In the following interactive visualization, we provide qualitative results for the UNet model.
-
-                <h3>Input Panoramas</h3>
-                <div id="input_panoramas">
-                    <div class="render_container">
-                        <div data-size="400" class="render_window"></div><div data-size="400" class="render_window"></div><div data-size="400" class="render_window"></div>
-                    </div>
+                <h3>Architecture</h3>
+                <p>
+                    The Pano3D baseline search relies on single-pass autoencoder architectures supervised by a weighted combination
+                    of different loss functions, each focusing on a specific depth map trait.
+                    For the autoencoders we use a simple convolution decoder and focus our search on the encoder part, and specifically:
+                    <ul>
+                        <li>
+                            A standard ResNet-152 encoder [10] with 110M parameters {IMAGE}
+                        </li>
+                        <li>
+                            A standard DenseNet-161 encoder [11] with 55M parameters {IMAGE}
+                        </li>
+                        <li>
+                            A neural architecture search encoder, PNAS [12] with 99M parameters {IMAGE}
+                        </li>
+                    </ul>
+                    In addition, our search also considers architectures with encoder-decoder skip connections:
+                    <ul>
+                        <li>
+                            A traditional UNet [13] with 27M parameters {IMAGE}
+                        </li>
+                        <li>
+                            A customized ResNet-152 autoencoder with UNet-like skip connections 
+                            starting from the first residual block and 112M parameters {IMAGE}
+                        </li>
+                    </ul>
+                </p>
+                <h3>Losses</h3>
+                    For the baseline search, we build upon prior literature regarding depth regression losses [14] and 
+                    consider standard supporting losses, as well as a recently presented globalized loss:
+                    <ul>
+                        <li>
+                            A L1 depth error, which is the better performing direct objective [14], supported by:
+                            <ul>
+                                <li>
+                                    A multi-scale gradient maching term [15], that aims at preserving boundaries
+                                </li>
+                                <li>
+                                    A surface orientation error term [3], that aims at minimizing the cosine distance between normals
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            A combined objective for direct depth performance, boundary preservation and surface smoothness,
+                        </li>
+                        <li>
+                            The above combined error is further supported by a global virtual normal loss (VNL) [16]
+                        </li>
+                    </ul>
+                <h3>Indicators</h3>
+                To holistically assess the different models, we employ performance indicators that aggregate metrics across the different dimensions:
+                <ul>
+                    <li>\(i_d = \frac{1}{(1 - \delta_{1.25}) \times RMSE}\)</li>
+                    <li>\(i_b = \frac{1}{(1 - \frac{(F_{0.25} + F_{0.5} + F_{1.0})}{3}) \times dbe^{acc}}\)</li>
+                    <li>\(i_s = \frac{1}{(1 - \frac{(\alpha_{11.25^o} + \alpha_{22.5^o} + \alpha_{30^o})}{3}) \times RMSE^o}\)</li>
+                </ul>
+                <div class="indicators">
+                    <figure style="width: 32.00%;">
+                        <img src="images/id.svg" style="width:100%;">
+                        <p class="caption">For the direct depth performance, it is observed that generally 
+                            the combined loss leads to improved performance (with a notable exception being the ResNet_skip model). 
+                            Interestingly the VNL only improves the performance of the UNet model, which can be attributed to the 
+                            combined effect of a smaller receptive field than the other models (inferior global context capture), 
+                            and of the localised prediction effect that the skip connections introduce.</p>
+                    </figure>
+                    <figure style="width: 32.00%;">
+                        <img src="images/ib.svg" style="width:100%;">
+                        <p class="caption">As expected, the smoothness objective hurts boundary preservation while the gradient 
+                            matching term boosts, with UNet also benefiting from the VNL loss in terms of preserving boundaries.</p>
+                    </figure>
+                    <figure style="width: 32.00%;">
+                        <img src="images/is.svg" style="width:100%;">
+                        <p class="caption">Opposite from the boundary, the gradient matching term hurts smoothness when used in 
+                            isolation, but the smoothness term helps balance its effect, and even benefits from their combined use. 
+                            Again, UNet is the only architecture to consistently benefit from VNL across all indicators</p>
+                    </figure>
                 </div>
+                <h3>Best Models per Architecture</h3>
+                <p>
+                    From the above analysis, we define the best performing models of each architecture, with the only 
+                    conflicting choice being the ResNet_skip selected model where a balanced performer was chosen. 
+                    Qualitative results follow with the images on the left allowing for a transition between the input color 
+                    image and the normal maps from the predicted depth, accompanied by Poisson 3D reconstruction [17] of the 
+                    estimated depth maps.
+                    <!-- ResNet -->
 
-                <h3>Predicted meshes</h3>
-                <div id="pred_meshes">
-                    <div class="render_container">
-                        <div data-size="400" class="render_window"></div><div data-size="400" class="render_window"></div><div data-size="400" class="render_window"></div>
-                    </div>
-                </div>
+                    <h4>\(\color{#E3D10A}{ResNet}\) </h4>
+                    <table class="center">
+                        <tr>
+                            <td>
+                                <div id="beer-slider" class="beer-slider" data-beer-label="Color" data-beer-start="40">
+                                    <img src="images/qualitative/color/color_9.png" alt="">
+                                    <div class="beer-reveal" data-beer-label="ResNet">
+                                    <img src="images/qualitative/normals/resnet/normal_9.png" alt="">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <iframe allowfullscreen webkitallowfullscreen width="512" height="276" frameborder="0" seamless src="https://p3d.in/e/GHUuO+xray+spin"></iframe>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <!-- DenseNet -->
+
+                    <h4>\(\color{#800080}{DenseNet}\)</h4>
+                    <table>
+                        <tr>
+                            <td>
+                                <div id="beer-slider" class="beer-slider" data-beer-label="Color" data-beer-start="40">
+                                    <img src="images/qualitative/color/color_9.png" alt="">
+                                    <div class="beer-reveal" data-beer-label="DenseNet">
+                                    <img src="images/qualitative/normals/densenet/normal_9.png" alt="">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <iframe allowfullscreen webkitallowfullscreen width="512" height="276" frameborder="0" seamless src="https://p3d.in/e/GHUuO+xray+spin"></iframe>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- PNAS -->
+                    <h4>\(\color{#00FFFF}{PNAS}\)</h4>
+                    <table>
+                        <tr>
+                            <td>
+                                <div id="beer-slider" class="beer-slider" data-beer-label="Color" data-beer-start="40">
+                                    <img src="images/qualitative/color/color_9.png" alt="">
+                                    <div class="beer-reveal" data-beer-label="Pnas">
+                                    <img src="images/qualitative/normals/pnas/normal_9.png" alt="">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <iframe allowfullscreen webkitallowfullscreen width="512" height="276" frameborder="0" seamless src="https://p3d.in/e/GHUuO+xray+spin"></iframe>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- ResNet_skip -->
+                    
+                    <h4>\(\color{#FF00FF}{ResNet_{skip}}\)</h4>
+                    <table>
+                        <tr>
+                            <td>
+                                <div id="beer-slider" class="beer-slider" data-beer-label="Color" data-beer-start="40">
+                                    <img src="images/qualitative/color/color_9.png" alt="">
+                                    <div class="beer-reveal" data-beer-label="ResNetSkip">
+                                    <img src="images/qualitative/normals/skip/normal_9.png" alt="">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <iframe allowfullscreen webkitallowfullscreen width="512" height="276" frameborder="0" seamless src="https://p3d.in/e/GHUuO+xray+spin"></iframe>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- UNet -->
+                    
+                    <h4>\(\color{#FFA600}{UNet}\)</h4>
+                    <table>
+                        <tr>
+                            <td>
+                                <div id="beer-slider" class="beer-slider" data-beer-label="Color" data-beer-start="40">
+                                    <img src="images/qualitative/color/color_9.png" alt="">
+                                    <div class="beer-reveal" data-beer-label="Unet">
+                                    <img src="images/qualitative/normals/unet/normal_9.png" alt="">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <iframe allowfullscreen webkitallowfullscreen width="512" height="276" frameborder="0" seamless src="https://p3d.in/e/GHUuO+xray+spin"></iframe>
+                            </td>
+                        </tr>
+                    </table>
+                </p>
+                <!-- ## Refining Depth Estimates: -->
+                <h2>Refining Depth Estimates</h2>
+                <p>
+                    Taking into account the developments for depth refinement, Pano3D also includes an analysis of a 
+                    recent work using displacement fields [18], which is properly adapted to the spherical domain, 
+                    to periodic displacement fields. <br>
+                    We use a specialized guided stacked hourglass architecture as a refinement module that is trained 
+                    using a pretrained depth model. Apart from the dual (guided) input encoder path, the guided stacked 
+                    hourglass model exchanges information between the color and depth features using 
+                    Adaptive Instance Normalization (AdaIn) [REF]. <br>
+                    <mark>GUIDED STACKED HOURGLASS image to be added</mark> <br>
+                    The periodic displacement fields consistently improve the boundary preservation performance
+                    of all models apart from the UNet one, which nonetheless, already exhibits the best boundary preservation performance.
+                    Qualitative samples overlaying the detected boundaries for selected models are illustrated below:
+                </p>
+                <table>
+                    <tr>
+                        <td><img src="images/qualitative/edges/gt/135_sf_gt.png" style="width:100%;"></td>
+                        <td><img src="images/qualitative/edges/unet/135_sf_unet.png" style="width:100%;"></td>
+                        <td><img src="images/qualitative/edges/pnas/135_sf_pnas.png" style="width:100%;"></td>
+                        <td><img src="images/qualitative/edges/resnet/135_sf_resnet.png" style="width:100%;"></td>
+                        <td><img src="images/qualitative/edges/skip/135_sf_skip.png" style="width:100%;"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/qualitative/edges/gt/17_sf_gt.png" style="width:100%;"></td>
+                        <td><img src="images/qualitative/edges/unet/17_sf_unet.png" style="width:100%;"></td>
+                        <td><img src="images/qualitative/edges/pnas/17_sf_pnas.png" style="width:100%;"></td>
+                        <td><img src="images/qualitative/edges/resnet/17_sf_resnet.png" style="width:100%;"></td>
+                        <td><img src="images/qualitative/edges/skip/17_sf_skip.png" style="width:100%;"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/qualitative/edges/gt/38_sf_gt.png" style="width:100%;"></td>
+                        <td><img src="images/qualitative/edges/unet/38_sf_unet.png" style="width:100%;"></td>
+                        <td><img src="images/qualitative/edges/pnas/38_sf_pnas.png" style="width:100%;"></td>
+                        <td><img src="images/qualitative/edges/resnet/38_sf_resnet.png" style="width:100%;"></td>
+                        <td><img src="images/qualitative/edges/skip/38_sf_skip.png" style="width:100%;"></td>
+                    </tr>
+                </table>
+                <p class="caption">
+                    Boundary preservation qualitative comparison between the \(UNet\), \(Pnas\), \(ResNet\) and \(ResNet_{skip}\) models.
+                    From left to right: \(\textbf{i)} GT  depth\) <span style="color:rgb(0,204,153)">(green)</span>, \(\textbf{ii)} UNet\) <span style="color:rgb(255,166,0)">(orange)</span>,
+                    \(\textbf{iii)}\)  \(Pnas\) <span style="color:rgb(0,255,255)">(cyan)</span>, \(\textbf{iv)}\) \(ResNet\) <span style="color:rgb(227,209,10)">(yellow)</span>, 
+                    and \(\textbf{v)}\) \(ResNet_{skip}\) <span style="color:rgb(255,0,255)">(magenta)</span>.
+                </p>
             </div>
+            <div class="section-title">Comparisons</div>
+            <div class="content">
+                Overall, the Pano3D baseline search shows that skip connections offer higher boundary 
+                preservation performance, naturally at the expense of smoothness, but their direct depth estimation performance 
+                does not suffer from this. The following comparison between the UNet and PNAS architecture (used in [19]) shows this 
+                different, with the advantage figure on the right (similar to [20]) illustrating the areas where each model performers better than the other
+                <h3>\(ResNet\) \(vs\) \(ResNet_{skip}\)</h3>
+                <table>
+                    <tr>
+                        <td>
+                            <div id="beer-slider" class="beer-slider" data-beer-label="ResNet" data-beer-start="40">
+                                <img src="images/qualitative/skip/skip_9.png" alt="">
+                                <div class="beer-reveal" data-beer-label="ResNetSkip">
+                                <img src="images/qualitative/resnet/resnet_9.png" alt="">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="beer-slider" data-beer-label="Advantage">
+                                <img src="images/qualitative/skip_advantage/adv_9.png" alt="">
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <p class="caption">
+                    Qualitative comparison between \(ResNet\) \(and\) \(ResNet_{skip}\). 
+                    It is apparent that the addition of skip connections allows \(ResNet_{skip}\) to capture finer-grained details.
+                </p>
+
+                <h3>\({UNet}\) \(vs\) \({PNAS}\)</h3>
+
+                <table>
+                    <tr>
+                        <td>
+                            <div id="beer-slider" class="beer-slider" data-beer-label="Pnas" data-beer-start="40">
+                                <img src="images/qualitative/pnas/pnas_9.png" alt="">
+                                <div class="beer-reveal" data-beer-label="Unet">
+                                <img src="images/qualitative/unet/unet_9.png" alt="">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="beer-slider" data-beer-label="Advantage">
+                                <img src="images/qualitative/skip_advantage/adv_9.png" alt="">
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+                <p class="caption">
+                    Qualitative comparison between \(\color{#FFA600}{UNet}\) \(and\) \(\color{#00FFFF}{PNAS}\). 
+                    Apparenntly,  \(\color{#00FFFF}{PNAS}\) provides smoother results while it is clear that \(\color{#FFA600}{UNet}\) is able to capture finer-grained details.
+                </p>
+                
+            </div>
+            <div class="section-title">In-the-wild Results</div>
+                <div class="content">
+                   <p>
+                    The Pano3D baseline is a solid panorama depth estimation model that is positioned favourably against the state-of-the-art, 
+                    with the following samples showing the BiFuse [21] predictions, compared to the UNet ones, when applied to in-the-wild panoramas 
+                    acquired via both 360 cameras and stitched mobile phone captures.
+                   </p>
+                   <h3>\({UNet}\) \(vs\) \({BiFuse [21]}\)</h3>
+                   <div id="container" class="center"></div>
+                   <p class="caption">
+                    Input Panorama.
+                   </p>
+                   <table>
+                    <tr>
+                        <td>
+                            <iframe allowfullscreen webkitallowfullscreen width="640" height="480" frameborder="0" seamless src="https://p3d.in/e/GkYfQ"></iframe>
+                        </td>
+                        <td>
+                            <iframe allowfullscreen webkitallowfullscreen width="640" height="480" frameborder="0" seamless src="https://p3d.in/e/4qiIe"></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <iframe allowfullscreen webkitallowfullscreen width="640" height="480" frameborder="0" seamless src="https://p3d.in/e/LASCa"></iframe>
+                        </td>
+                        <td>
+                            <iframe allowfullscreen webkitallowfullscreen width="640" height="480" frameborder="0" seamless src="https://p3d.in/e/97DcU"></iframe>
+                        </td>
+                    </tr>
+                    </table>
+                    <p class="caption">
+                        Qualitative comparison between \({UNet}\) \(and\) \({BiFuse [21]}\).
+                    </p>
+                </div>
 
             <div class="section-title">Acknowledgements</div>
             <div class="content">
                 This project has received funding from the European Union’s Horizon 2020 innovation programme <a href="https://atlantis-ar.eu/">ATLANTIS</a> under grant agreement No 951900.
             </div>
+            <div class="section-title">References</div>
+            <div class="content">
+                <ol>
+                    <li>
+                        Eigen, D., Puhrsch, C. and Fergus, R., 2014. Depth map prediction from a single image using a multi-scale deep network. arXiv preprint arXiv:1406.2283.
+                    </li>
+                    <li>
+                        Zioulis, N., Karakottas, A., Zarpalas, D., Alvarez, F. and Daras, P., 2019, September. Spherical view synthesis for self-supervised 360 depth estimation. In 2019 International Conference on 3D Vision (3DV) (pp. 690-699). IEEE.
+                    </li>
+                    <li>
+                        Hu, J., Ozay, M., Zhang, Y. and Okatani, T., 2019, January. Revisiting single image depth estimation: Toward higher resolution maps with accurate object boundaries. In 2019 IEEE Winter Conference on Applications of Computer Vision (WACV) (pp. 1043-1051). IEEE
+                    </li>
+                    <li>
+                        Koch, T., Liebel, L., Fraundorfer, F. and Korner, M., 2018. Evaluation of cnn-based single-image depth estimation methods. In Proceedings of the European Conference on Computer Vision (ECCV) Workshops (pp. 0-0)
+                    </li>
+                    <li>
+                        Wang, X., Fouhey, D. and Gupta, A., 2015. Designing deep networks for surface normal estimation. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 539-547).
+                    </li>
+                    <li>
+                        Girardeau-Montaut, D., 2006. Détection de changement sur des données géométriques tridimensionnelles (Doctoral dissertation, Télécom ParisTech).
+                    </li>
+                    <li>
+                        Cignoni, P., Rocchini, C. and Scopigno, R., 1998, June. Metro: measuring error on simplified surfaces. In Computer graphics forum (Vol. 17, No. 2, pp. 167-174). Oxford, UK and Boston, USA: Blackwell Publishers.
+                    </li>
+                    <li>
+                        Xia, F., Li, C., Chen, K., Shen, W.B., Martín-Martín, R., Hirose, N., Zamir, A.R., Fei-Fei, L. and Savarese, S., 2019. Gibson env v2: Embodied simulation environments for interactive navigation. Stanford University, Tech. Rep
+                    </li>
+                    <li>
+                        Chang, A., Dai, A., Funkhouser, T., Halber, M., Niessner, M., Savva, M., Song, S., Zeng, A. and Zhang, Y., 2017. Matterport3d: Learning from rgb-d data in indoor environments. arXiv preprint arXiv:1709.06158
+                    </li>
+                    <li>
+                        He, K., Zhang, X., Ren, S. and Sun, J., 2016, October. Identity mappings in deep residual networks. In European conference on computer vision (pp. 630-645). Springer, Cham.
+                    </li>
+                    <li>
+                        Iandola, F., Moskewicz, M., Karayev, S., Girshick, R., Darrell, T. and Keutzer, K., 2014. Densenet: Implementing efficient convnet descriptor pyramids. arXiv preprint arXiv:1404.1869.
+                    </li>
+                    <li>
+                        Liu, C., Zoph, B., Neumann, M., Shlens, J., Hua, W., Li, L.J., Fei-Fei, L., Yuille, A., Huang, J. and Murphy, K., 2018. Progressive neural architecture search. In Proceedings of the European conference on computer vision (ECCV) (pp. 19-34).
+                    </li>
+                    <li>
+                        Ronneberger, O., Fischer, P. and Brox, T., 2015, October. U-net: Convolutional networks for biomedical image segmentation. In International Conference on Medical image computing and computer-assisted intervention (pp. 234-241). Springer, Cham.
+                    </li>
+                    <li>
+                        Carvalho, M., Le Saux, B., Trouvé-Peloux, P., Almansa, A. and Champagnat, F., 2018, October. On regression losses for deep depth estimation. In 2018 25th IEEE International Conference on Image Processing (ICIP) (pp. 2915-2919). IEEE
+                    </li>
+                    <li>
+                        Li, Z. and Snavely, N., 2018. Megadepth: Learning single-view depth prediction from internet photos. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 2041-2050).
+                    </li>
+                    <li>
+                        Yin, W., Liu, Y., Shen, C. and Yan, Y., 2019. Enforcing geometric constraints of virtual normal for depth prediction. In Proceedings of the IEEE/CVF International Conference on Computer Vision (pp. 5684-5693).
+                    </li>
+                    <li>
+                        Kazhdan, M., Bolitho, M. and Hoppe, H., 2006, June. Poisson surface reconstruction. In Proceedings of the fourth Eurographics symposium on Geometry processing (Vol. 7).
+                    </li>
+                    <li>
+                        Ramamonjisoa, M., Du, Y. and Lepetit, V., 2020. Predicting sharp and accurate occlusion boundaries in monocular depth estimation using displacement fields. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 14648-14657).
+                    </li>
+                    <li>
+                        Lee, J. and Kim, C.S., 2020, August. Multi-loss Rebalancing Algorithm for Monocular Depth Estimation. In ECCV (17) (pp. 785-801).
+                    </li>
+                    <li>
+                        Sun, C., Sun, M. and Chen, H.T., 2020. HoHoNet: 360 Indoor Holistic Understanding with Latent Horizontal Features. arXiv preprint arXiv:2011.11498.
+                    </li>
+                    <li>
+                        Wang, F.E., Yeh, Y.H., Sun, M., Chiu, W.C. and Tsai, Y.H., 2020. Bifuse: Monocular 360 depth estimation via bi-projection fusion. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 462-471).
+                    </li>
+                </ol>
+            </div>
         </div>
 
-        <script type="module">
-            import * as THREE from "https://unpkg.com/three/build/three.module.js";
-            import { OrbitControls } from "https://unpkg.com/three/examples/jsm/controls/OrbitControls.js";
-            import {OBJLoader} from "https://unpkg.com/three/examples/jsm/loaders/OBJLoader.js";
-            // import { PLYLoader } from './js/loaders/PLYLoader.js';
-            import { MTLLoader } from "https://unpkg.com/three/examples/jsm/loaders/MTLLoader"
+        <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            </script>
+
+        <!-- <script type="module">
+            // import * as THREE from "https://unpkg.com/three/build/three.module.js";
+            import * as THREE from './js/three.module.js';
+           
+            import { OrbitControls } from './js/controls/OrbitControls.js';
+            import {OBJLoader} from "./js/loaders/OBJLoader.js";
+            import { PLYLoader } from './js/loaders/PLYLoader.js';
+            import { MTLLoader } from "./js/loaders/MTLLoader.js"
 
             // Render the predictions
             function random_choice(arr, n) {
@@ -480,6 +1067,15 @@
                             //m.transparent = true;
                             //var mesh = new THREE.Mesh(g, m);
                             meshes[part_idx] = object;
+                            //smooth function
+                            //var smooth_geom = new THREE.BufferGeometry(object.geometry);
+                            //smooth_geom = geom.fromBufferGeometry(object.geometry);
+                            // smooth_geom = new Geometry().fromBufferGeometry(object.geometry);
+                            // smooth_geom.mergeVertices();
+                            // smooth_geom.computeVertexNormals();
+                            // smooth_geom.computeFaceNormals();
+                            // object.geometry = new THREE.BufferGeometry().fromGeometry(smooth_geom);
+                            //
                             scene.add(object);
 
                             loaded++;
@@ -562,6 +1158,8 @@
                     var texture = new THREE.TextureLoader().load(prefix);
 					var material = new THREE.MeshBasicMaterial( { map: texture } );
 
+               
+
 					var mesh = new THREE.Mesh( geometry, material );
 					meshes[pano_idx] = mesh;
 					scene.add( mesh );
@@ -599,6 +1197,8 @@
                 };
 
 			}
+
+
 
             function show_group_panos(elements, objects, N) {
                 var controls = [];
@@ -642,6 +1242,8 @@
                 };
             }
 
+
+
             function show_group(elements, objects, N) {
                 var controls = [];
                 for (var i=0; i<objects.length; i++) {
@@ -665,10 +1267,15 @@
 
             // panoramas
             var panos = [
-                "panoramas/color_0.png",
-                "panoramas/color_7.png",
-                "panoramas/color_21.png",
+                "panoramas/GS__0015.jpg",
+                "panoramas/GS__0119.png",
+                "panoramas/GS__0120.png",
             ];
+            // var human_control = show_group(
+            //     document.getElementById("humans").getElementsByClassName("render_window"),
+            //     [humans[0], humans[1], humans[2]],
+            //     6
+            // );
 
             var panos = show_group_panos(
                 document.getElementById("input_panoramas").getElementsByClassName("render_window"),
@@ -678,15 +1285,345 @@
 
             //meshes
             var meshes_paths = [
-                "meshes/pred_0_mesh.obj",
-                "meshes/pred_7_mesh.obj",
-                "meshes/pred_21_mesh.obj",
+                "ply/pred_0_mesh.obj",
+                "ply/pred_7_mesh.obj",
+                "ply/pred_21_mesh.obj",
             ];
-            var non_coloured_meshes = show_group(
-                document.getElementById("pred_meshes").getElementsByClassName("render_window"),
-                [meshes_paths[0], meshes_paths[1], meshes_paths[2]],
-                6
-            );
+            // var non_coloured_meshes = show_group(
+            //     document.getElementById("pred_meshes").getElementsByClassName("render_window"),
+            //     [meshes_paths[0], meshes_paths[1], meshes_paths[2]],
+            //     6
+            // );
+            // var meshes = show_group_meshes(
+            //     document.getElementById("point_clouds").getElementsByClassName("render_window"),
+            //     [meshes_paths[0], meshes_paths[1], meshes_paths[2]],
+            //     6
+            // );
+
+            // var human_checkboxes = document.querySelectorAll("#humans .controls input");
+            // reset_checkboxes(human_checkboxes);
+            // document.querySelector("#humans .controls").addEventListener(
+            //     "change",
+            //     function (ev) {
+            //         if (ev.target.id == "humans_all") {
+            //             Array.prototype.filter.call(
+            //                 human_checkboxes,
+            //                 (el) => el.id != "humans_all"
+            //             ).forEach(function (el) {el.checked = false;});
+            //         } else if (ev.target.checked) {
+            //             human_checkboxes[0].checked = false;
+            //         }
+
+            //         var ids = new Set();
+            //         if (human_checkboxes[0].checked) {
+            //             ids = new Set([0, 1, 2, 3, 4, 5]);
+            //         }
+            //         var part_ids = [1, 2, 0, 4, 3, 5];
+            //         for (var i=1; i<human_checkboxes.length; i++) {
+            //             if (human_checkboxes[i].checked) {
+            //                 ids.add(part_ids[i-1]);
+            //             }
+            //         }
+
+            //         human_control.show(Array.from(ids));
+            //     }
+            // );
+            // document.querySelector("#humans .controls button").addEventListener(
+            //     "click",
+            //     function (ev) {
+            //         reset_checkboxes(human_checkboxes);
+            //         var new_humans = random_choice(humans, 3);
+            //         var render_windows = document.getElementById("humans").getElementsByClassName("render_window");
+            //         Array.prototype.forEach.call(render_windows, function (r) {r.innerHTML = "";});
+            //         human_control = show_group(
+            //             render_windows,
+            //             new_humans,
+            //             6
+            //         );
+            //     }
+            // );
+
+            // // Planes
+            // var planes = [
+            //     "https://superquadrics.com/neural_parts/planes/10af5de930178a161596c26b5af806fe",
+            //     "https://superquadrics.com/neural_parts/planes/1a32f10b20170883663e90eaf6b4ca52",
+            //     "https://superquadrics.com/neural_parts/planes/1a6ad7a24bb89733f412783097373bdc",
+            //     "https://superquadrics.com/neural_parts/planes/1b3c6b2fbcf834cf62b600da24e0965",
+            //     "https://superquadrics.com/neural_parts/planes/1c26ecb4cd01759dc1006ed55bc1a3fc",
+            //     "https://superquadrics.com/neural_parts/planes/284e6431669d46fd44797ce00623b3fd",
+            //     "https://superquadrics.com/neural_parts/planes/2c3ba3f35c5d2b0ce77e43d0a92bdc06",
+            //     "https://superquadrics.com/neural_parts/planes/315f523d0a924fb7ef70df8610b582b2",
+            //     "https://superquadrics.com/neural_parts/planes/343a607d1604335fb4f192eea1889928",
+            //     "https://superquadrics.com/neural_parts/planes/347d86d7001cef01232236eecec447b",
+            //     "https://superquadrics.com/neural_parts/planes/351c9235749e398162147e00e97e28b5",
+            //     "https://superquadrics.com/neural_parts/planes/3716ed4fa80dbf5f41392ab7a601818b",
+            //     "https://superquadrics.com/neural_parts/planes/384e72f69e6f24404cb288947cda4a2c",
+            //     "https://superquadrics.com/neural_parts/planes/440ac1b4ac3cbe114c3a35cee92bb95b",
+            //     "https://superquadrics.com/neural_parts/planes/440e5ba74ac8124e9751c7a6f15617f4",
+            //     "https://superquadrics.com/neural_parts/planes/48706d323b9041d5438a95791ca4064d",
+            //     "https://superquadrics.com/neural_parts/planes/563cef4df464ddb1e153dd90dac45a6d",
+            //     "https://superquadrics.com/neural_parts/planes/5c6590461085c93ea91e80f26309099e",
+            //     "https://superquadrics.com/neural_parts/planes/60b5f5da40e0dd33579f6385fdd4245b",
+            //     "https://superquadrics.com/neural_parts/planes/7b134f6573e7270fb0a79e28606cb167",
+            //     "https://superquadrics.com/neural_parts/planes/92a83ecaa10e8d3f78e919a72d9a39e7",
+            //     "https://superquadrics.com/neural_parts/planes/ed2aaca045fb1714cd4229f38ad0d015",
+            //     "https://superquadrics.com/neural_parts/planes/f12eefbbefabe566ca8607f540cc62ba",
+            // ];
+            // var plane_control = show_group(
+            //     document.getElementById("planes").getElementsByClassName("render_window"),
+            //     [planes[7], planes[1], planes[2]],
+            //     5
+            // );
+            // var plane_checkboxes = document.querySelectorAll("#planes .controls input");
+            // reset_checkboxes(plane_checkboxes);
+            // document.querySelector("#planes .controls").addEventListener(
+            //     "change",
+            //     function (ev) {
+            //         if (ev.target.id == "planes_all") {
+            //             Array.prototype.filter.call(
+            //                 plane_checkboxes,
+            //                 (el) => el.id != "planes_all"
+            //             ).forEach(function (el) {el.checked = false;});
+            //         } else if (ev.target.checked) {
+            //             plane_checkboxes[0].checked = false;
+            //         }
+
+            //         var ids = new Set();
+            //         if (plane_checkboxes[0].checked) {
+            //             ids = new Set([0, 1, 2, 3, 4]);
+            //         }
+            //         var part_ids = [4, 0, 3, 2, 1];
+            //         for (var i=1; i<plane_checkboxes.length; i++) {
+            //             if (plane_checkboxes[i].checked) {
+            //                 ids.add(part_ids[i-1]);
+            //             }
+            //         }
+
+            //         plane_control.show(Array.from(ids));
+            //     }
+            // );
+            // document.querySelector("#planes .controls button").addEventListener(
+            //     "click",
+            //     function (ev) {
+            //         reset_checkboxes(plane_checkboxes);
+            //         var new_planes = random_choice(planes, 3);
+            //         var render_windows = document.getElementById("planes").getElementsByClassName("render_window");
+            //         Array.prototype.forEach.call(render_windows, function (r) {r.innerHTML = "";});
+            //         plane_control = show_group(
+            //             render_windows,
+            //             new_planes,
+            //             5
+            //         );
+            //     }
+            // );
+        </script> -->
+
+        <script type="module">
+
+			import * as THREE from './js/three.module.js';
+
+			let camera, scene, renderer;
+
+			let isUserInteracting = false,
+				onPointerDownMouseX = 0, onPointerDownMouseY = 0,
+				lon = 92, onPointerDownLon = 0,
+				lat = -53.4, onPointerDownLat = 0,
+				phi = 0, theta = 0, fov=60,
+				width = 640, height = 480;
+
+			init();
+			animate();
+            
+
+			function init() {
+
+				const container = document.getElementById( 'container' );
+
+				//camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 1100 );
+				camera = new THREE.PerspectiveCamera( fov, width/height, 1, 1100 );
+
+				scene = new THREE.Scene();
+
+				const geometry = new THREE.SphereGeometry( 500, 60, 40 );
+				// invert the geometry on the x-axis so that all of the faces point inward
+				geometry.scale( - 1, 1, 1 );
+
+				const texture = new THREE.TextureLoader().load( 'panoramas/GS__0015.jpg' );
+				const material = new THREE.MeshBasicMaterial( { map: texture } );
+
+				const mesh = new THREE.Mesh( geometry, material );
+
+				scene.add( mesh );
+
+				renderer = new THREE.WebGLRenderer();
+				renderer.setPixelRatio( window.devicePixelRatio );
+				// renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.setSize( width, height );
+				container.appendChild( renderer.domElement );
+
+				container.style.touchAction = 'none';
+				container.addEventListener( 'pointerdown', onPointerDown );
+
+				//document.addEventListener( 'wheel', onDocumentMouseWheel );
+
+				//
+
+				document.addEventListener( 'dragover', function ( event ) {
+
+					event.preventDefault();
+					event.dataTransfer.dropEffect = 'copy';
+
+				} );
+
+				document.addEventListener( 'dragenter', function () {
+
+					document.body.style.opacity = 0.5;
+
+				} );
+
+				document.addEventListener( 'dragleave', function () {
+
+					document.body.style.opacity = 1;
+
+				} );
+
+				document.addEventListener( 'drop', function ( event ) {
+
+					event.preventDefault();
+
+					const reader = new FileReader();
+					reader.addEventListener( 'load', function ( event ) {
+
+						material.map.image.src = event.target.result;
+						material.map.needsUpdate = true;
+
+					} );
+					reader.readAsDataURL( event.dataTransfer.files[ 0 ] );
+
+					document.body.style.opacity = 1;
+
+				} );
+
+				//
+
+				window.addEventListener( 'resize', onWindowResize );
+
+			}
+
+			function onWindowResize() {
+
+				// camera.aspect = window.innerWidth / window.innerHeight;
+				// camera.updateProjectionMatrix();
+
+				// renderer.setSize( window.innerWidth, window.innerHeight );
+				camera.aspect = width / height;
+				camera.updateProjectionMatrix();
+				renderer.setSize( width, height );
+			}
+
+			function onPointerDown( event ) {
+
+				if ( event.isPrimary === false ) return;
+
+				isUserInteracting = true;
+
+				onPointerDownMouseX = event.clientX;
+				onPointerDownMouseY = event.clientY;
+
+				onPointerDownLon = lon;
+				onPointerDownLat = lat;
+
+				document.addEventListener( 'pointermove', onPointerMove );
+				document.addEventListener( 'pointerup', onPointerUp );
+
+			}
+
+			function onPointerMove( event ) {
+
+				if ( event.isPrimary === false ) return;
+
+				lon = ( onPointerDownMouseX - event.clientX ) * 0.1 + onPointerDownLon;
+				lat = ( event.clientY - onPointerDownMouseY ) * 0.1 + onPointerDownLat;
+
+			}
+
+			function onPointerUp() {
+
+				if ( event.isPrimary === false ) return;
+
+				isUserInteracting = false;
+
+				document.removeEventListener( 'pointermove', onPointerMove );
+				document.removeEventListener( 'pointerup', onPointerUp );
+
+			}
+
+			function onDocumentMouseWheel( event ) {
+
+				const fov = camera.fov + event.deltaY * 0.05;
+
+				camera.fov = THREE.MathUtils.clamp( fov, 10, 75 );
+
+				camera.updateProjectionMatrix();
+
+			}
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+				update();
+
+			}
+
+			function update() {
+
+				// if ( isUserInteracting === false ) {
+
+				// 	lon += 0.1;
+
+				// }
+
+				lat = Math.max( - 85, Math.min( 85, lat ) );
+				phi = THREE.MathUtils.degToRad( 90 - lat );
+				theta = THREE.MathUtils.degToRad( lon );
+
+				// console.log(lat);
+				// console.log(lon);
+
+				const x = 500 * Math.sin( phi ) * Math.cos( theta );
+				const y = 500 * Math.cos( phi );
+				const z = 500 * Math.sin( phi ) * Math.sin( theta );
+
+				camera.lookAt( x, y, z );
+
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+        <!--Slider-->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+        <script>
+                $.fn.BeerSlider = function ( options ) {
+                  options = options || {};
+                  return this.each(function() {
+                    new BeerSlider(this, options);
+                    
+                  });
+                };
+                $('.beer-slider').each( (function( index, el ) {
+                  $(el).BeerSlider({start: $(el).data('beer-start')})
+                }));
         </script>
+        <!-- <script>
+            // Make the carousel for the comparisons
+            var glide = new Glide(".glide", {
+                type: "carousel",
+                startAt: 0,
+                perView: 1,
+                autoplay: 2000
+            }).mount();
+        </script> -->
     </body>
 </html>
