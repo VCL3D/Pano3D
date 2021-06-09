@@ -359,24 +359,29 @@
                     For the autoencoders we use a simple convolution decoder and focus our search on the encoder part, and specifically:
                     <ul>
                         <li>
-                            A standard ResNet-152 encoder [<a href="#ResNet"><b>3</b></a>] with \(110M\) parameters {IMAGE}
+                            A standard ResNet-152 encoder [<a href="#ResNet"><b>3</b></a>] with \(110M\) parameters
                         </li>
+                            <img src="images/architectures/resnet.png" width="50%">
                         <li>
-                            A standard DenseNet-161 encoder [<a href="#DenseNet"><b>4</b></a>] with \(55M\) parameters {IMAGE}
+                            A standard DenseNet-161 encoder [<a href="#DenseNet"><b>4</b></a>] with \(55M\) parameters
                         </li>
+                            <img src="images/architectures/densenet.png" width="50%">
                         <li>
-                            A neural architecture search encoder, PNAS [<a href="#PNAS"><b>5</b></a>] with \(99M\) parameters {IMAGE}
+                            A neural architecture search encoder, PNAS [<a href="#PNAS"><b>5</b></a>] with \(99M\) parameters
                         </li>
+                            <img src="images/architectures/pnas.png" width="50%">
                     </ul>
                     In addition, our search also considers architectures with encoder-decoder skip connections:
                     <ul>
                         <li>
                             A traditional UNet [<a href="#UNet"><b>6</b></a>] with \(27M\) parameters {IMAGE}
                         </li>
+                            <img src="images/architectures/unet.png" width="50%">
                         <li>
                             A customized ResNet-152 autoencoder with UNet-like skip connections 
                             starting from the first residual block and \(112M\) parameters {IMAGE}
                         </li>
+                            <img src="images/architectures/resnet_skip.png" width="50%">
                     </ul>
                 </p>
                 <h3>Losses</h3>
@@ -657,19 +662,27 @@
                 </p>
                 <!-- ## Refining Depth Estimates: -->
                 <h2>Refining Depth Estimates</h2>
+                <div class="side-text">
                 <p>
+                    
                     Taking into account the developments for depth refinement, Pano3D also includes an analysis of a 
                     recent work using displacement fields [<a href="#DF"><b>18</b></a>], which is properly adapted to the spherical domain, 
                     to periodic displacement fields. <br>
                     We use a specialized guided stacked hourglass architecture as a refinement module that is trained 
                     using a pretrained depth model. Apart from the dual (guided) input encoder path, the guided stacked 
                     hourglass model exchanges information between the color and depth features using 
-                    Adaptive Instance Normalization (AdaIn) [<a href="#AdaIN"><b>19</b></a>]. <br>
-                    <mark>GUIDED STACKED HOURGLASS image to be added</mark> <br>
+                    Adaptive Instance Normalization (AdaIn) [<a href="#AdaIN"><b>19</b></a>]. </p> 
+                </div>
+                <div class="side-image">
+                    <img src="images/architectures/guided_sh.png" style="width:100%;">
+                </div>
+                <br>
+                <p>
                     The periodic displacement fields consistently improve the boundary preservation performance
                     of all models apart from the UNet one, which nonetheless, already exhibits the best boundary preservation performance.
                     Qualitative samples overlaying the detected boundaries for selected models are illustrated below:
                 </p>
+                
                 <table>
                     <tr>
                         <td><img src="images/qualitative/edges/gt/135_sf_gt.png" style="width:100%;"></td>
@@ -836,15 +849,25 @@
             <div class="section-title">Acknowledgements</div>
             <div class="content">
                 This project has received funding from the European Union’s Horizon 2020 innovation programme <a href="https://atlantis-ar.eu/">ATLANTIS</a> under grant agreement No 951900.
+                <table>
+                    <tr>
+                        <td>
+                            <img src="images/atlantis_logo.png" alt="atlantis">
+                        </td>
+                        <td>
+                            <img src="images/eu_logo.png" alt="eu" width="40%">
+                        </td>
+                    </tr>
+                    </table>
             </div>
             <div class="section-title">References</div>
             <div class="content">
                 <ol>
                     <li>
-                        <a id="Matterport3D"/>Chang, A., Dai, A., Funkhouser, T., Halber, M., Niessner, M., Savva, M., Song, S., Zeng, A. and Zhang, Y., 2017. Matterport3d: Learning from rgb-d data in indoor environments. arXiv preprint arXiv:1709.06158
+                        <a href="https://arxiv.org/abs/1709.06158" id="Matterport3D"/>Chang, A., Dai, A., Funkhouser, T., Halber, M., Niessner, M., Savva, M., Song, S., Zeng, A. and Zhang, Y., 2017. Matterport3d: Learning from rgb-d data in indoor environments. arXiv preprint arXiv:1709.06158
                     </li>
-		   <li>
-                        <a id="GibsonV2"/>Xia, F., Li, C., Chen, K., Shen, W.B., Martín-Martín, R., Hirose, N., Zamir, A.R., Fei-Fei, L. and Savarese, S., 2019. Gibson env v2: Embodied simulation environments for interactive navigation. Stanford University, Tech. Rep
+		            <li>
+                        <a href="http://svl.stanford.edu/gibson2/assets/gibsonv2paper.pdf" id="GibsonV2"/>Xia, F., Li, C., Chen, K., Shen, W.B., Martín-Martín, R., Hirose, N., Zamir, A.R., Fei-Fei, L. and Savarese, S., 2019. Gibson env v2: Embodied simulation environments for interactive navigation. Stanford University, Tech. Rep
                     </li>
                     <li>
                         <a id="ResNet"/>He, K., Zhang, X., Ren, S. and Sun, J., 2016, October. Identity mappings in deep residual networks. In European conference on computer vision (pp. 630-645). Springer, Cham.
