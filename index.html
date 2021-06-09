@@ -321,7 +321,7 @@
                         <ol>
                             <li>
                                 Access to the Pano3D dataset requires agreement with the terms and conditions for each of the 3D datasets
-                                that were used to create (i.e. render) it, and more specifically, Matterport3D [9] and GibsonV2 [8]. 
+                                that were used to create (i.e. render) it, and more specifically, Matterport3D [<a href="#Matterport3D"><b>1</b></a>] and GibsonV2 [<a href="#GibsonV2"><b>2</b></a>]. 
                                 Therefore, in order to grant you access to this dataset, we need you to first fill <a href="" >request form</a>.
                             </li>
                             <li>
@@ -330,8 +330,8 @@
                                 Due to data-size limitations, the dataset is split into six (6) repositories, 
                                 which respectively contain the color image, depth and normal map renders for each image. 
                                 The repositories are split into the two resolutions, with each subgroup of 3 repositories 
-                                containing the entire Matterport3D dataset renders, the entire GibsonV2 test split renders, 
-                                and the remainder of GibsonV2 which is used as additional training data. 
+                                containing the entire Matterport3D [<a href="#Matterport3D"><b>1</b></a>] dataset renders, the entire GibsonV2 [<a href="#GibsonV2"><b>2</b></a>] test split renders, 
+                                and the remainder of GibsonV2 [<a href="#GibsonV2"><b>2</b></a>] which is used as additional training data. 
                                 Therefore, a separate request for access needs to be made to each repository in order to download 
                                 the corresponding data. 
                             </li>
@@ -359,23 +359,23 @@
                     For the autoencoders we use a simple convolution decoder and focus our search on the encoder part, and specifically:
                     <ul>
                         <li>
-                            A standard ResNet-152 encoder [10] with 110M parameters {IMAGE}
+                            A standard ResNet-152 encoder [<a href="#ResNet"><b>3</b></a>] with \(110M\) parameters {IMAGE}
                         </li>
                         <li>
-                            A standard DenseNet-161 encoder [11] with 55M parameters {IMAGE}
+                            A standard DenseNet-161 encoder [<a href="#DenseNet"><b>4</b></a>] with \(55M\) parameters {IMAGE}
                         </li>
                         <li>
-                            A neural architecture search encoder, PNAS [12] with 99M parameters {IMAGE}
+                            A neural architecture search encoder, PNAS [<a href="#PNAS"><b>5</b></a>] with \(99M\) parameters {IMAGE}
                         </li>
                     </ul>
                     In addition, our search also considers architectures with encoder-decoder skip connections:
                     <ul>
                         <li>
-                            A traditional UNet [13] with 27M parameters {IMAGE}
+                            A traditional UNet [<a href="#UNet"><b>6</b></a>] with \(27M\) parameters {IMAGE}
                         </li>
                         <li>
                             A customized ResNet-152 autoencoder with UNet-like skip connections 
-                            starting from the first residual block and 112M parameters {IMAGE}
+                            starting from the first residual block and \(112M\) parameters {IMAGE}
                         </li>
                     </ul>
                 </p>
