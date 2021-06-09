@@ -384,21 +384,21 @@
                     consider standard supporting losses, as well as a recently presented globalized loss:
                     <ul>
                         <li>
-                            A L1 depth error, which is the better performing direct objective [14], supported by:
+                            A \(L_1\) depth error, which is the better performing direct objective [14], supported by:
                             <ul>
                                 <li>
-                                    A multi-scale gradient maching term [15], that aims at preserving boundaries
+                                    A multi-scale gradient maching term [15], that aims at preserving boundaries (\(L_{grad}\))
                                 </li>
                                 <li>
-                                    A surface orientation error term [3], that aims at minimizing the cosine distance between normals
+                                    A surface orientation error term [3], that aims at minimizing the cosine distance between normals (\(L_{cosine}\))
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            A combined objective for direct depth performance, boundary preservation and surface smoothness,
+                            A combined objective (\(L_{comb}\) for direct depth performance, boundary preservation and surface smoothness,
                         </li>
                         <li>
-                            The above combined error is further supported by a global virtual normal loss (VNL) [16]
+                            The above combined error is further supported by a global virtual normal loss (VNL) (\(L_{vnl}\)) [16]
                         </li>
                     </ul>
 <h3>Metrics</h3>
@@ -510,8 +510,16 @@
                     estimated depth maps.
                     <!-- ResNet -->
 
-                    <h4 style="margin-left: auto;margin-right: auto;">\(\color{#E3D10A}{ResNet}\) </h4>
+                    <!-- <h4 style="margin-left: auto;margin-right: auto;">\(\color{#E3D10A}{ResNet}\) </h4> -->
                     <table class="center" style="margin-left: auto;margin-right: auto;">
+                        <tr>
+                            <th>
+                                \(\color{#E3D10A}{ResNet}\)
+                            </th>
+                            <th>
+                                \(\color{#800080}{DenseNet}\)
+                            </th>
+                        </tr>
                         <tr>
                             <td>
                                 <div id="beer-slider" class="beer-slider" data-beer-label="Color" data-beer-start="40">
@@ -521,15 +529,26 @@
                                     </div>
                                 </div>
                             </td>
+                            <td>
+                                <div id="beer-slider" class="beer-slider" data-beer-label="Color" data-beer-start="40">
+                                    <img src="images/qualitative/color/color_9.png" alt="">
+                                    <div class="beer-reveal" data-beer-label="DenseNet">
+                                    <img src="images/qualitative/normals/densenet/normal_9.png" alt="">
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>
                                 <iframe allowfullscreen webkitallowfullscreen width="512" height="276" frameborder="0" seamless src="https://p3d.in/e/XM5H3"></iframe>
                             </td>
+                            <td>
+                                <iframe allowfullscreen webkitallowfullscreen width="512" height="276" frameborder="0" seamless src="https://p3d.in/e/mQ4yD"></iframe>
+                            </td>
                         </tr>
                     </table>
                     
-                    <!-- DenseNet -->
+                    <!-- DenseNet
 
                     <h4>\(\color{#800080}{DenseNet}\)</h4>
                     <table style="margin-left: auto;margin-right: auto;">
@@ -548,11 +567,19 @@
                                 <iframe allowfullscreen webkitallowfullscreen width="512" height="276" frameborder="0" seamless src="https://p3d.in/e/mQ4yD"></iframe>
                             </td>
                         </tr>
-                    </table>
+                    </table> -->
 
                     <!-- PNAS -->
-                    <h4>\(\color{#00FFFF}{PNAS}\)</h4>
+                    <!-- <h4>\(\color{#00FFFF}{PNAS}\)</h4> -->
                     <table style="margin-left: auto;margin-right: auto;">
+                        <tr>
+                            <th>
+                                \(\color{#00FFFF}{PNAS}\)
+                            </th>
+                            <th>
+                                \(\color{#FF00FF}{ResNet_{skip}}\)
+                            </th>
+                        </tr>
                         <tr>
                             <td>
                                 <div id="beer-slider" class="beer-slider" data-beer-label="Color" data-beer-start="40">
@@ -562,17 +589,28 @@
                                     </div>
                                 </div>
                             </td>
+                            <td>
+                                <div id="beer-slider" class="beer-slider" data-beer-label="Color" data-beer-start="40">
+                                    <img src="images/qualitative/color/color_9.png" alt="">
+                                    <div class="beer-reveal" data-beer-label="ResNetSkip">
+                                    <img src="images/qualitative/normals/skip/normal_9.png" alt="">
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
                             <td>
                                 <iframe allowfullscreen webkitallowfullscreen width="512" height="276" frameborder="0" seamless src="https://p3d.in/e/cGM6D"></iframe>
+                            </td>
+                            <td>
+                                <iframe allowfullscreen webkitallowfullscreen width="512" height="276" frameborder="0" seamless src="https://p3d.in/e/5QcwE"></iframe>
                             </td>
                         </tr>
                     </table>
 
                     <!-- ResNet_skip -->
                     
-                    <h4>\(\color{#FF00FF}{ResNet_{skip}}\)</h4>
+                    <!-- <h4>\(\color{#FF00FF}{ResNet_{skip}}\)</h4>
                     <table style="margin-left: auto;margin-right: auto;">
                         <tr>
                             <td>
@@ -589,12 +627,17 @@
                                 <iframe allowfullscreen webkitallowfullscreen width="512" height="276" frameborder="0" seamless src="https://p3d.in/e/5QcwE"></iframe>
                             </td>
                         </tr>
-                    </table>
+                    </table> -->
 
                     <!-- UNet -->
                     
-                    <h4>\(\color{#FFA600}{UNet}\)</h4>
+                    <!-- <h4>\(\color{#FFA600}{UNet}\)</h4> -->
                     <table style="margin-left: auto;margin-right: auto;">
+                        <tr>
+                            <th style="text-align:center">
+                                \(\color{#FFA600}{UNet}\)
+                            </th>
+                        </tr>
                         <tr>
                             <td>
                                 <div id="beer-slider" class="beer-slider" data-beer-label="Color" data-beer-start="40">
@@ -652,9 +695,9 @@
                 </table>
                 <p class="caption">
                     Boundary preservation qualitative comparison between the \(UNet\), \(Pnas\), \(ResNet\) and \(ResNet_{skip}\) models.
-                    From left to right: \(\textbf{i)} GT  depth\) <span style="color:rgb(0,204,153)">(green)</span>, \(\textbf{ii)} UNet\) <span style="color:rgb(255,166,0)">(orange)</span>,
-                    \(\textbf{iii)}\)  \(Pnas\) <span style="color:rgb(0,255,255)">(cyan)</span>, \(\textbf{iv)}\) \(ResNet\) <span style="color:rgb(227,209,10)">(yellow)</span>, 
-                    and \(\textbf{v)}\) \(ResNet_{skip}\) <span style="color:rgb(255,0,255)">(magenta)</span>.
+                    From left to right: \(\textbf{i)} \color{#00cc99}{GT  depth}\), \(\textbf{ii)}\color{#FFA600}{UNet}\),
+                    \(\textbf{iii)}\)  \(\color{#00FFFF}{Pnas}\), \(\textbf{iv)}\) \(\color{#E3D10A}{ResNet}\), 
+                    and \(\textbf{v)}\) \(\color{#FF00FF}{ResNet_{skip}}\).
                 </p>
             </div>
             <div class="section-title">Comparisons</div>
@@ -733,7 +776,12 @@
                             </div>
                         </td>
                         <td>
-                           add panorama viewer
+                            <div id="beer-slider" class="beer-slider" data-beer-label="Panorama" data-beer-start="40">
+                                <img src="images/in_the_wild/color_0.png" alt="">
+                                <div class="beer-reveal" data-beer-label="BiFuse">
+                                <img src="images/in_the_wild/bifuse_depth_t_0_0.png" alt="">
+                                </div>
+                            </div>
                         </td>
                     </tr>
                     <tr>
@@ -746,7 +794,12 @@
                             </div>
                         </td>
                         <td>
-                           add panorama viewer
+                            <div id="beer-slider" class="beer-slider" data-beer-label="Panorama" data-beer-start="40">
+                                <img src="images/in_the_wild/color_4.png" alt="">
+                                <div class="beer-reveal" data-beer-label="BiFuse">
+                                <img src="images/in_the_wild/bifuse_depth_t_0_4.png" alt="">
+                                </div>
+                            </div>
                         </td>
                     </tr>
                     
@@ -760,23 +813,23 @@
                    
                     <tr>
                         <td>
-                            <iframe allowfullscreen webkitallowfullscreen width="640" height="480" frameborder="0" seamless src="https://p3d.in/e/LASCa"></iframe>
+                            <iframe allowfullscreen webkitallowfullscreen width="472" height="276" frameborder="0" seamless src="https://p3d.in/e/LASCa"></iframe>
                         </td>
                         <td>
-                            <iframe allowfullscreen webkitallowfullscreen width="640" height="480" frameborder="0" seamless src="https://p3d.in/e/97DcU"></iframe>
+                            <iframe allowfullscreen webkitallowfullscreen width="472" height="276" frameborder="0" seamless src="https://p3d.in/e/97DcU"></iframe>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <iframe allowfullscreen webkitallowfullscreen width="640" height="480" frameborder="0" seamless src="https://p3d.in/e/GkYfQ"></iframe>
+                            <iframe allowfullscreen webkitallowfullscreen width="472" height="276" frameborder="0" seamless src="https://p3d.in/e/GkYfQ"></iframe>
                         </td>
                         <td>
-                            <iframe allowfullscreen webkitallowfullscreen width="640" height="480" frameborder="0" seamless src="https://p3d.in/e/4qiIe"></iframe>
+                            <iframe allowfullscreen webkitallowfullscreen width="472" height="276" frameborder="0" seamless src="https://p3d.in/e/4qiIe"></iframe>
                         </td>
                     </tr>
                     </table>
                     <p class="caption">
-                        Qualitative comparison between \({UNet}\) (on the leftc column) \(and\) \({BiFuse [21]}\) (on the right column).
+                        Qualitative comparison between \(\color{#FFA600}{UNet}\) (on the leftc column) \(and\) \(\color{#fa8ef9}{BiFuse [21]}\) (on the right column).
                     </p>
                 </div>
 
