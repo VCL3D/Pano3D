@@ -422,7 +422,7 @@
 <table class="tg">
 <tbody>
   <tr>
-	  <td class="tg-t77i" style="vertical-align: top;">Direct [<a href="#Eigen"><span style="font-color: white; color:white;"><b>1</b></span></a>, 2]</td>
+	  <td class="tg-t77i" style="vertical-align: top;">Direct [<a href="#Eigen"><span style="font-color: white; color:white;"><b>11</b></span></a>, <a href="#SVS"><span style="font-color: white; color:white;"><b>12</b></span></a>]</td>
     <td class="tg-7n52" style="vertical-align: top;">Boundary</td>
   </tr>
   <tr>
@@ -439,26 +439,26 @@
     </td>
     <td class="tg-m2jw" style="vertical-align: top;">
 	<ol>
-                                <li>\(\textit{prec}_{\{0.25, 0.5, 1.0\}}\) [3]</li>
+                                <li>\(\textit{prec}_{\{0.25, 0.5, 1.0\}}\) [<a href="#Boundary"><b>13</b></a>]</li>
                                 <!--<li>\(\textit{prec}_{0.5}\) [3]</li>
                                 <li>\(\textit{prec}_{1.0}\) [3]</li>-->
-                                <li>\(\textit{rec}_{\{0.25, 0.5, 1.0\}}\) [3]</li>
+                                <li>\(\textit{rec}_{\{0.25, 0.5, 1.0\}}\) [<a href="#Boundary"><b>13</b></a>]</li>
                                 <!--<li>\(\textit{rec}_{0.5}\) [3]</li>
                                 <li>\(\textit{rec}_{1.0}\)[3]</li>-->
-                                <li>\(\textit{dbe}^{\{acc, comp\}}\) [4]</li>
+                                <li>\(\textit{dbe}^{\{acc, comp\}}\) [<a href="#DBE"><b>14</b></a>]</li>
                                 <!--<li>\(\textit{dbe}^{comp}\) [4]</li>-->
                             </ol>  
     </td>
   </tr>
   <tr>
     <td class="tg-dj31" style="vertical-align: top;">Geometrical</td>
-    <td class="tg-l4lt" style="vertical-align: top;">Smoothness [5]</td>
+    <td class="tg-l4lt" style="vertical-align: top;">Smoothness [<a href="#Boundary"><b>9</b></a>]</td>
   </tr>
   <tr>
     <td class="tg-m2jw" style="vertical-align: top;">
 	<ol>
-                                <li>\(\textit{c2c}\) [6]</li>
-                                <li>\(\textit{m2m}\) [7]</li>
+                                <li>\(\textit{c2c}\) [<a href="#CloudCompare"><b>15</b></a>]</li>
+                                <li>\(\textit{m2m}\) [<a href="#Metro"><b>15</b></a>]</li>
                             </ol>  
     </td>
         <td class="tg-m2jw" style="vertical-align: top;">
@@ -506,7 +506,7 @@
                     From the above analysis, we define the best performing models of each architecture, with the only 
 			conflicting choice being the ResNet<sub>skip</sub> selected model where a balanced performer was chosen. 
                     Qualitative results follow with the images on the left allowing for a transition between the input color 
-                    image and the normal maps from the predicted depth, accompanied by Poisson 3D reconstruction [17] of the 
+                    image and the normal maps from the predicted depth, accompanied by Poisson 3D reconstruction [<a href="#Poisson"><b>17</b></a>] of the 
                     estimated depth maps.
                     <!-- ResNet -->
 
@@ -616,12 +616,12 @@
                 <h2>Refining Depth Estimates</h2>
                 <p>
                     Taking into account the developments for depth refinement, Pano3D also includes an analysis of a 
-                    recent work using displacement fields [18], which is properly adapted to the spherical domain, 
+                    recent work using displacement fields [<a href="#DF"><b>18</b></a>], which is properly adapted to the spherical domain, 
                     to periodic displacement fields. <br>
                     We use a specialized guided stacked hourglass architecture as a refinement module that is trained 
                     using a pretrained depth model. Apart from the dual (guided) input encoder path, the guided stacked 
                     hourglass model exchanges information between the color and depth features using 
-                    Adaptive Instance Normalization (AdaIn) [19]. <br>
+                    Adaptive Instance Normalization (AdaIn) [<a href="#AdaIN"><b>19</b></a>]. <br>
                     <mark>GUIDED STACKED HOURGLASS image to be added</mark> <br>
                     The periodic displacement fields consistently improve the boundary preservation performance
                     of all models apart from the UNet one, which nonetheless, already exhibits the best boundary preservation performance.
@@ -661,8 +661,8 @@
             <div class="content">
                 Overall, the Pano3D baseline search shows that skip connections offer higher boundary 
                 preservation performance, naturally at the expense of smoothness, but their direct depth estimation performance 
-                does not suffer from this. The following comparison between the UNet and PNAS architecture (used in [20]) shows this 
-                different, with the advantage figure on the right (similar to [21]) illustrating the areas where each model performers better than the other
+                does not suffer from this. The following comparison between the UNet and PNAS architecture (used in [<a href="#Rebalancing"><b>20</b></a>]) shows this 
+                different, with the advantage figure on the right (similar to [<a href="#HoHoNet"><b>21</b></a>]) illustrating the areas where each model performers better than the other
                 <h3>\(ResNet\) \(vs\) \(ResNet_{skip}\)</h3>
                 <table>
                     <tr>
@@ -718,10 +718,10 @@
                 <div class="content">
                    <p>
                     The Pano3D baseline is a solid panorama depth estimation model that is positioned favourably against the state-of-the-art, 
-                    with the following samples showing the BiFuse [22] predictions, compared to the UNet ones, when applied to in-the-wild panoramas 
+                    with the following samples showing the BiFuse [<a href="#BiFuse"><b>22</b></a>] predictions, compared to the UNet ones, when applied to in-the-wild panoramas 
                     acquired via both 360 cameras and stitched mobile phone captures.
                    </p>
-                   <h3>\({UNet}\) \(vs\) \({BiFuse}\) [21]</h3>
+                   <h3>\({UNet}\) \(vs\) \({BiFuse}\) [<a href="#BiFuse"><b>22</b></a>]</h3>
                    <table>
                     <tr>
                         <td>
@@ -776,7 +776,7 @@
                     </tr>
                     </table>
                     <p class="caption">
-                        Qualitative comparison between \({UNet}\) (on the leftc column) \(and\) \({BiFuse}\) [21] (on the right column).
+                        Qualitative comparison between \({UNet}\) (on the leftc column) \(and\) \({BiFuse}\) [<a href="#BiFuse"><b>22</b></a>] (on the right column).
                     </p>
                 </div>
 
