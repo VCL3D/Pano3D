@@ -267,11 +267,11 @@
             <div class="section-title">Data Generation</div>
                 <div class="content">
                     <p>
-                        Using Matterport3D [9] for training and the Pano3D GibsonV2 splits for testing, 
+			    Using Matterport3D [<a href="#Matterport3D"><b>1</b></a>] for training and the Pano3D GibsonV2 [<a href="#GibsonV2"><b>2</b></a>] splits for testing, 
                         the benchmark delivers a zero-shot cross-dataset transfer evaluation that can be 
                         applied to different generalization settings on-demand. In addition, 
-                        Pano3D offers renders in two resolutions (1024x512 and 512x256). 
-                        We further release a big part of GibsonV2 that has not been used in the Pano3D testing splits, 
+                        Pano3D offers renders in two resolutions (\(1024 \times 512\) and \(512 \times 256\)). 
+                        We further release a big part of GibsonV2 [<a href="#GibsonV2"><b>2</b></a>] that has not been used in the Pano3D testing splits, 
                         and can be used as additional training data.
 
                     </p>
@@ -788,70 +788,70 @@
             <div class="content">
                 <ol>
                     <li>
-                        <a id="Eigen14"/>Eigen, D., Puhrsch, C. and Fergus, R., 2014. Depth map prediction from a single image using a multi-scale deep network. arXiv preprint arXiv:1406.2283.
+                        <a id="Matterport3D"/>Chang, A., Dai, A., Funkhouser, T., Halber, M., Niessner, M., Savva, M., Song, S., Zeng, A. and Zhang, Y., 2017. Matterport3d: Learning from rgb-d data in indoor environments. arXiv preprint arXiv:1709.06158
+                    </li>
+		   <li>
+                        <a id="GibsonV2"/>Xia, F., Li, C., Chen, K., Shen, W.B., Martín-Martín, R., Hirose, N., Zamir, A.R., Fei-Fei, L. and Savarese, S., 2019. Gibson env v2: Embodied simulation environments for interactive navigation. Stanford University, Tech. Rep
                     </li>
                     <li>
-                        Zioulis, N., Karakottas, A., Zarpalas, D., Alvarez, F. and Daras, P., 2019, September. Spherical view synthesis for self-supervised 360 depth estimation. In 2019 International Conference on 3D Vision (3DV) (pp. 690-699). IEEE.
+                        <a id="ResNet"/>He, K., Zhang, X., Ren, S. and Sun, J., 2016, October. Identity mappings in deep residual networks. In European conference on computer vision (pp. 630-645). Springer, Cham.
                     </li>
                     <li>
-                        Hu, J., Ozay, M., Zhang, Y. and Okatani, T., 2019, January. Revisiting single image depth estimation: Toward higher resolution maps with accurate object boundaries. In 2019 IEEE Winter Conference on Applications of Computer Vision (WACV) (pp. 1043-1051). IEEE
+                       <a id="DenseNet"/>Iandola, F., Moskewicz, M., Karayev, S., Girshick, R., Darrell, T. and Keutzer, K., 2014. Densenet: Implementing efficient convnet descriptor pyramids. arXiv preprint arXiv:1404.1869.
                     </li>
                     <li>
-                        Koch, T., Liebel, L., Fraundorfer, F. and Korner, M., 2018. Evaluation of cnn-based single-image depth estimation methods. In Proceedings of the European Conference on Computer Vision (ECCV) Workshops (pp. 0-0)
+                        <a id="PNAS"/>Liu, C., Zoph, B., Neumann, M., Shlens, J., Hua, W., Li, L.J., Fei-Fei, L., Yuille, A., Huang, J. and Murphy, K., 2018. Progressive neural architecture search. In Proceedings of the European conference on computer vision (ECCV) (pp. 19-34).
                     </li>
                     <li>
-                        Wang, X., Fouhey, D. and Gupta, A., 2015. Designing deep networks for surface normal estimation. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 539-547).
+                        <a id="UNet"/>Ronneberger, O., Fischer, P. and Brox, T., 2015, October. U-net: Convolutional networks for biomedical image segmentation. In International Conference on Medical image computing and computer-assisted intervention (pp. 234-241). Springer, Cham.
                     </li>
                     <li>
-                        Girardeau-Montaut, D., 2006. Détection de changement sur des données géométriques tridimensionnelles (Doctoral dissertation, Télécom ParisTech).
+                        <a id="L1"/>Carvalho, M., Le Saux, B., Trouvé-Peloux, P., Almansa, A. and Champagnat, F., 2018, October. On regression losses for deep depth estimation. In 2018 25th IEEE International Conference on Image Processing (ICIP) (pp. 2915-2919). IEEE
                     </li>
                     <li>
-                        Cignoni, P., Rocchini, C. and Scopigno, R., 1998, June. Metro: measuring error on simplified surfaces. In Computer graphics forum (Vol. 17, No. 2, pp. 167-174). Oxford, UK and Boston, USA: Blackwell Publishers.
+                        <a id="GradLoss"/>Li, Z. and Snavely, N., 2018. Megadepth: Learning single-view depth prediction from internet photos. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 2041-2050).
                     </li>
                     <li>
-                        Xia, F., Li, C., Chen, K., Shen, W.B., Martín-Martín, R., Hirose, N., Zamir, A.R., Fei-Fei, L. and Savarese, S., 2019. Gibson env v2: Embodied simulation environments for interactive navigation. Stanford University, Tech. Rep
-                    </li>
-                    <li>
-                        Chang, A., Dai, A., Funkhouser, T., Halber, M., Niessner, M., Savva, M., Song, S., Zeng, A. and Zhang, Y., 2017. Matterport3d: Learning from rgb-d data in indoor environments. arXiv preprint arXiv:1709.06158
-                    </li>
-                    <li>
-                        He, K., Zhang, X., Ren, S. and Sun, J., 2016, October. Identity mappings in deep residual networks. In European conference on computer vision (pp. 630-645). Springer, Cham.
-                    </li>
-                    <li>
-                        Iandola, F., Moskewicz, M., Karayev, S., Girshick, R., Darrell, T. and Keutzer, K., 2014. Densenet: Implementing efficient convnet descriptor pyramids. arXiv preprint arXiv:1404.1869.
-                    </li>
-                    <li>
-                        Liu, C., Zoph, B., Neumann, M., Shlens, J., Hua, W., Li, L.J., Fei-Fei, L., Yuille, A., Huang, J. and Murphy, K., 2018. Progressive neural architecture search. In Proceedings of the European conference on computer vision (ECCV) (pp. 19-34).
-                    </li>
-                    <li>
-                        Ronneberger, O., Fischer, P. and Brox, T., 2015, October. U-net: Convolutional networks for biomedical image segmentation. In International Conference on Medical image computing and computer-assisted intervention (pp. 234-241). Springer, Cham.
-                    </li>
-                    <li>
-                        Carvalho, M., Le Saux, B., Trouvé-Peloux, P., Almansa, A. and Champagnat, F., 2018, October. On regression losses for deep depth estimation. In 2018 25th IEEE International Conference on Image Processing (ICIP) (pp. 2915-2919). IEEE
-                    </li>
-                    <li>
-                        Li, Z. and Snavely, N., 2018. Megadepth: Learning single-view depth prediction from internet photos. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 2041-2050).
-                    </li>
-                    <li>
-                        Yin, W., Liu, Y., Shen, C. and Yan, Y., 2019. Enforcing geometric constraints of virtual normal for depth prediction. In Proceedings of the IEEE/CVF International Conference on Computer Vision (pp. 5684-5693).
-                    </li>
-                    <li>
-                        Kazhdan, M., Bolitho, M. and Hoppe, H., 2006, June. Poisson surface reconstruction. In Proceedings of the fourth Eurographics symposium on Geometry processing (Vol. 7).
-                    </li>
-                    <li>
-                        Ramamonjisoa, M., Du, Y. and Lepetit, V., 2020. Predicting sharp and accurate occlusion boundaries in monocular depth estimation using displacement fields. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 14648-14657).
+                        <a id="VNL"/>Yin, W., Liu, Y., Shen, C. and Yan, Y., 2019. Enforcing geometric constraints of virtual normal for depth prediction. In Proceedings of the IEEE/CVF International Conference on Computer Vision (pp. 5684-5693).
                     </li>
 		    <li>
-			    Huang, X. and Belongie, S., 2017. Arbitrary style transfer in real-time with adaptive instance normalization. In Proceedings of the IEEE International Conference on Computer Vision (pp. 1501-1510).
+                        <a id="Eigen"/>Eigen, D., Puhrsch, C. and Fergus, R., 2014. Depth map prediction from a single image using a multi-scale deep network. arXiv preprint arXiv:1406.2283.
+                    </li>
+                    <li>
+                        <a id="SVS"/>Zioulis, N., Karakottas, A., Zarpalas, D., Alvarez, F. and Daras, P., 2019, September. Spherical view synthesis for self-supervised 360 depth estimation. In 2019 International Conference on 3D Vision (3DV) (pp. 690-699). IEEE.
+                    </li>
+                    <li>
+                        <a id="Boundary"/>Hu, J., Ozay, M., Zhang, Y. and Okatani, T., 2019, January. Revisiting single image depth estimation: Toward higher resolution maps with accurate object boundaries. In 2019 IEEE Winter Conference on Applications of Computer Vision (WACV) (pp. 1043-1051). IEEE
+                    </li>
+                    <li>
+                        <a id="DBE"/>Koch, T., Liebel, L., Fraundorfer, F. and Korner, M., 2018. Evaluation of cnn-based single-image depth estimation methods. In Proceedings of the European Conference on Computer Vision (ECCV) Workshops (pp. 0-0)
+                    </li>
+                    <li>
+                        <a id="DeepNormals"/>Wang, X., Fouhey, D. and Gupta, A., 2015. Designing deep networks for surface normal estimation. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 539-547).
+                    </li>
+                    <li>
+                        <a id="CloudCompare"/>Girardeau-Montaut, D., 2006. Détection de changement sur des données géométriques tridimensionnelles (Doctoral dissertation, Télécom ParisTech).
+                    </li>
+                    <li>
+                        <a id="Metro"/>Cignoni, P., Rocchini, C. and Scopigno, R., 1998, June. Metro: measuring error on simplified surfaces. In Computer graphics forum (Vol. 17, No. 2, pp. 167-174). Oxford, UK and Boston, USA: Blackwell Publishers.
+                    </li>
+                    <li>
+                        <a id="Poisson"/>Kazhdan, M., Bolitho, M. and Hoppe, H., 2006, June. Poisson surface reconstruction. In Proceedings of the fourth Eurographics symposium on Geometry processing (Vol. 7).
+                    </li>
+                    <li>
+                        <a id="DF"/>Ramamonjisoa, M., Du, Y. and Lepetit, V., 2020. Predicting sharp and accurate occlusion boundaries in monocular depth estimation using displacement fields. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 14648-14657).
+                    </li>
+		    <li>
+			    <a id="AdaIN"/>Huang, X. and Belongie, S., 2017. Arbitrary style transfer in real-time with adaptive instance normalization. In Proceedings of the IEEE International Conference on Computer Vision (pp. 1501-1510).
 		    </li>
                     <li>
-                        Lee, J. and Kim, C.S., 2020, August. Multi-loss Rebalancing Algorithm for Monocular Depth Estimation. In ECCV (17) (pp. 785-801).
+                        <a id="Rebalancing"/>Lee, J. and Kim, C.S., 2020, August. Multi-loss Rebalancing Algorithm for Monocular Depth Estimation. In ECCV (17) (pp. 785-801).
                     </li>
                     <li>
-                        Sun, C., Sun, M. and Chen, H.T., 2020. HoHoNet: 360 Indoor Holistic Understanding with Latent Horizontal Features. arXiv preprint arXiv:2011.11498.
+                        <a id="HoHoNet"/>Sun, C., Sun, M. and Chen, H.T., 2020. HoHoNet: 360 Indoor Holistic Understanding with Latent Horizontal Features. arXiv preprint arXiv:2011.11498.
                     </li>
                     <li>
-                        Wang, F.E., Yeh, Y.H., Sun, M., Chiu, W.C. and Tsai, Y.H., 2020. Bifuse: Monocular 360 depth estimation via bi-projection fusion. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 462-471).
+                        <a id="BiFuse"/>Wang, F.E., Yeh, Y.H., Sun, M., Chiu, W.C. and Tsai, Y.H., 2020. Bifuse: Monocular 360 depth estimation via bi-projection fusion. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 462-471).
                     </li>
                 </ol>
             </div>
