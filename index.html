@@ -267,11 +267,11 @@
             <div class="section-title">Data Generation</div>
                 <div class="content">
                     <p>
-                        Using Matterport3D [9] for training and the Pano3D GibsonV2 splits for testing, 
+			    Using Matterport3D [<a href="#Matterport3D"><b>1</b></a>] for training and the Pano3D GibsonV2 [<a href="#GibsonV2"><b>2</b></a>] splits for testing, 
                         the benchmark delivers a zero-shot cross-dataset transfer evaluation that can be 
                         applied to different generalization settings on-demand. In addition, 
-                        Pano3D offers renders in two resolutions (1024x512 and 512x256). 
-                        We further release a big part of GibsonV2 that has not been used in the Pano3D testing splits, 
+                        Pano3D offers renders in two resolutions (\(1024 \times 512\) and \(512 \times 256\)). 
+                        We further release a big part of GibsonV2 [<a href="#GibsonV2"><b>2</b></a>] that has not been used in the Pano3D testing splits, 
                         and can be used as additional training data.
 
                     </p>
@@ -321,7 +321,7 @@
                         <ol>
                             <li>
                                 Access to the Pano3D dataset requires agreement with the terms and conditions for each of the 3D datasets
-                                that were used to create (i.e. render) it, and more specifically, Matterport3D [9] and GibsonV2 [8]. 
+                                that were used to create (i.e. render) it, and more specifically, Matterport3D [<a href="#Matterport3D"><b>1</b></a>] and GibsonV2 [<a href="#GibsonV2"><b>2</b></a>]. 
                                 Therefore, in order to grant you access to this dataset, we need you to first fill <a href="" >request form</a>.
                             </li>
                             <li>
@@ -330,8 +330,8 @@
                                 Due to data-size limitations, the dataset is split into six (6) repositories, 
                                 which respectively contain the color image, depth and normal map renders for each image. 
                                 The repositories are split into the two resolutions, with each subgroup of 3 repositories 
-                                containing the entire Matterport3D dataset renders, the entire GibsonV2 test split renders, 
-                                and the remainder of GibsonV2 which is used as additional training data. 
+                                containing the entire Matterport3D [<a href="#Matterport3D"><b>1</b></a>] dataset renders, the entire GibsonV2 [<a href="#GibsonV2"><b>2</b></a>] test split renders, 
+                                and the remainder of GibsonV2 [<a href="#GibsonV2"><b>2</b></a>] which is used as additional training data. 
                                 Therefore, a separate request for access needs to be made to each repository in order to download 
                                 the corresponding data. 
                             </li>
@@ -359,23 +359,23 @@
                     For the autoencoders we use a simple convolution decoder and focus our search on the encoder part, and specifically:
                     <ul>
                         <li>
-                            A standard ResNet-152 encoder [10] with 110M parameters {IMAGE}
+                            A standard ResNet-152 encoder [<a href="#ResNet"><b>3</b></a>] with \(110M\) parameters {IMAGE}
                         </li>
                         <li>
-                            A standard DenseNet-161 encoder [11] with 55M parameters {IMAGE}
+                            A standard DenseNet-161 encoder [<a href="#DenseNet"><b>4</b></a>] with \(55M\) parameters {IMAGE}
                         </li>
                         <li>
-                            A neural architecture search encoder, PNAS [12] with 99M parameters {IMAGE}
+                            A neural architecture search encoder, PNAS [<a href="#PNAS"><b>5</b></a>] with \(99M\) parameters {IMAGE}
                         </li>
                     </ul>
                     In addition, our search also considers architectures with encoder-decoder skip connections:
                     <ul>
                         <li>
-                            A traditional UNet [13] with 27M parameters {IMAGE}
+                            A traditional UNet [<a href="#UNet"><b>6</b></a>] with \(27M\) parameters {IMAGE}
                         </li>
                         <li>
                             A customized ResNet-152 autoencoder with UNet-like skip connections 
-                            starting from the first residual block and 112M parameters {IMAGE}
+                            starting from the first residual block and \(112M\) parameters {IMAGE}
                         </li>
                     </ul>
                 </p>
@@ -384,13 +384,13 @@
                     consider standard supporting losses, as well as a recently presented globalized loss:
                     <ul>
                         <li>
-                            A \(L_1\) depth error, which is the better performing direct objective [14], supported by:
+                            A \(L_1\) depth error, which is the better performing direct objective [<a href="#L1"><b>7</b></a>], supported by:
                             <ul>
                                 <li>
-                                    A multi-scale gradient maching term [15], that aims at preserving boundaries (\(L_{grad}\))
+                                    A multi-scale gradient maching term [<a href="#GradLoss"><b>8</b></a>], that aims at preserving boundaries (\(L_{grad}\))
                                 </li>
                                 <li>
-                                    A surface orientation error term [3], that aims at minimizing the cosine distance between normals (\(L_{cosine}\))
+                                    A surface orientation error term [<a href="#DeepNormals"><b>9</b></a>], that aims at minimizing the cosine distance between normals (\(L_{cosine}\))
                                 </li>
                             </ul>
                         </li>
@@ -398,7 +398,7 @@
                             A combined objective (\(L_{comb}\) for direct depth performance, boundary preservation and surface smoothness,
                         </li>
                         <li>
-                            The above combined error is further supported by a global virtual normal loss (VNL) (\(L_{vnl}\)) [16]
+                            The above combined error is further supported by a global virtual normal loss (VNL) (\(L_{vnl}\)) [<a href="#VNL"><b>10</b></a>]
                         </li>
                     </ul>
 <h3>Metrics</h3>
@@ -422,7 +422,7 @@
 <table class="tg">
 <tbody>
   <tr>
-    <td class="tg-t77i" style="vertical-align: top;">Direct [1, 2]</td>
+	  <td class="tg-t77i" style="vertical-align: top;">Direct [<a href="#Eigen"><span style="font-color: white; color:white;"><b>11</b></span></a>, <a href="#SVS"><span style="font-color: white; color:white;"><b>12</b></span></a>]</td>
     <td class="tg-7n52" style="vertical-align: top;">Boundary</td>
   </tr>
   <tr>
@@ -439,34 +439,34 @@
     </td>
     <td class="tg-m2jw" style="vertical-align: top;">
 	<ol>
-                                <li>\(\textit{prec}_{\{0.25, 0.5, 1.0\}}\) [3]</li>
+                                <li>\(\textit{prec}_{\{0.25, 0.5, 1.0\}}\) [<a href="#Boundary"><b>13</b></a>]</li>
                                 <!--<li>\(\textit{prec}_{0.5}\) [3]</li>
                                 <li>\(\textit{prec}_{1.0}\) [3]</li>-->
-                                <li>\(\textit{rec}_{\{0.25, 0.5, 1.0\}}\) [3]</li>
+                                <li>\(\textit{rec}_{\{0.25, 0.5, 1.0\}}\) [<a href="#Boundary"><b>13</b></a>]</li>
                                 <!--<li>\(\textit{rec}_{0.5}\) [3]</li>
                                 <li>\(\textit{rec}_{1.0}\)[3]</li>-->
-                                <li>\(\textit{dbe}^{\{acc, comp\}}\) [4]</li>
+                                <li>\(\textit{dbe}^{\{acc, comp\}}\) [<a href="#DBE"><b>14</b></a>]</li>
                                 <!--<li>\(\textit{dbe}^{comp}\) [4]</li>-->
                             </ol>  
     </td>
   </tr>
   <tr>
     <td class="tg-dj31" style="vertical-align: top;">Geometrical</td>
-    <td class="tg-l4lt" style="vertical-align: top;">Smoothness [5]</td>
+    <td class="tg-l4lt" style="vertical-align: top;">Smoothness [<a href="#Boundary"><b>9</b></a>]</td>
   </tr>
   <tr>
     <td class="tg-m2jw" style="vertical-align: top;">
+	<ol>
+                                <li>\(\textit{c2c}\) [<a href="#CloudCompare"><b>15</b></a>]</li>
+                                <li>\(\textit{m2m}\) [<a href="#Metro"><b>15</b></a>]</li>
+                            </ol>  
+    </td>
+        <td class="tg-m2jw" style="vertical-align: top;">
 	<ol>
                                 <li>\(\textit{RMSE}^o\)</li>
                                 <li>\(\alpha_{\{11.25^o, 22.50^o, 30.00^o\}}\)</li>
                                 <!--<li>\(\alpha_{22.50^o}\)</li>
                                 <li>\(\alpha_{30.00^o}\)</li>-->
-                            </ol>  
-    </td>
-    <td class="tg-m2jw" style="vertical-align: top;">
-	<ol>
-                                <li>\(\textit{c2c}\) [6]</li>
-                                <li>\(\textit{m2m}\) [7]</li>
                             </ol>  
     </td>
   </tr>
@@ -506,7 +506,7 @@
                     From the above analysis, we define the best performing models of each architecture, with the only 
 			conflicting choice being the ResNet<sub>skip</sub> selected model where a balanced performer was chosen. 
                     Qualitative results follow with the images on the left allowing for a transition between the input color 
-                    image and the normal maps from the predicted depth, accompanied by Poisson 3D reconstruction [17] of the 
+                    image and the normal maps from the predicted depth, accompanied by Poisson 3D reconstruction [<a href="#Poisson"><b>17</b></a>] of the 
                     estimated depth maps.
                     <!-- ResNet -->
 
@@ -659,12 +659,12 @@
                 <h2>Refining Depth Estimates</h2>
                 <p>
                     Taking into account the developments for depth refinement, Pano3D also includes an analysis of a 
-                    recent work using displacement fields [18], which is properly adapted to the spherical domain, 
+                    recent work using displacement fields [<a href="#DF"><b>18</b></a>], which is properly adapted to the spherical domain, 
                     to periodic displacement fields. <br>
                     We use a specialized guided stacked hourglass architecture as a refinement module that is trained 
                     using a pretrained depth model. Apart from the dual (guided) input encoder path, the guided stacked 
                     hourglass model exchanges information between the color and depth features using 
-                    Adaptive Instance Normalization (AdaIn) [19]. <br>
+                    Adaptive Instance Normalization (AdaIn) [<a href="#AdaIN"><b>19</b></a>]. <br>
                     <mark>GUIDED STACKED HOURGLASS image to be added</mark> <br>
                     The periodic displacement fields consistently improve the boundary preservation performance
                     of all models apart from the UNet one, which nonetheless, already exhibits the best boundary preservation performance.
@@ -704,8 +704,8 @@
             <div class="content">
                 Overall, the Pano3D baseline search shows that skip connections offer higher boundary 
                 preservation performance, naturally at the expense of smoothness, but their direct depth estimation performance 
-                does not suffer from this. The following comparison between the UNet and PNAS architecture (used in [20]) shows this 
-                different, with the advantage figure on the right (similar to [21]) illustrating the areas where each model performers better than the other
+                does not suffer from this. The following comparison between the UNet and PNAS architecture (used in [<a href="#Rebalancing"><b>20</b></a>]) shows this 
+                different, with the advantage figure on the right (similar to [<a href="#HoHoNet"><b>21</b></a>]) illustrating the areas where each model performers better than the other
                 <h3>\(ResNet\) \(vs\) \(ResNet_{skip}\)</h3>
                 <table>
                     <tr>
@@ -761,10 +761,10 @@
                 <div class="content">
                    <p>
                     The Pano3D baseline is a solid panorama depth estimation model that is positioned favourably against the state-of-the-art, 
-                    with the following samples showing the BiFuse [22] predictions, compared to the UNet ones, when applied to in-the-wild panoramas 
+                    with the following samples showing the BiFuse [<a href="#BiFuse"><b>22</b></a>] predictions, compared to the UNet ones, when applied to in-the-wild panoramas 
                     acquired via both 360 cameras and stitched mobile phone captures.
                    </p>
-                   <h3>\({UNet}\) \(vs\) \({BiFuse [21]}\)</h3>
+                   <h3>\({UNet}\) \(vs\) \({BiFuse}\)</h3>
                    <table>
                     <tr>
                         <td>
@@ -829,7 +829,7 @@
                     </tr>
                     </table>
                     <p class="caption">
-                        Qualitative comparison between \(\color{#FFA600}{UNet}\) (on the leftc column) \(and\) \(\color{#fa8ef9}{BiFuse [21]}\) (on the right column).
+                        Qualitative comparison between \(\color{#FFA600}{UNet}\) (on the leftc column) \(and\) \(\color{#fa8ef9}{BiFuse}\) [<a href="#BiFuse"><b>22</b></a>] (on the right column).
                     </p>
                 </div>
 
@@ -841,70 +841,70 @@
             <div class="content">
                 <ol>
                     <li>
-                        Eigen, D., Puhrsch, C. and Fergus, R., 2014. Depth map prediction from a single image using a multi-scale deep network. arXiv preprint arXiv:1406.2283.
+                        <a id="Matterport3D"/>Chang, A., Dai, A., Funkhouser, T., Halber, M., Niessner, M., Savva, M., Song, S., Zeng, A. and Zhang, Y., 2017. Matterport3d: Learning from rgb-d data in indoor environments. arXiv preprint arXiv:1709.06158
+                    </li>
+		   <li>
+                        <a id="GibsonV2"/>Xia, F., Li, C., Chen, K., Shen, W.B., Martín-Martín, R., Hirose, N., Zamir, A.R., Fei-Fei, L. and Savarese, S., 2019. Gibson env v2: Embodied simulation environments for interactive navigation. Stanford University, Tech. Rep
                     </li>
                     <li>
-                        Zioulis, N., Karakottas, A., Zarpalas, D., Alvarez, F. and Daras, P., 2019, September. Spherical view synthesis for self-supervised 360 depth estimation. In 2019 International Conference on 3D Vision (3DV) (pp. 690-699). IEEE.
+                        <a id="ResNet"/>He, K., Zhang, X., Ren, S. and Sun, J., 2016, October. Identity mappings in deep residual networks. In European conference on computer vision (pp. 630-645). Springer, Cham.
                     </li>
                     <li>
-                        Hu, J., Ozay, M., Zhang, Y. and Okatani, T., 2019, January. Revisiting single image depth estimation: Toward higher resolution maps with accurate object boundaries. In 2019 IEEE Winter Conference on Applications of Computer Vision (WACV) (pp. 1043-1051). IEEE
+                       <a id="DenseNet"/>Iandola, F., Moskewicz, M., Karayev, S., Girshick, R., Darrell, T. and Keutzer, K., 2014. Densenet: Implementing efficient convnet descriptor pyramids. arXiv preprint arXiv:1404.1869.
                     </li>
                     <li>
-                        Koch, T., Liebel, L., Fraundorfer, F. and Korner, M., 2018. Evaluation of cnn-based single-image depth estimation methods. In Proceedings of the European Conference on Computer Vision (ECCV) Workshops (pp. 0-0)
+                        <a id="PNAS"/>Liu, C., Zoph, B., Neumann, M., Shlens, J., Hua, W., Li, L.J., Fei-Fei, L., Yuille, A., Huang, J. and Murphy, K., 2018. Progressive neural architecture search. In Proceedings of the European conference on computer vision (ECCV) (pp. 19-34).
                     </li>
                     <li>
-                        Wang, X., Fouhey, D. and Gupta, A., 2015. Designing deep networks for surface normal estimation. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 539-547).
+                        <a id="UNet"/>Ronneberger, O., Fischer, P. and Brox, T., 2015, October. U-net: Convolutional networks for biomedical image segmentation. In International Conference on Medical image computing and computer-assisted intervention (pp. 234-241). Springer, Cham.
                     </li>
                     <li>
-                        Girardeau-Montaut, D., 2006. Détection de changement sur des données géométriques tridimensionnelles (Doctoral dissertation, Télécom ParisTech).
+                        <a id="L1"/>Carvalho, M., Le Saux, B., Trouvé-Peloux, P., Almansa, A. and Champagnat, F., 2018, October. On regression losses for deep depth estimation. In 2018 25th IEEE International Conference on Image Processing (ICIP) (pp. 2915-2919). IEEE
                     </li>
                     <li>
-                        Cignoni, P., Rocchini, C. and Scopigno, R., 1998, June. Metro: measuring error on simplified surfaces. In Computer graphics forum (Vol. 17, No. 2, pp. 167-174). Oxford, UK and Boston, USA: Blackwell Publishers.
-                    </li>
-                    <li>
-                        Xia, F., Li, C., Chen, K., Shen, W.B., Martín-Martín, R., Hirose, N., Zamir, A.R., Fei-Fei, L. and Savarese, S., 2019. Gibson env v2: Embodied simulation environments for interactive navigation. Stanford University, Tech. Rep
-                    </li>
-                    <li>
-                        Chang, A., Dai, A., Funkhouser, T., Halber, M., Niessner, M., Savva, M., Song, S., Zeng, A. and Zhang, Y., 2017. Matterport3d: Learning from rgb-d data in indoor environments. arXiv preprint arXiv:1709.06158
-                    </li>
-                    <li>
-                        He, K., Zhang, X., Ren, S. and Sun, J., 2016, October. Identity mappings in deep residual networks. In European conference on computer vision (pp. 630-645). Springer, Cham.
-                    </li>
-                    <li>
-                        Iandola, F., Moskewicz, M., Karayev, S., Girshick, R., Darrell, T. and Keutzer, K., 2014. Densenet: Implementing efficient convnet descriptor pyramids. arXiv preprint arXiv:1404.1869.
-                    </li>
-                    <li>
-                        Liu, C., Zoph, B., Neumann, M., Shlens, J., Hua, W., Li, L.J., Fei-Fei, L., Yuille, A., Huang, J. and Murphy, K., 2018. Progressive neural architecture search. In Proceedings of the European conference on computer vision (ECCV) (pp. 19-34).
-                    </li>
-                    <li>
-                        Ronneberger, O., Fischer, P. and Brox, T., 2015, October. U-net: Convolutional networks for biomedical image segmentation. In International Conference on Medical image computing and computer-assisted intervention (pp. 234-241). Springer, Cham.
-                    </li>
-                    <li>
-                        Carvalho, M., Le Saux, B., Trouvé-Peloux, P., Almansa, A. and Champagnat, F., 2018, October. On regression losses for deep depth estimation. In 2018 25th IEEE International Conference on Image Processing (ICIP) (pp. 2915-2919). IEEE
-                    </li>
-                    <li>
-                        Li, Z. and Snavely, N., 2018. Megadepth: Learning single-view depth prediction from internet photos. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 2041-2050).
-                    </li>
-                    <li>
-                        Yin, W., Liu, Y., Shen, C. and Yan, Y., 2019. Enforcing geometric constraints of virtual normal for depth prediction. In Proceedings of the IEEE/CVF International Conference on Computer Vision (pp. 5684-5693).
-                    </li>
-                    <li>
-                        Kazhdan, M., Bolitho, M. and Hoppe, H., 2006, June. Poisson surface reconstruction. In Proceedings of the fourth Eurographics symposium on Geometry processing (Vol. 7).
-                    </li>
-                    <li>
-                        Ramamonjisoa, M., Du, Y. and Lepetit, V., 2020. Predicting sharp and accurate occlusion boundaries in monocular depth estimation using displacement fields. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 14648-14657).
+                        <a id="GradLoss"/>Li, Z. and Snavely, N., 2018. Megadepth: Learning single-view depth prediction from internet photos. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 2041-2050).
                     </li>
 		    <li>
-			    Huang, X. and Belongie, S., 2017. Arbitrary style transfer in real-time with adaptive instance normalization. In Proceedings of the IEEE International Conference on Computer Vision (pp. 1501-1510).
+                        <a id="DeepNormals"/>Wang, X., Fouhey, D. and Gupta, A., 2015. Designing deep networks for surface normal estimation. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 539-547).
+                    </li>
+                    <li>
+                        <a id="VNL"/>Yin, W., Liu, Y., Shen, C. and Yan, Y., 2019. Enforcing geometric constraints of virtual normal for depth prediction. In Proceedings of the IEEE/CVF International Conference on Computer Vision (pp. 5684-5693).
+                    </li>
+		    <li>
+                        <a id="Eigen"/>Eigen, D., Puhrsch, C. and Fergus, R., 2014. Depth map prediction from a single image using a multi-scale deep network. arXiv preprint arXiv:1406.2283.
+                    </li>
+                    <li>
+                        <a id="SVS"/>Zioulis, N., Karakottas, A., Zarpalas, D., Alvarez, F. and Daras, P., 2019, September. Spherical view synthesis for self-supervised 360 depth estimation. In 2019 International Conference on 3D Vision (3DV) (pp. 690-699). IEEE.
+                    </li>
+                    <li>
+                        <a id="Boundary"/>Hu, J., Ozay, M., Zhang, Y. and Okatani, T., 2019, January. Revisiting single image depth estimation: Toward higher resolution maps with accurate object boundaries. In 2019 IEEE Winter Conference on Applications of Computer Vision (WACV) (pp. 1043-1051). IEEE
+                    </li>
+                    <li>
+                        <a id="DBE"/>Koch, T., Liebel, L., Fraundorfer, F. and Korner, M., 2018. Evaluation of cnn-based single-image depth estimation methods. In Proceedings of the European Conference on Computer Vision (ECCV) Workshops (pp. 0-0)
+                    </li>
+                    <li>
+                        <a id="CloudCompare"/>Girardeau-Montaut, D., 2006. Détection de changement sur des données géométriques tridimensionnelles (Doctoral dissertation, Télécom ParisTech).
+                    </li>
+                    <li>
+                        <a id="Metro"/>Cignoni, P., Rocchini, C. and Scopigno, R., 1998, June. Metro: measuring error on simplified surfaces. In Computer graphics forum (Vol. 17, No. 2, pp. 167-174). Oxford, UK and Boston, USA: Blackwell Publishers.
+                    </li>
+                    <li>
+                        <a id="Poisson"/>Kazhdan, M., Bolitho, M. and Hoppe, H., 2006, June. Poisson surface reconstruction. In Proceedings of the fourth Eurographics symposium on Geometry processing (Vol. 7).
+                    </li>
+                    <li>
+                        <a id="DF"/>Ramamonjisoa, M., Du, Y. and Lepetit, V., 2020. Predicting sharp and accurate occlusion boundaries in monocular depth estimation using displacement fields. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 14648-14657).
+                    </li>
+		    <li>
+			    <a id="AdaIN"/>Huang, X. and Belongie, S., 2017. Arbitrary style transfer in real-time with adaptive instance normalization. In Proceedings of the IEEE International Conference on Computer Vision (pp. 1501-1510).
 		    </li>
                     <li>
-                        Lee, J. and Kim, C.S., 2020, August. Multi-loss Rebalancing Algorithm for Monocular Depth Estimation. In ECCV (17) (pp. 785-801).
+                        <a id="Rebalancing"/>Lee, J. and Kim, C.S., 2020, August. Multi-loss Rebalancing Algorithm for Monocular Depth Estimation. In ECCV (17) (pp. 785-801).
                     </li>
                     <li>
-                        Sun, C., Sun, M. and Chen, H.T., 2020. HoHoNet: 360 Indoor Holistic Understanding with Latent Horizontal Features. arXiv preprint arXiv:2011.11498.
+                        <a id="HoHoNet"/>Sun, C., Sun, M. and Chen, H.T., 2020. HoHoNet: 360 Indoor Holistic Understanding with Latent Horizontal Features. arXiv preprint arXiv:2011.11498.
                     </li>
                     <li>
-                        Wang, F.E., Yeh, Y.H., Sun, M., Chiu, W.C. and Tsai, Y.H., 2020. Bifuse: Monocular 360 depth estimation via bi-projection fusion. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 462-471).
+                        <a id="BiFuse"/>Wang, F.E., Yeh, Y.H., Sun, M., Chiu, W.C. and Tsai, Y.H., 2020. Bifuse: Monocular 360 depth estimation via bi-projection fusion. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 462-471).
                     </li>
                 </ol>
             </div>
