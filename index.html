@@ -384,13 +384,13 @@
                     consider standard supporting losses, as well as a recently presented globalized loss:
                     <ul>
                         <li>
-                            A L1 depth error, which is the better performing direct objective [14], supported by:
+                            A L1 depth error, which is the better performing direct objective [<a href="#L1"><b>7</b></a>], supported by:
                             <ul>
                                 <li>
-                                    A multi-scale gradient maching term [15], that aims at preserving boundaries
+                                    A multi-scale gradient maching term [<a href="#GradLoss"><b>8</b></a>], that aims at preserving boundaries
                                 </li>
                                 <li>
-                                    A surface orientation error term [3], that aims at minimizing the cosine distance between normals
+                                    A surface orientation error term [<a href="#DeepNormals"><b>9</b></a>], that aims at minimizing the cosine distance between normals
                                 </li>
                             </ul>
                         </li>
@@ -398,7 +398,7 @@
                             A combined objective for direct depth performance, boundary preservation and surface smoothness,
                         </li>
                         <li>
-                            The above combined error is further supported by a global virtual normal loss (VNL) [16]
+                            The above combined error is further supported by a global virtual normal loss (VNL) [<a href="#VNL"><b>10</b></a>]
                         </li>
                     </ul>
 <h3>Metrics</h3>
@@ -811,6 +811,9 @@
                     <li>
                         <a id="GradLoss"/>Li, Z. and Snavely, N., 2018. Megadepth: Learning single-view depth prediction from internet photos. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 2041-2050).
                     </li>
+		    <li>
+                        <a id="DeepNormals"/>Wang, X., Fouhey, D. and Gupta, A., 2015. Designing deep networks for surface normal estimation. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 539-547).
+                    </li>
                     <li>
                         <a id="VNL"/>Yin, W., Liu, Y., Shen, C. and Yan, Y., 2019. Enforcing geometric constraints of virtual normal for depth prediction. In Proceedings of the IEEE/CVF International Conference on Computer Vision (pp. 5684-5693).
                     </li>
@@ -825,9 +828,6 @@
                     </li>
                     <li>
                         <a id="DBE"/>Koch, T., Liebel, L., Fraundorfer, F. and Korner, M., 2018. Evaluation of cnn-based single-image depth estimation methods. In Proceedings of the European Conference on Computer Vision (ECCV) Workshops (pp. 0-0)
-                    </li>
-                    <li>
-                        <a id="DeepNormals"/>Wang, X., Fouhey, D. and Gupta, A., 2015. Designing deep networks for surface normal estimation. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 539-547).
                     </li>
                     <li>
                         <a id="CloudCompare"/>Girardeau-Montaut, D., 2006. Détection de changement sur des données géométriques tridimensionnelles (Doctoral dissertation, Télécom ParisTech).
