@@ -165,7 +165,7 @@
                 <p>
                     For evaluating depth from spherical panoramas we show that 
                     without proper weighting the metrics favour performance in distorted areas. 
-                    Apart from the <span style="color: #4472c4"><b>direct depth performance metrics</b></span>, the Pano3D benchmark also 
+                    Apart from the <span style="color: #4472c4"><b>direct depth performance metrics</b></span>, the \(\textbf{Pano3D}\) benchmark also 
                     includes implementations for metrics measuring <span style="color: #ff0000"><b>depth boundary preservation</b></span> and 
                     <span style="color: #00b050"><b>depth smoothness.</b></span>. Finally, it also includes aggregated 3D metrics that consolidate 
                     boundary and smoothness errors in different ways that are more appropriate for 
@@ -195,11 +195,11 @@
             <div class="section-title">Data Generation</div>
                 <div class="content">
                     <p>
-			    Using Matterport3D [<a href="#Matterport3D"><b>1</b></a>] for training and the Pano3D GibsonV2 [<a href="#GibsonV2"><b>2</b></a>] splits for testing, 
+			    Using Matterport3D [<a href="#Matterport3D"><b>1</b></a>] for training and the \(\textbf{Pano3D}\) GibsonV2 [<a href="#GibsonV2"><b>2</b></a>] splits for testing, 
                         the benchmark delivers a zero-shot cross-dataset transfer evaluation that can be 
                         applied to different generalization settings on-demand. In addition, 
-                        Pano3D offers renders in two resolutions (\(1024 \times 512\) and \(512 \times 256\)). 
-                        We further release a big part of GibsonV2 [<a href="#GibsonV2"><b>2</b></a>] that has not been used in the Pano3D testing splits, 
+                        \(\textbf{Pano3D}\) offers renders in two resolutions (\(1024 \times 512\) and \(512 \times 256\)). 
+                        We further release a big part of GibsonV2 [<a href="#GibsonV2"><b>2</b></a>] that has not been used in the \(\textbf{Pano3D}\) testing splits, 
                         and can be used as additional training data.
 
                     </p>
@@ -245,10 +245,10 @@
                     </div>
                     <h3>Download</h3>
                     <p>
-                        To download the Pano3D dataset we follow a two-step process:
+                        To download the \(\textbf{Pano3D}\) dataset we follow a two-step process:
                         <ol>
                             <li>
-                                Access to the Pano3D dataset requires agreement with the terms and conditions for each of the 3D datasets
+                                Access to the \(\textbf{Pano3D}\) dataset requires agreement with the terms and conditions for each of the 3D datasets
                                 that were used to create (i.e. render) it, and more specifically, Matterport3D [<a href="#Matterport3D"><b>1</b></a>] and GibsonV2 [<a href="#GibsonV2"><b>2</b></a>]. 
                                 Therefore, in order to grant you access to this dataset, we need you to first fill <a href="" >request form</a>.
                             </li>
@@ -282,7 +282,7 @@
             <div class="content">
                 <h3>Architecture</h3>
                 <p>
-                    The Pano3D baseline search relies on single-pass autoencoder architectures supervised by a weighted combination
+                    The \(\textbf{Pano3D}\) baseline search relies on single-pass autoencoder architectures supervised by a weighted combination
                     of different loss functions, each focusing on a specific depth map trait.
                     For the autoencoders we use a simple convolution decoder and focus our search on the encoder part, and specifically:
                     <ul>
@@ -599,7 +599,7 @@
                 <div class="side-text">
                 <p>
                     
-                    Taking into account the developments for depth refinement, Pano3D also includes an analysis of a 
+                    Taking into account the developments for depth refinement, \(\textbf{Pano3D}\) also includes an analysis of a 
                     recent work using displacement fields [<a href="#DF"><b>18</b></a>], which is properly adapted to the spherical domain, 
                     to periodic displacement fields. <br>
                     We use a specialized guided stacked hourglass architecture as a refinement module that is trained 
@@ -648,7 +648,7 @@
             </div>
             <div class="section-title">Comparisons</div>
             <div class="content">
-                Overall, the Pano3D baseline search shows that skip connections offer higher boundary 
+                Overall, the \(\textbf{Pano3D}\) baseline search shows that skip connections offer higher boundary 
                 preservation performance, naturally at the expense of smoothness, but their direct depth estimation performance 
                 does not suffer from this. The following comparison between the UNet and PNAS architecture (used in [<a href="#Rebalancing"><b>20</b></a>]) shows this 
                 different, with the advantage figure on the right (similar to [<a href="#HoHoNet"><b>21</b></a>]) illustrating the areas where each model performers better than the other
@@ -707,7 +707,7 @@
             <div class="section-title">In-the-wild Results</div>
                 <div class="content">
                    <p>
-                    The Pano3D baseline is a solid panorama depth estimation model that is positioned favourably against the state-of-the-art, 
+                    The \(\textbf{Pano3D}\) baseline is a solid panorama depth estimation model that is positioned favourably against the state-of-the-art, 
                     with the following samples showing the BiFuse [<a href="#BiFuse"><b>22</b></a>] predictions, compared to the UNet ones, when applied to in-the-wild panoramas 
                     acquired via both 360 cameras and stitched mobile phone captures.
                    </p>
