@@ -109,7 +109,7 @@
                     Georgios Albanis <sup>1</sup>
                 </a>
                 <a href=https://zokin.github.io/>
-                    Nikolaos Zioulis <sup>1,2</sup>
+                    Nikolaos Zioulis <sup>1, 2</sup>
                 </a>
                 <a href=https://github.com/pdrak>
                     Petros Drakoulis <sup>1</sup>
@@ -150,19 +150,6 @@
                     Code
                 </a>
             </div>
-            <!--<div class="teaser-image">
-                <img src="images/teaser_new.png" style="width:50%;">
-                <p class="caption">\(\textbf{Pano3D}\) is a new benchmark for depth estimation from spherical panoramas. 
-                    Its goal is to drive progress for this task in a consistent and holistic manner. 
-                    To achieve that we generate a new dataset and integrate evaluation metrics that 
-                    capture not only depth performance, 
-                    but also secondary traits like boundary preservation and smoothness. 
-                    Moreover, \(\textbf{Pano3D}\) takes a step beyond  typical intra-dataset evaluation schemes 
-                    to inter-dataset  performance  assessment.   By  disentangling  generalization to 
-                    three different axes,  \(\textbf{Pano3D}\) facilitates proper extrapolation assessment under different out-of-training data conditions.
-                    Relying on the  \(\textbf{Pano3D}\) holistic benchmark for 360 depth estimation we  perform an  extended  analysis  and derive a solid baseline for the task.
-                    </p>
-            </div>-->
 	    <div class="side-image">
                 <img src="images/teaser_new.png" style="width:85%;">
             </div>
@@ -423,8 +410,8 @@
                 To holistically assess the different models, we employ performance indicators that aggregate metrics across the different dimensions:
                 <ul>
                     <li>\(\Large i_d = \frac{1}{(1 - \delta_{1.25}) \times RMSE}\),</li>
-                    <li>\(\LARGE  i_b = \frac{1}{(1 - \frac{(F_{0.25} + F_{0.5} + F_{1.0})}{3}) \times dbe^{acc}}\), where \(F_{t}=2\frac{prec_{t} \times rec_{t}}{prec_{t} + rec_{t}}\),</li>
-                    <li>\(\Huge i_s = \frac{1}{(1 - \frac{(\alpha_{11.25^o} + \alpha_{22.5^o} + \alpha_{30^o})}{3}) \times RMSE^o}\),</li>
+                    <li>\(\Large  i_b = \frac{1}{(1 - \frac{(F_{0.25} + F_{0.5} + F_{1.0})}{3}) \times dbe^{acc}}\), where \(F_{t}=2\frac{prec_{t} \times rec_{t}}{prec_{t} + rec_{t}}\),</li>
+                    <li>\(\Large i_s = \frac{1}{(1 - \frac{(\alpha_{11.25^o} + \alpha_{22.5^o} + \alpha_{30^o})}{3}) \times RMSE^o}\),</li>
                 </ul>
                 <div class="indicators">
                     <figure style="width: 32.00%;">
