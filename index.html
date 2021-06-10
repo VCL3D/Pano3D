@@ -481,9 +481,9 @@
                 <h3>Indicators</h3>
                 To holistically assess the different models, we employ performance indicators that aggregate metrics across the different dimensions:
                 <ul>
-                    <li>\(i_d = \frac{1}{(1 - \delta_{1.25}) \times RMSE}\),</li>
-                    <li>\(i_b = \frac{1}{(1 - \frac{(F_{0.25} + F_{0.5} + F_{1.0})}{3}) \times dbe^{acc}}\), where \(F_{t}=2\frac{prec_{t} \times rec_{t}}{prec_{t} + rec_{t}}\),</li>
-                    <li>\(i_s = \frac{1}{(1 - \frac{(\alpha_{11.25^o} + \alpha_{22.5^o} + \alpha_{30^o})}{3}) \times RMSE^o}\),</li>
+                    <li>\(\Large i_d = \frac{1}{(1 - \delta_{1.25}) \times RMSE}\),</li>
+                    <li>\(\LARGE  i_b = \frac{1}{(1 - \frac{(F_{0.25} + F_{0.5} + F_{1.0})}{3}) \times dbe^{acc}}\), where \(F_{t}=2\frac{prec_{t} \times rec_{t}}{prec_{t} + rec_{t}}\),</li>
+                    <li>\(\Huge i_s = \frac{1}{(1 - \frac{(\alpha_{11.25^o} + \alpha_{22.5^o} + \alpha_{30^o})}{3}) \times RMSE^o}\),</li>
                 </ul>
                 <div class="indicators">
                     <figure style="width: 32.00%;">
@@ -667,7 +667,7 @@
                 </p>
                 <!-- ## Refining Depth Estimates: -->
 <div class="section-title">Refining Depth Estimates</div>                
-<h2 class="section-title">Refining Depth Estimates</h2>
+<!--<h2 class="section-title">Refining Depth Estimates</h2>-->
                 <div class="side-text">
                 <p>
                     
@@ -713,8 +713,7 @@
                     </tr>
                 </table>
                 <p class="caption">
-                    Boundary preservation qualitative comparison between the \(UNet\), \(Pnas\), \(ResNet\) and \(ResNet_{skip}\) models.
-                    From left to right: \(\textbf{i)} \color{#00cc99}{GT  depth}\), \(\textbf{ii)}\color{#FFA600}{UNet}\),
+                    Boundary preservation qualitative comparison, from left to right: \(\textbf{i)} \color{#00cc99}{ GT depth}\), \(\textbf{ii)}\color{#FFA600}{ UNet}\),
                     \(\textbf{iii)}\)  \(\color{#00FFFF}{Pnas}\), \(\textbf{iv)}\) \(\color{#E3D10A}{ResNet}\), 
                     and \(\textbf{v)}\) \(\color{#FF00FF}{ResNet_{skip}}\).
                 </p>
@@ -725,7 +724,8 @@
                 preservation performance, naturally at the expense of smoothness, but their direct depth estimation performance 
                 does not suffer from this. The following comparison between the UNet and PNAS architecture (used in [<a href="#Rebalancing"><b>20</b></a>]) shows this 
                 different, with the advantage figure on the right (similar to [<a href="#HoHoNet"><b>21</b></a>]) illustrating the areas where each model performers better than the other
-                <h3>\(ResNet\) \(vs\) \(ResNet_{skip}\)</h3>
+                
+	        <h3 align="center">\(ResNet\) \(vs\) \(ResNet_{skip}\)</h3>
                 <table>
                     <tr>
                         <td>
@@ -750,7 +750,7 @@
                     It is apparent that the addition of skip connections allows \(ResNet_{skip}\) to capture finer-grained details.
                 </p>
 
-                <h3>\({UNet}\) \(vs\) \({PNAS}\)</h3>
+                <h3 align="center">\({UNet}\) \(vs\) \({PNAS}\)</h3>
 
                 <table>
                     <tr>
@@ -783,7 +783,8 @@
                     with the following samples showing the BiFuse [<a href="#BiFuse"><b>22</b></a>] predictions, compared to the UNet ones, when applied to in-the-wild panoramas 
                     acquired via both 360 cameras and stitched mobile phone captures.
                    </p>
-                   <h3>\({UNet}\) \(vs\) \({BiFuse}\)</h3>
+			
+                   <h3 align="center">\({UNet}\) \(vs\) \({BiFuse}\)</h3>
                    <table>
                     <tr>
                         <td>
@@ -861,7 +862,7 @@
                             <img src="images/atlantis_logo.png" alt="atlantis">
                         </td>
                         <td>
-                            <img src="images/eu_logo.png" alt="eu" width="40%">
+                            <img src="images/eu_logo.png" alt="eu" width="50%">
                         </td>
                     </tr>
                     </table>
