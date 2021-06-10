@@ -299,3 +299,60 @@ video {
     display: inline-block;
     transition: background-color 0.6s ease;
   }
+
+/* testing icons */
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?vg2v8n');
+    src:  url('fonts/icomoon.eot?vg2v8n#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?vg2v8n') format('truetype'),
+      url('fonts/icomoon.woff?vg2v8n') format('woff'),
+      url('fonts/icomoon.svg?vg2v8n#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    /* speak: never; */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-densenet_icon:before {
+    content: "\e900";
+    color: #800080;
+    font-size: x-large;
+  }
+
+
+.icon-pnas:before {
+    content: "\e901";
+    color: #00FFFF;
+    font-size: x-large;
+  }
+  .icon-resnet_icon:before {
+    content: "\e902";
+    color: #E3D10A;
+    font-size: x-large;
+  }
+  .icon-resnet_skip_icon:before {
+    content: "\e903";
+    color: #FF00FF;
+    font-size: x-large;
+  }
+  .icon-unet:before {
+    content: "\e904";
+    color: #FFA600;
+    font-size: x-large;
+  }

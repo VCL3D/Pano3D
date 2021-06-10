@@ -361,27 +361,27 @@
                         <li>
                             A standard ResNet-152 encoder [<a href="#ResNet"><b>3</b></a>] with \(110M\) parameters
                         </li>
-                            <img src="images/architectures/resnet.png" width="50%">
+                            <img src="images/architectures/resnet.png" width="40%">
                         <li>
                             A standard DenseNet-161 encoder [<a href="#DenseNet"><b>4</b></a>] with \(55M\) parameters
                         </li>
-                            <img src="images/architectures/densenet.png" width="50%">
+                            <img src="images/architectures/densenet.png" width="40%">
                         <li>
                             A neural architecture search encoder, PNAS [<a href="#PNAS"><b>5</b></a>] with \(99M\) parameters
                         </li>
-                            <img src="images/architectures/pnas.png" width="50%">
+                            <img src="images/architectures/pnas.png" width="40%">
                     </ul>
                     In addition, our search also considers architectures with encoder-decoder skip connections:
                     <ul>
                         <li>
-                            A traditional UNet [<a href="#UNet"><b>6</b></a>] with \(27M\) parameters {IMAGE}
+                            A traditional UNet [<a href="#UNet"><b>6</b></a>] with \(27M\) parameters
                         </li>
-                            <img src="images/architectures/unet.png" width="50%">
+                            <img src="images/architectures/unet.png" width="40%">
                         <li>
                             A customized ResNet-152 autoencoder with UNet-like skip connections 
-                            starting from the first residual block and \(112M\) parameters {IMAGE}
+                            starting from the first residual block and \(112M\) parameters
                         </li>
-                            <img src="images/architectures/resnet_skip.png" width="50%">
+                            <img src="images/architectures/resnet_skip.png" width="40%">
                     </ul>
                 </p>
                 <h3>Losses</h3>
@@ -519,9 +519,11 @@
                     <table class="center" style="margin-left: auto;margin-right: auto;">
                         <tr>
                             <th>
-                                \(\color{#E3D10A}{ResNet}\)
+                                <span class="icon-resnet_icon"></span>
+                                \(\color{#E3D10A}{ResNet}\) 
                             </th>
                             <th>
+                                <span class="icon-densenet_icon"></span>
                                 \(\color{#800080}{DenseNet}\)
                             </th>
                         </tr>
@@ -579,9 +581,11 @@
                     <table style="margin-left: auto;margin-right: auto;">
                         <tr>
                             <th>
+                                <span class="icon-pnas"></span>
                                 \(\color{#00FFFF}{PNAS}\)
                             </th>
                             <th>
+                                <span class="icon-resnet_skip_icon"></span>
                                 \(\color{#FF00FF}{ResNet_{skip}}\)
                             </th>
                         </tr>
@@ -640,6 +644,7 @@
                     <table style="margin-left: auto;margin-right: auto;">
                         <tr>
                             <th style="text-align:center">
+                                <span class="icon-unet"></span>
                                 \(\color{#FFA600}{UNet}\)
                             </th>
                         </tr>
