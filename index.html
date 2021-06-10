@@ -183,65 +183,7 @@
                     <span style="color: #00b050"><b>depth smoothness.</b></span>. Finally, it also includes aggregated 3D metrics that consolidate 
                     boundary and smoothness errors in different ways that are more appropriate for 
                     different downstream tasks (e.g. view synthesis or 3D reconstruction).
-                </p>
-                <!--<table style="width:100%" cellspacing="0">
-                    <tr>
-                        <th style="text-align: center;background-color: #4472c4;">
-                            Direct [1,2]
-                        </th>
-                        <th style="text-align: center;background-color: #ff0000">
-                            Boundary
-                        </th>
-                        <th style="text-align: center;background-color: #00b050">
-                            Smoothness[5]
-                        </th>
-                        <th style="text-align: center;background-color: #05a1bdaf;">
-                            Geometrical
-                        </th>
-                    </tr>
-                    <tr>
-                        <td style="vertical-align: top;">
-                            <ol>
-                                <li>\(\textit{(w)RMSE}\)</li>
-                                <li>\(\textit{(w)RMSLE}\)</li>
-                                <li>\(\textit{AbsRel}\)</li>
-                                <li>\(\textit{SqRel}\)</li>
-                                <li>\((w)\delta_{\{1.05, 1.0, 1.25, 1.25^2, 1.25^3\}}\)</li>
-                                <li>\((w)\delta_{1.25^2}\)</li>
-                                <li>\((w)\delta_{1.25^3}\)</li>
-                            </ol>
-                        </td>
-                        <td style="vertical-align: top;">
-                            <ol>
-                                <li>\(\textit{prec}_{\{0.25, 0.5, 1.0\}}\) [3]</li>
-                                <li>\(\textit{prec}_{0.5}\) [3]</li>
-                                <li>\(\textit{prec}_{1.0}\) [3]</li>
-                                <li>\(\textit{rec}_{\{0.25, 0.5, 1.0\}}\) [3]</li>
-                                <li>\(\textit{rec}_{0.5}\) [3]</li>
-                                <li>\(\textit{rec}_{1.0}\)[3]</li>
-                                <li>\(\textit{dbe}^{\{acc, comp\}}\) [4]</li>
-                                <li>\(\textit{dbe}^{comp}\) [4]</li>
-                            </ol>
-                        </td>
-                        <td style="vertical-align: top;">
-                            <ol>
-                                <li>\(\textit{RMSE}^o\)</li>
-                                <li>\(\alpha_{\{11.25^o, 22.50^o, 30.00^o\}}\)</li>
-                                <li>\(\alpha_{22.50^o}\)</li>
-                                <li>\(\alpha_{30.00^o}\)</li>
-                            </ol>
-
-                        </td>
-                        <td style="vertical-align: top;">
-                            <ol>
-                                <li>\(\textit{c2c}\) [6]</li>
-                                <li>\(\textit{m2m}\) [7]</li>
-                            </ol>
-                        </td>
-                    </tr>
-                  
-                </table>-->
-	        
+                </p>                	        
             </div>
             <div class="side-image">
                 <img src="images/depth_estimation.png" style="width:50%;">
@@ -260,7 +202,6 @@
                     i) <span style="color: #f7a206"><b>target depth distribution</b></span>, 
                     ii) <span style="color: #6206f7"><b>scene context</b></span>, and
                     iii) <span style="color: #f706cf"><b>varying camera domain</b></span>. 
-                    We render the GibsonV2 dataset [8] and split it to deliver test sets belonging to each axis.
                 </p>
             </div>
 
