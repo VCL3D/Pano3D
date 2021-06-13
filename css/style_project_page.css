@@ -12,7 +12,8 @@ body {
 }
 a {
     text-decoration: none;
-    color: #0505af;
+    color: #2196f3;
+    /*color: #0505af;*/
 }
 .section {
     max-width: 950px;
