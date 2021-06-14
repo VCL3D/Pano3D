@@ -89,14 +89,18 @@ Each volume is broken down in several <code>.zip</code> files (2GB each) for mor
 </table> -->
  <h1> Acknowledgements </h1>
  This dataset has been generated within the European Union’s Horizon 2020 innovation programme [ATLANTIS](https://atlantis-ar.eu/) under grant agreement No 951900.
+ <br>
+
+ <img align="middle" src="../assets/images/atlantis_logo.png" alt="atlantis" width="100%" >
+ <img src="../assets/images/eu_logo.png" alt="eu" width="50%" class="center">
 
  <table>
 <tr>
 <td>
-<img src="../assets/images/atlantis_logo.png" alt="atlantis">
+
 </td>
 <td>
-<img src="../assets/images/eu_logo.png" alt="eu" width="10%">
+
 </td>
 </tr>
 </table>
