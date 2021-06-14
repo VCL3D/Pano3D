@@ -16,6 +16,7 @@ We offer 3 different modalities as indicated below, with the corresponding data 
 | `Color` images | <code>.png</code> | gray, _i.e._ `(64, 64, 64)` |
 | `Depth` maps | single channel, floating point <code>.exr</code> | `(inf)` |
 | `Normal` maps | 3-channel (_x, y, z_), floating point <code>.exr</code> | `(0.0f, 0.0f, 0.0f)` & `(nan, nan, nan)` |
+
 <h2> Samples </h2>
 <p align="center">
   <div> 
