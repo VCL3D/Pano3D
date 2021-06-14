@@ -77,7 +77,7 @@ Each modality has a corresponding data format and invalid values (due to imperfe
  <h1> Download Data </h1>
 
 <p style="text-align: justify;">
-                To download the **Pano3D** dataset a two-step process is employed as the rendered dataset is a derivative of third party 3D datasets. To get access to download the dataset two **parallel** steps are required:
+  To download the <b>Pano3D</b> dataset a two-step process is employed as the rendered dataset is a derivative of third party 3D datasets. To get access to download the dataset two **parallel** steps are required:
                         <ol>
                             <li>
                                 First, to agree with the terms and conditions for each of the 3D datasets that were used to create (i.e. render) it, and more specifically, Matterport3D [<a href="#Matterport3D"><b>1</b></a>] and GibsonV2 [<a href="#GibsonV2"><b>2</b></a>]. This is accomplished by filling in this <a href="" >request form</a>.
