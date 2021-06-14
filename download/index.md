@@ -103,10 +103,11 @@ Each modality has a corresponding data format and invalid values (due to imperfe
                                   </ul>
                                 </li>
                               </ol>
-                                Therefore, a separate request for access needs to be made to each repository in order to download 
-                                the corresponding data. 
+                               
                             </li>
                         </ol>
+                        Therefore, a separate request for access needs to be made to each repository in order to download 
+                                the corresponding data. 
 </p>
 <p style="text-align: justify;">
   <b>Note</b> that only completing one step of the two (<i>i.e.</i> only filling out the form, or only requesting access from the Zenodo repositories <b>will not</b> be enough to get access to the data. We will do our best to contact you in such cases and notify you to complete all steps as needed, but our mails may be lost (e.g. spam filters/folders). 
