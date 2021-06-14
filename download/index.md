@@ -3,7 +3,10 @@ The **Pano3D** 360<sup>o</sup> depth estimation benchmark provides a standard <a
 
 The latter is used for zero-shot cross dataset transfer performance assessment and decomposes it into 3 different splits, each one ablating a specific generalization trait.
 
-<h1> Modalities </h1>
+<h1> Dataset Description </h1>
+
+<h2> Modalities </h2>
+
 The dataset offers `3` different modalities as indicated below:
 
 | __Image Type__        | __Data Format__           | __Invalid Value__  |
@@ -21,10 +24,35 @@ Each modality has a corresponding data format and invalid values (due to imperfe
   <div align="center"> 
     <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
   </div>  
+  
+  <h3> GibsonV2 Medium </h3>
+  <div align="center"> 
+    <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
+  </div>  
+  
+  <h3> GibsonV2 Fullplus </h3>
+  <div align="center"> 
+    <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
+  </div>  
+  
+  <h3> GibsonV2 Full </h3>
+  <div align="center"> 
+    <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
+  </div>  
+
+ <h3> GibsonV2 Tiny Filmic </h3>
+  <div align="center"> 
+    <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
+  </div>  
+  
+  <h3> GibsonV2 Fullplus Filmic </h3>
+  <div align="center"> 
+    <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
+  </div>  
 
  <h1> Usage </h1>
 
- <h2> Download </h2>
+ <h1> Download Data </h1>
 
 <p style="text-align: justify;">
                 To download the <i>Pano3D</i> dataset we follow a two-step process:
