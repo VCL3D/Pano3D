@@ -20,9 +20,9 @@ Each modality has a corresponding data format and invalid values (due to imperfe
 
 <h2> Samples </h2>
 
- <h3> GibsonV2 Tiny </h3>
+ <!--<h3> GibsonV2 Tiny </h3>
   <div align="center"> 
-    <img src="../assets/data_gifs/gv2_tiny.gif" width="75%" style="float:center; margin-right:1%;">
+    <img src="../assets/data_gifs/gv2_tiny.gif" width="45%" style="float:center; margin-right:1%;">
   </div>  
   <br/>
   
@@ -54,7 +54,54 @@ Each modality has a corresponding data format and invalid values (due to imperfe
   <div align="center"> 
     <img src="../assets/data_gifs/gv2_tiny.gif" width="75%" style="float:center; margin-right:1%;">
   </div>  
-  <br/>
+  <br/>-->
+  
+  <style type="text/css">
+.tg  {border:none;border-collapse:collapse;border-spacing:0;margin:0px auto;}
+.tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+  padding:10px 5px;word-break:normal;}
+.tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-290e{background-color:#1f78b4;border-color:inherit;color:#efefef;
+  font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-7c40{background-color:#986536;border-color:inherit;font-family:"Lucida Console", Monaco, monospace !important;;
+  font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-kzsc{background-color:#e7298a;color:#efefef;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-xhg5{border-color:inherit;font-family:"Lucida Console", Monaco, monospace !important;;text-align:center;vertical-align:top}
+.tg .tg-9cbo{background-color:#b3de69;border-color:inherit;font-family:"Lucida Console", Monaco, monospace !important;;
+  font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-yz71{background-color:#1b9e77;border-color:inherit;color:#efefef;
+  font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-yz71">GibsonV2 Tiny</td>
+    <td class="tg-290e">GibsonV2 Medium</td>
+  </tr>
+  <tr>
+    <td class="tg-xhg5"> <img src="../assets/data_gifs/gv2_tiny.gif" width="45%" style="float:center; margin-right:1%;"></td>
+    <td class="tg-xhg5"> <img src="../assets/data_gifs/gv2_tiny.gif" width="45%" style="float:center; margin-right:1%;"></td>
+  </tr>
+  <tr>
+    <td class="tg-9cbo">GibsonV2 Fullplus</td>
+    <td class="tg-7c40">GibsonV2 Full</td>
+  </tr>
+  <tr>
+    <td class="tg-xhg5"> <img src="../assets/data_gifs/gv2_tiny.gif" width="45%" style="float:center; margin-right:1%;"></td>
+    <td class="tg-xhg5"> <img src="../assets/data_gifs/gv2_tiny.gif" width="45%" style="float:center; margin-right:1%;"></td>
+  </tr>
+  <tr>
+    <td class="tg-kzsc">GibsonV2 Tiny Filmic</td>
+    <td class="tg-kzsc">GibsonV2 Fullplus Filmic</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"> <img src="../assets/data_gifs/gv2_tiny.gif" width="45%" style="float:center; margin-right:1%;"></td>
+    <td class="tg-baqh"> <img src="../assets/data_gifs/gv2_tiny.gif" width="45%" style="float:center; margin-right:1%;"></td>
+  </tr>
+</tbody>
+</table>
   
  <h1> Usage </h1>
 
