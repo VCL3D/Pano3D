@@ -5,7 +5,7 @@ description: A dataset for UAV assistant tasks
 
 github:
     form_url: https://forms.gle/uCAZutW8PGzR8Mhn9
-    zenodo_url: https://zenodo.org/record/3994337#.X0PCeegzaUk
+    zenodo_url: https://vcl3d.github.io/Pano3D/download/#Download
     repository_url: https://github.com/VCL3D/UAVA
     is_project_page: true
     repository_name: UAVA
