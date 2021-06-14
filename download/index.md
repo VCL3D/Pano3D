@@ -13,24 +13,16 @@ We offer 3 different modalities as indicated below, with the corresponding data 
 
 | __Image Type__        | __Data Format__           | __Invalid Value__  |
 | ------------- |:-------------:|:-----:|
-| `Color` | `.png` | gray, <br/> _i.e._ `(64, 64, 64)` |
+| `Color` | `.png` | true black, <br/> _i.e._ `(0, 0, 0)` |
 | `Depth` | single channel, <br/> floating point `.exr` | `(inf)` |
 | `Normal` | 3-channel (_x, y, z_),<br/> floating point `.exr` | `(0.0f, 0.0f, 0.0f)` <br/> & `(nan, nan, nan)` |
 
 <h2> Samples </h2>
-<!--<p align="center">-->
+
  <h3> GibsonV2 Tiny </h3>
   <div align="center"> 
     <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
-  </div>
-  <!-- <div> 
-    <img src="./assets/img/data_gifs/DatasetGifStanford.gif" width="32%" style="float:left; margin-right:1%;">
-  </div>
-  <div> 
-    <img src="./assets/img/data_gifs/DatasetGifSunCG.gif" width="32%" style="float:left; margin-right:1%;">
-  </div> -->
-  <!--<p style="clear:both;"/>-->
-<!--</p>-->
+  </div>  
 
  <h1> Usage </h1>
 
