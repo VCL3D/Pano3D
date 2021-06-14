@@ -68,7 +68,7 @@ Each modality has a corresponding data format and invalid values (due to imperfe
 </table>
   
   When training on Matterport3D the above splits offer:
-  - Tiny: Same context (residential buildings) but different depth distribution
+  - <span class="tg-yz71">Tiny</span>: Same context (residential buildings) but different depth distribution
   - Medium: Same context (residential buildings) but different depth distribution
   - Fullplus: Different context (non exclusively residential buildings) but of the same depth distribution
   - Filmic: Same as the original splits but with a shifted camera (color) domain
