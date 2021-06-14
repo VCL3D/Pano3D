@@ -103,26 +103,10 @@ Each modality has a corresponding data format and invalid values (due to imperfe
                                   </ul>
                                 </li>
                               </ol>
-
-                                which respectively contain the color image, depth and normal map renders for each image. 
-                                The repositories are split into the two resolutions, with each subgroup of 3 repositories 
-                                containing the entire Matterport3D dataset renders, the entire GibsonV2 test split renders, 
-                                and the remainder of GibsonV2 which is used as additional training data. 
                                 Therefore, a separate request for access needs to be made to each repository in order to download 
                                 the corresponding data. 
                             </li>
                         </ol>
-                        <b>Note</b> that only completing one step of the two (i.e. only filling out the form, or only requesting access 
-                        from the Zenodo repositories) <b>will not</b> be enough to get access to the data. 
-                        We will do our best to contact you in such cases and notify you to complete all steps as needed, 
-                        but our mails may be lost (e.g. spam filters/folders). 
-                        The only exception to this, is if you have already filled in the form and need access to another Zenodo repository 
-                        (for example you need extra dataset/splits which are hosted on different Zenodo repositories), then you only need 
-                        to fill in the Zenodo request but please, make sure to mention that the form has already been filled in so that 
-                        we can verify it. <br>
-
-                        Each volume is broken down in several .zip files (2GB each) for more convenient downloading on low 
-                        bandwidth connections. You need all the .zip archives of each volume in order to extract the containing files.
 </p>
 <p style="text-align: justify;">
   <b>Note</b> that only completing one step of the two (<i>i.e.</i> only filling out the form, or only requesting access from the Zenodo repositories <b>will not</b> be enough to get access to the data. We will do our best to contact you in such cases and notify you to complete all steps as needed, but our mails may be lost (e.g. spam filters/folders). 
@@ -130,11 +114,12 @@ Each modality has a corresponding data format and invalid values (due to imperfe
 </p>
 
 <p style="text-align: justify;">
-Each volume is broken down in several <code>.zip</code> files (2GB each) for more convinient downloading on low bandwidth connections. You need all the <code>.zip</code> archives of each volume in order to extract the containing files.
+Each volume is broken down in several <code>.zip</code> files (2GB each) for more convinient downloading on low bandwidth connections. You need all the <code>.zip</code> archives of each volume in order to extract the containing files, recommendably with <a href="https://www.7-zip.org/">7zip's GUI</a>.
 </p>
 
  <h2> Data splits </h2>
- We follow the same data-split logic as defined in Matterport3D. We use GV2 splits for testing only.
+ We follow the same data-split logic as defined in Matterport3D. 
+ The GV2 subgroups are used as distinct splits with only the full variant used for training.
 
 <!-- <h2> Data organisation</h2>
 <table>
@@ -148,16 +133,4 @@ Each volume is broken down in several <code>.zip</code> files (2GB each) for mor
  This dataset has been generated within the European Union’s Horizon 2020 innovation programme [ATLANTIS](https://atlantis-ar.eu/) under grant agreement No 951900.
  <br>
 
- <img align="middle" src="../assets/images/atlantis_logo.png" alt="atlantis" width="100%" >
- <img src="../assets/images/eu_logo.png" alt="eu" width="50%" class="center">
-
- <table>
-<tr>
-<td>
-
-</td>
-<td>
-
-</td>
-</tr>
-</table>
+ <a href="https://atlantis-ar.eu/"><img align="middle" src="../assets/images/atlantis_logo.png" alt="atlantis" width="75%" ></a><img src="../assets/images/eu_logo.png" alt="eu" width="35%" class="center">
