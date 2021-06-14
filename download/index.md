@@ -13,13 +13,14 @@ We offer 3 different modalities as indicated below, with the corresponding data 
 
 | __Image Type__        | __Data Format__           | __Invalid Value__  |
 | ------------- |:-------------:|:-----:|
-| `Color` images | `.png` | gray, <br/> _i.e._ `(64, 64, 64)` |
-| `Depth` maps | single channel, floating point <code>.exr</code> | `(inf)` |
-| `Normal` maps | 3-channel (_x, y, z_), floating point <code>.exr</code> | `(0.0f, 0.0f, 0.0f)` & `(nan, nan, nan)` |
+| `Color` | `.png` | gray, <br/> _i.e._ `(64, 64, 64)` |
+| `Depth` | single channel, <br/> floating point `.exr` | `(inf)` |
+| `Normal` | 3-channel (_x, y, z_),<br/> floating point `.exr` | `(0.0f, 0.0f, 0.0f)` <br/> & `(nan, nan, nan)` |
 
 <h2> Samples </h2>
-<p align="center">
-  <div> 
+<!--<p align="center">-->
+ <h3> GibsonV2 Tiny </h3>
+  <div align="center"> 
     <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
   </div>
   <!-- <div> 
@@ -28,8 +29,8 @@ We offer 3 different modalities as indicated below, with the corresponding data 
   <div> 
     <img src="./assets/img/data_gifs/DatasetGifSunCG.gif" width="32%" style="float:left; margin-right:1%;">
   </div> -->
-  <p style="clear:both;"/>
-</p>
+  <!--<p style="clear:both;"/>-->
+<!--</p>-->
 
  <h1> Usage </h1>
 
