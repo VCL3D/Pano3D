@@ -22,7 +22,7 @@ Each modality has a corresponding data format and invalid values (due to imperfe
 
  <h3> GibsonV2 Tiny </h3>
   <div align="center"> 
-    <img src="../assets/data_gifs/gv2_tiny.gif" width="75%" style="float:left; margin-right:1%;">
+    <img src="../assets/data_gifs/gv2_tiny.gif" width="75%" style="float:center; margin-right:1%;">
   </div>  
   <br/>
   
