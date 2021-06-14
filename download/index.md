@@ -77,17 +77,33 @@ Each modality has a corresponding data format and invalid values (due to imperfe
  <h1> Download Data </h1>
 
 <p style="text-align: justify;">
-                To download the **Pano3D** dataset we follow a two-step process:
+                To download the **Pano3D** dataset a two-step process is employed as the rendered dataset is a derivative of third party 3D datasets. To get access to download the dataset two **parallel** steps are required:
                         <ol>
                             <li>
-                                Access to the **Pano3D** dataset requires agreement with the terms and conditions for each of the 3D datasets
-                                that were used to create (i.e. render) it, and more specifically, Matterport3D [<a href="#Matterport3D"><b>1</b></a>] and GibsonV2 [<a href="#GibsonV2"><b>2</b></a>]. 
-                                Therefore, in order to grant you access to this dataset, we need you to first fill <a href="" >request form</a>.
+                                First, to agree with the terms and conditions for each of the 3D datasets that were used to create (i.e. render) it, and more specifically, Matterport3D [<a href="#Matterport3D"><b>1</b></a>] and GibsonV2 [<a href="#GibsonV2"><b>2</b></a>]. This is accomplished by filling in this <a href="" >request form</a>.
                             </li>
                             <li>
-                                Then, you need to perform a request for access to the respective Zenodo repositories, 
-                                where the data are hosted. 
-                                Due to data-size limitations, the dataset is split into six (6) repositories, 
+                                Second, a request for access to the respective Zenodo repositories where the data are hosted is required, one for each split/part.
+                                Due to Zenodo's quota limitations, the dataset is split into six (6) repositories grouped in resolutions and splits/parts as follows:
+                              <ol>
+                                <li>`1024 x 512` Resolution
+                                    <ul>
+                                      <li>Matterport3D Train & Test</li>
+                                      <li>GibsonV2 Full (**w/o normals**)</li>
+                                      <li>GibsonV2 Tiny, Medium & Fullplus (**w/o normals**)</li>
+                                      <li>GibsonV2 Full **normals only**</li>
+                                      <li>GibsonV2 Tiny, Medium & Fullplus **normals only**</li>
+                                  </ul>
+                                </li>
+                                <li>`512 x 256` Resolution
+                                    <ul>
+                                      <li>Matterport3D Train & Test</li>
+                                      <li>GibsonV2 Full</li>
+                                      <li>GibsonV2 Tiny, Medium & Fullplus</li>
+                                  </ul>
+                                </li>
+                              </ol>
+
                                 which respectively contain the color image, depth and normal map renders for each image. 
                                 The repositories are split into the two resolutions, with each subgroup of 3 repositories 
                                 containing the entire Matterport3D dataset renders, the entire GibsonV2 test split renders, 
