@@ -4,7 +4,7 @@
   
 The <b>Pano3D</b> 360<sup>o</sup> depth estimation benchmark provides a standard <a href="https://niessner.github.io/Matterport/">Matterport3D</a> train and test split, as well as a secondary <a href="http://gibsonenv.stanford.edu/database/">GibsonV2</a> partioning for testing and training as well.
 
-The latter is used for zero-shot cross dataset transfer performance assessment and decomposes it into 3 different splits, each one focusing on a specific generalization trait.
+The latter is used for zero-shot cross dataset transfer performance assessment and decomposes it into 3 different splits, each one focusing on a specific generalization axis.
 
 </p>
 
