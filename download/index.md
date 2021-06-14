@@ -1,8 +1,12 @@
 <h1 id="overview">Overview</h1>
 
+<p style="text-align: justify;">
+  
 The **Pano3D** 360<sup>o</sup> depth estimation benchmark provides a standard <a href="https://niessner.github.io/Matterport/">Matterport3D</a> train and test split, as well as a secondary <a href="http://gibsonenv.stanford.edu/database/">GibsonV2</a> partioning for testing and training as well.
 
 The latter is used for zero-shot cross dataset transfer performance assessment and decomposes it into 3 different splits, each one ablating a specific generalization trait.
+
+</p>
 
 <h1> Data Description </h1>
 
@@ -16,7 +20,7 @@ The dataset offers `3` different modalities as indicated below:
 | `Depth` | single channel, <br/> floating point `.exr` | `(inf)` |
 | `Normal` | 3-channel (_x, y, z_),<br/> floating point `.exr` | `(0.0f, 0.0f, 0.0f)` <br/> & `(nan, nan, nan)` |
 
-Each modality has a corresponding data format and invalid values (due to imperfect scanning, holes manifest during rendering).
+<p style="text-align: justify;">Each modality has a corresponding data format and invalid values (due to imperfect scanning, holes manifest during rendering).</p>
 
 
 <h2> Splits </h2>
@@ -78,12 +82,12 @@ Each modality has a corresponding data format and invalid values (due to imperfe
  <h1> Download Data </h1><a href="#Download"/>
 
 <p style="text-align: justify;">
-  To download the <b>Pano3D</b> dataset a two-step process is employed as the rendered dataset is a derivative of third party 3D datasets. To get access to download the dataset two **parallel** steps are required:
+  To download the <b>Pano3D</b> dataset a two-step process is employed as the rendered dataset is a derivative of third party 3D datasets. To get access to download the dataset two <b>parallel</b> steps are required:
                         <ol>
-                            <li>
-                                First, to agree with the terms and conditions for each of the 3D datasets that were used to create (i.e. render) it, and more specifically, Matterport3D [<a href="#Matterport3D"><b>1</b></a>] and GibsonV2 [<a href="#GibsonV2"><b>2</b></a>]. This is accomplished by filling in this <a href="" >request form</a>.
+                            <li style="text-align: justify;">
+                                First, to agree with the terms and conditions for each of the 3D datasets that were used to create (i.e. render) it, and more specifically, Matterport3D and GibsonV2. This is accomplished by filling in this <a href="">request form</a>.
                             </li>
-                            <li>
+                            <li style="text-align: justify;">
                                 Second, a request for access to the respective Zenodo repositories where the data are hosted is required, one for each split/part.
                                 Due to Zenodo's quota limitations, the dataset is split into eight (8) repositories grouped in resolutions and splits/parts as follows:
                               <ol>
@@ -107,8 +111,8 @@ Each modality has a corresponding data format and invalid values (due to imperfe
                                
                             </li>
                         </ol>
-                        Therefore, a separate request for access needs to be made to each repository in order to download 
-                                the corresponding data. 
+                        <p style="text-align: justify;">Therefore, a separate request for access needs to be made to each repository in order to download 
+                                the corresponding data. </p>
 </p>
 <p style="text-align: justify;">
   <b>Note</b> that only completing one step of the two (<i>i.e.</i> only filling out the form, or only requesting access from the Zenodo repositories <b>will not</b> be enough to get access to the data. We will do our best to contact you in such cases and notify you to complete all steps as needed, but our mails may be lost (e.g. spam filters/folders). 
