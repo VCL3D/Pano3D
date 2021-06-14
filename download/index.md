@@ -19,7 +19,7 @@ We offer 3 different modalities as indicated below, with the corresponding data 
 <h2> Samples </h2>
 <p align="center">
   <div> 
-    <img src=".assets/images/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
+    <img src="./assets/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
   </div>
   <!-- <div> 
     <img src="./assets/img/data_gifs/DatasetGifStanford.gif" width="32%" style="float:left; margin-right:1%;">
