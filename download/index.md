@@ -1,21 +1,19 @@
 <h1 id="overview">Overview</h1>
-The <i>Pano3D</i>, dataset is specifically designed for fostering 360 based applications.
-We employ two real-world 3D scanned datasets (<a href="https://niessner.github.io/Matterport/">Matterport3D</a>) and  (<a href="http://gibsonenv.stanford.edu/database/">GibsonV2</a>), and physically-based rendering, to generate realistic multimodal data.
- <!-- <p>
- <img src="./assets/images/dataset_concept.png" alt="DatasetConcept">
- </p> -->
+The **Pano3D** 360<sup>o</sup> depth estimation benchmark provides a standard <a href="https://niessner.github.io/Matterport/">Matterport3D</a> train and test split, as well as a secondary <a href="http://gibsonenv.stanford.edu/database/">GibsonV2</a> partioning for testing and training as well.
 
- <h1 id="motivation">Motivation</h1>
-Even though great progress has been achieved during the last years in the 360 domain, there is still a gap regarding data availability, which permits evaluating the generalization ability of the developed algorithms. To that end, Pano3d aims at filling this gap by providing a large corpus of data, varying in terms of domain, lighting conditions, and  <a href="https://docs.blender.org/manual/en/latest/render/color_management.html">color spaces</a>. 
+The latter is used for zero-shot cross dataset transfer performance assessment and decomposes it into 3 different splits, each one ablating a specific generalization trait.
 
 <h1> Modalities </h1>
-We offer 3 different modalities as indicated below, with the corresponding data formats following and the invalid values (due to imperfect scanning, holes manifest during rendering) denoted in brackets.
+The dataset offers `3` different modalities as indicated below:
 
 | __Image Type__        | __Data Format__           | __Invalid Value__  |
 | ------------- |:-------------:|:-----:|
 | `Color` | `.png` | true black, <br/> _i.e._ `(0, 0, 0)` |
 | `Depth` | single channel, <br/> floating point `.exr` | `(inf)` |
 | `Normal` | 3-channel (_x, y, z_),<br/> floating point `.exr` | `(0.0f, 0.0f, 0.0f)` <br/> & `(nan, nan, nan)` |
+
+Each modality has a corresponding data format and invalid values (due to imperfect scanning, holes manifest during rendering).
+
 
 <h2> Samples </h2>
 
