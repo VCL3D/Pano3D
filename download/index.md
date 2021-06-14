@@ -33,19 +33,18 @@ We offer 3 different modalities as indicated below, with the corresponding data 
  <h1> Usage </h1>
 
  <h2> Download </h2>
-<p>We follow a <b>two-step</b> procedure to download the <b>UAVA</b> dataset.</p>
 
 <p style="text-align: justify;">
-                To download the \(\textbf{Pano3D}\) dataset we follow a two-step process:
+                To download the <i>Pano3D</i> dataset we follow a two-step process:
                         <ol>
                             <li>
-                                Access to the \(\textbf{Pano3D}\) dataset requires agreement with the terms and conditions for each of the 3D datasets
+                                Access to the <i>Pano3D</i> dataset requires agreement with the terms and conditions for each of the 3D datasets
                                 that were used to create (i.e. render) it, and more specifically, Matterport3D [<a href="#Matterport3D"><b>1</b></a>] and GibsonV2 [<a href="#GibsonV2"><b>2</b></a>]. 
                                 Therefore, in order to grant you access to this dataset, we need you to first fill <a href="" >request form</a>.
                             </li>
                             <li>
                                 Then, you need to perform a request for access to the respective Zenodo repositories, 
-                                where the data are hosted (more information can be found in our <a href="" >download page</a>). 
+                                where the data are hosted. 
                                 Due to data-size limitations, the dataset is split into six (6) repositories, 
                                 which respectively contain the color image, depth and normal map renders for each image. 
                                 The repositories are split into the two resolutions, with each subgroup of 3 repositories 
