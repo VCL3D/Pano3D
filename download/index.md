@@ -19,7 +19,7 @@ We offer 3 different modalities as indicated below, with the corresponding data 
 <h2> Samples </h2>
 <p align="center">
   <div> 
-    <img src="./assets/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
+    <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
   </div>
   <!-- <div> 
     <img src="./assets/img/data_gifs/DatasetGifStanford.gif" width="32%" style="float:left; margin-right:1%;">
@@ -93,10 +93,10 @@ Each volume is broken down in several <code>.zip</code> files (2GB each) for mor
  <table>
 <tr>
 <td>
-<img src="./assets/images/eu_logo.png" alt="eu">
+<img src="../assets/images/atlantis_logo.png" alt="atlantis">
 </td>
 <td>
-<img src="./assets/images/atlantis_logo.png" alt="atlantis">
+<img src="../assets/images/eu_logo.png" alt="eu" width="10%">
 </td>
 </tr>
 </table>
