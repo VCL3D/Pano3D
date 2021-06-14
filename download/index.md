@@ -124,8 +124,10 @@ Each volume is broken down in several <code>.zip</code> files (2GB each) for mor
 </p>
 
  <h2> Data splits </h2>
- We follow the same data-split logic as defined in Matterport3D. 
- The GV2 subgroups are used as distinct splits with only the full variant used for training.
+ <p style="text-align: justify;">
+  We follow the same data-split logic as defined in Matterport3D. 
+  The GV2 subgroups are used as distinct splits with only the full variant used for training.
+  </p>
 
 <!-- <h2> Data organisation</h2>
 <table>
