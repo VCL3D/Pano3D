@@ -68,11 +68,11 @@ Each modality has a corresponding data format and invalid values (due to imperfe
 </table>
   
   When training on Matterport3D the above splits offer:
-  - <span style="color: #1b9e77;">Tiny</span>: Same context (residential buildings) but different depth distribution
-  - <span style="color: #1f78b4;">Medium</span>: Same context (residential buildings) but different depth distribution
-  - <span style="color: #b3de69;">Fullplus</span>: Different context (non exclusively residential buildings) but of the same depth distribution
-  - <span style="color: #e7298a;">Filmic</span>: Same as the original splits but with a shifted camera (color) domain
-  - <span style="color: #986536;">Full</span>: An expanded (`~ x3` compared to Matterport3D) training set
+  - <b><span style="color: #1b9e77;">Tiny</span></b>: <b>Same</b> context (residential buildings) but <b>different</b> depth distribution
+  - <b><span style="color: #1f78b4;">Medium</span></b>: <b>Same</b> context (residential buildings) but <b>different</b> depth distribution
+  - <b><span style="color: #b3de69;">Fullplus</span></b>: <b>Different</b> context (non exclusively residential buildings) but of the <b>same</b> depth distribution
+  - <b><span style="color: #e7298a;">Filmic</span></b>: <b>Same</b> as the original splits but with a <b>shifted</b> camera (color) domain
+  - <b><span style="color: #986536;">Full</span></b>: An <b>expanded</b> (`~ x3` compared to Matterport3D) training set
 
  <h1> Download Data </h1>
 
@@ -89,10 +89,10 @@ Each modality has a corresponding data format and invalid values (due to imperfe
                                 <li>`1024 x 512` Resolution
                                     <ul>
                                       <li>Matterport3D Train & Test</li>
-                                      <li>GibsonV2 Full (**w/o normals**)</li>
-                                      <li>GibsonV2 Tiny, Medium & Fullplus (**w/o normals**)</li>
-                                      <li>GibsonV2 Full **normals only**</li>
-                                      <li>GibsonV2 Tiny, Medium & Fullplus **normals only**</li>
+                                      <li>GibsonV2 Full (<b>w/o normals</b>)</li>
+                                      <li>GibsonV2 Tiny, Medium & Fullplus (<b>w/o normals</b>)</li>
+                                      <li>GibsonV2 Full <b>normals only</b></li>
+                                      <li>GibsonV2 Tiny, Medium & Fullplus <b>normals only</b></li>
                                   </ul>
                                 </li>
                                 <li>`512 x 256` Resolution
