@@ -84,7 +84,7 @@ Each modality has a corresponding data format and invalid values (due to imperfe
                             </li>
                             <li>
                                 Second, a request for access to the respective Zenodo repositories where the data are hosted is required, one for each split/part.
-                                Due to Zenodo's quota limitations, the dataset is split into six (6) repositories grouped in resolutions and splits/parts as follows:
+                                Due to Zenodo's quota limitations, the dataset is split into eight (8) repositories grouped in resolutions and splits/parts as follows:
                               <ol>
                                 <li>`1024 x 512` Resolution
                                     <ul>
