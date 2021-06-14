@@ -30,7 +30,7 @@ Each modality has a corresponding data format and invalid values (due to imperfe
   font-family:"Lucida Console", Monaco, monospace !important;;font-weight:bold;text-align:center;vertical-align:top}
 .tg .tg-baqh{text-align:center;vertical-align:top}
 .tg .tg-7c40{background-color:#986536;border-color:inherit;font-family:"Lucida Console", Monaco, monospace !important;;
-  font-weight:bold;text-align:center;vertical-align:top}
+  font-weight:bold;text-align:center;vertical-align:top;color:#efefef}
 .tg .tg-kzsc{background-color:#e7298a;color:#efefef;font-weight:bold;text-align:center;vertical-align:top}
 .tg .tg-xhg5{border-color:inherit;font-family:"Lucida Console", Monaco, monospace !important;;text-align:center;vertical-align:top}
 .tg .tg-9cbo{background-color:#b3de69;border-color:inherit;font-family:"Lucida Console", Monaco, monospace !important;;
@@ -72,10 +72,10 @@ Each modality has a corresponding data format and invalid values (due to imperfe
  <h1> Download Data </h1>
 
 <p style="text-align: justify;">
-                To download the <i>Pano3D</i> dataset we follow a two-step process:
+                To download the **Pano3D** dataset we follow a two-step process:
                         <ol>
                             <li>
-                                Access to the <i>Pano3D</i> dataset requires agreement with the terms and conditions for each of the 3D datasets
+                                Access to the **Pano3D** dataset requires agreement with the terms and conditions for each of the 3D datasets
                                 that were used to create (i.e. render) it, and more specifically, Matterport3D [<a href="#Matterport3D"><b>1</b></a>] and GibsonV2 [<a href="#GibsonV2"><b>2</b></a>]. 
                                 Therefore, in order to grant you access to this dataset, we need you to first fill <a href="" >request form</a>.
                             </li>
