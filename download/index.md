@@ -28,31 +28,31 @@ Each modality has a corresponding data format and invalid values (due to imperfe
   
   <h3> GibsonV2 Medium </h3>
   <div align="center"> 
-    <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
+    <img src="../assets/data_gifs/gv2_tiny.gif" width="75%" style="float:center; margin-right:1%;">
   </div>  
   <br/>
   
   <h3> GibsonV2 Fullplus </h3>
   <div align="center"> 
-    <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
+    <img src="../assets/data_gifs/gv2_tiny.gif" width="75%" style="float:center; margin-right:1%;">
   </div>  
   <br/>
   
   <h3> GibsonV2 Full </h3>
   <div align="center"> 
-    <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
+    <img src="../assets/data_gifs/gv2_tiny.gif" width="75%" style="float:center; margin-right:1%;">
   </div>  
   <br/>
 
   <h3> GibsonV2 Tiny Filmic </h3>
   <div align="center"> 
-    <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
+    <img src="../assets/data_gifs/gv2_tiny.gif" width="75%" style="float:center; margin-right:1%;">
   </div>  
   <br/>
   
   <h3> GibsonV2 Fullplus Filmic </h3>
   <div align="center"> 
-    <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
+    <img src="../assets/data_gifs/gv2_tiny.gif" width="75%" style="float:center; margin-right:1%;">
   </div>  
   <br/>
   
