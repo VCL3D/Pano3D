@@ -19,42 +19,6 @@ Each modality has a corresponding data format and invalid values (due to imperfe
 
 
 <h2> Samples </h2>
-
- <!--<h3> GibsonV2 Tiny </h3>
-  <div align="center"> 
-    <img src="../assets/data_gifs/gv2_tiny.gif" width="45%" style="float:center; margin-right:1%;">
-  </div>  
-  <br/>
-  
-  <h3> GibsonV2 Medium </h3>
-  <div align="center"> 
-    <img src="../assets/data_gifs/gv2_tiny.gif" width="75%" style="float:center; margin-right:1%;">
-  </div>  
-  <br/>
-  
-  <h3> GibsonV2 Fullplus </h3>
-  <div align="center"> 
-    <img src="../assets/data_gifs/gv2_tiny.gif" width="75%" style="float:center; margin-right:1%;">
-  </div>  
-  <br/>
-  
-  <h3> GibsonV2 Full </h3>
-  <div align="center"> 
-    <img src="../assets/data_gifs/gv2_tiny.gif" width="75%" style="float:center; margin-right:1%;">
-  </div>  
-  <br/>
-
-  <h3> GibsonV2 Tiny Filmic </h3>
-  <div align="center"> 
-    <img src="../assets/data_gifs/gv2_tiny.gif" width="75%" style="float:center; margin-right:1%;">
-  </div>  
-  <br/>
-  
-  <h3> GibsonV2 Fullplus Filmic </h3>
-  <div align="center"> 
-    <img src="../assets/data_gifs/gv2_tiny.gif" width="75%" style="float:center; margin-right:1%;">
-  </div>  
-  <br/>-->
   
   <style type="text/css">
 .tg  {border:none;border-collapse:collapse;border-spacing:0;margin:0px auto;}
@@ -76,29 +40,29 @@ Each modality has a corresponding data format and invalid values (due to imperfe
 </style>
 <table class="tg">
 <tbody>
-  <tr>
-    <td class="tg-yz71">GibsonV2 Tiny</td>
-    <td class="tg-290e">GibsonV2 Medium</td>
+  <tr style="padding: 0px;">
+    <td class="tg-yz71" style="padding: 0px;">GibsonV2 Tiny</td>
+    <td class="tg-290e" style="padding: 0px;">GibsonV2 Medium</td>
   </tr>
   <tr>
-    <td class="tg-xhg5"> <img src="../assets/data_gifs/gv2_tiny.gif" width="45%" style="float:center; margin-right:1%;"></td>
-    <td class="tg-xhg5"> <img src="../assets/data_gifs/gv2_tiny.gif" width="45%" style="float:center; margin-right:1%;"></td>
+    <td class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:center; margin-right:1%;"></td>
+    <td class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:center; margin-right:1%;"></td>
   </tr>
   <tr>
-    <td class="tg-9cbo">GibsonV2 Fullplus</td>
-    <td class="tg-7c40">GibsonV2 Full</td>
+    <td class="tg-9cbo" style="padding: 0px;">GibsonV2 Fullplus</td>
+    <td class="tg-7c40" style="padding: 0px;">GibsonV2 Full</td>
   </tr>
   <tr>
-    <td class="tg-xhg5"> <img src="../assets/data_gifs/gv2_tiny.gif" width="45%" style="float:center; margin-right:1%;"></td>
-    <td class="tg-xhg5"> <img src="../assets/data_gifs/gv2_tiny.gif" width="45%" style="float:center; margin-right:1%;"></td>
+    <td class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:center; margin-right:1%;"></td>
+    <td class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:center; margin-right:1%;"></td>
   </tr>
   <tr>
-    <td class="tg-kzsc">GibsonV2 Tiny Filmic</td>
-    <td class="tg-kzsc">GibsonV2 Fullplus Filmic</td>
+    <td class="tg-kzsc" style="padding: 0px;">GibsonV2 Tiny Filmic</td>
+    <td class="tg-kzsc" style="padding: 0px;">GibsonV2 Fullplus Filmic</td>
   </tr>
   <tr>
-    <td class="tg-baqh"> <img src="../assets/data_gifs/gv2_tiny.gif" width="45%" style="float:center; margin-right:1%;"></td>
-    <td class="tg-baqh"> <img src="../assets/data_gifs/gv2_tiny.gif" width="45%" style="float:center; margin-right:1%;"></td>
+    <td class="tg-baqh" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:center; margin-right:1%;"></td>
+    <td class="tg-baqh" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:center; margin-right:1%;"></td>
   </tr>
 </tbody>
 </table>
