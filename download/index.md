@@ -79,7 +79,7 @@ The dataset offers `3` different modalities as indicated below:
   - <b><span style="color: #e7298a;">Filmic</span></b>: <b>Same</b> as the original splits but with a <b>shifted</b> camera (color) domain
   - <b><span style="color: #986536;">Full</span></b>: An <b>expanded</b> (`~ x3` compared to Matterport3D) training set
 
- <a href="#Download"><h1> Download Data </h1></a>
+ <h1> Download Data </h1><a id="Download"/>
 
 <p style="text-align: justify;">
   To download the <b>Pano3D</b> dataset a two-step process is employed as the rendered dataset is a derivative of third party 3D datasets. To get access to download the dataset two <b>parallel</b> steps are required:
