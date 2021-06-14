@@ -3,7 +3,7 @@ The **Pano3D** 360<sup>o</sup> depth estimation benchmark provides a standard <a
 
 The latter is used for zero-shot cross dataset transfer performance assessment and decomposes it into 3 different splits, each one ablating a specific generalization trait.
 
-<h1> Dataset Description </h1>
+<h1> Data Description </h1>
 
 <h2> Modalities </h2>
 
@@ -22,7 +22,7 @@ Each modality has a corresponding data format and invalid values (due to imperfe
 
  <h3> GibsonV2 Tiny </h3>
   <div align="center"> 
-    <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:left; margin-right:1%;">
+    <img src="../assets/data_gifs/gv2_tiny.gif" width="75%" style="float:left; margin-right:1%;">
   </div>  
   
   <h3> GibsonV2 Medium </h3>
