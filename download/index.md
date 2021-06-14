@@ -18,7 +18,7 @@ The dataset offers `3` different modalities as indicated below:
 Each modality has a corresponding data format and invalid values (due to imperfect scanning, holes manifest during rendering).
 
 
-<h2> Samples </h2>
+<h2> Splits </h2>
   
   <style type="text/css">
 .tg  {border:none;border-collapse:collapse;border-spacing:0;margin:0px auto;}
@@ -67,7 +67,12 @@ Each modality has a corresponding data format and invalid values (due to imperfe
 </tbody>
 </table>
   
- <h1> Usage </h1>
+  When training on Matterport3D the above splits offer:
+  - Tiny: Same context (residential buildings) but different depth distribution
+  - Medium: Same context (residential buildings) but different depth distribution
+  - Fullplus: Different context (non exclusively residential buildings) but of the same depth distribution
+  - Filmic: Same as the original splits but with a shifted camera (color) domain
+  - Full: An expanded (`~ x3` compared to Matterport3D) training set
 
  <h1> Download Data </h1>
 
