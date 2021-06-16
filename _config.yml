@@ -4,7 +4,7 @@ show_downloads: true
 description: A 360 depth estimation benchmark
 
 github:
-    form_url: https://forms.gle/uCAZutW8PGzR8Mhn9
+    form_url: https://forms.gle/SJUqLZYmu8sogwrAA
     zenodo_url: https://vcl3d.github.io/Pano3D/download/#Download
     repository_url: https://github.com/VCL3D/Pano3D
     is_project_page: true
