@@ -86,7 +86,7 @@ The dataset offers `3` different modalities as indicated below:
   To download the <b>Pano3D</b> dataset a two-step process is employed as the rendered dataset is a derivative of third party 3D datasets. To get access to download the dataset two <b>parallel</b> steps are required:
                         <ol>
                             <li style="text-align: justify;">
-                                First, to agree with the terms and conditions for each of the 3D datasets that were used to create (i.e. render) it, and more specifically, Matterport3D and GibsonV2. This is accomplished by filling in this <a href="">request form</a>.
+                                First, to agree with the terms and conditions for each of the 3D datasets that were used to create (i.e. render) it, and more specifically, Matterport3D and GibsonV2. This is accomplished by filling in this <a href="https://forms.gle/SJUqLZYmu8sogwrAA">request form</a>.
                             </li>
                             <li style="text-align: justify;">
                                 Second, a request for access to the respective Zenodo repositories where the data are hosted is required, one for each split/part.
