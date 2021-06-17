@@ -3,12 +3,12 @@
 
 [![](https://img.shields.io/badge/CVPR21-OmniCV-blueviolet)](https://sites.google.com/view/omnicv2021/home)
 [![](https://img.shields.io/badge/Project-Page-blue)](https://vcl3d.github.io/Pano3D/)
-[![](https://img.shields.io/badge/Download-Data-ff69b4)](https://github.com/VCL3D/Pano3D/download)
+[![](https://img.shields.io/badge/Download-Data-ff69b4)](https://vcl3d.github.io/Pano3D/download/)
 [![](https://img.shields.io/badge/H2020-ATLANTIS-2e324d)](https://atlantis-ar.eu/)
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-[![Maintaner](https://img.shields.io/badge/maintainer-Giorgos_Albanis-blue)](tzole1155.github.io)
-[![Maintaner](https://img.shields.io/badge/maintainer-Nikolaos_Zioulis-lightblue)](zokin.github.io)
+[![Maintaner](https://img.shields.io/badge/maintainer-Giorgos_Albanis-blue)](http://tzole1155.github.io)
+[![Maintaner](https://img.shields.io/badge/maintainer-Nikolaos_Zioulis-lightblue)](http://zokin.github.io)
 
 
 <!-- https://academia.stackexchange.com/questions/27341/flair-badge-for-arxiv-paper -->
