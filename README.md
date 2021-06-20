@@ -24,14 +24,14 @@ We generate a dataset (using GibsonV2) and provide baselines for holistic perfor
         - (w)RMSLE
         - AbsRel
         - SqRel
-        - (w)Relative accuracy (`\delta`) @ `{1.05, 1.1, 1.25, 1.25^2, 1.25^3}`
+        - (w)Relative accuracy (`\delta`) @ {`1.05`, `1.1`, `1.25`, `1.25`<sup>2</sup>, `1.25`<sup>3</sup> }`
     - Boundary **discontinuity** preservation:
-        - Precision @ `{0.25, 0.5, 1.0}m`
-        - Recall @ `{0.25, 0.5, 1.0}m`
+        - Precision @ {`0.25`, `0.5`, `1.0`}m
+        - Recall @ {`0.25`, `0.5`, `1.0`}m
         - Depth boundary errors of accuracy and completeness
     - Surface **smoothness**:
         - RMSE<sup>o</sup>
-        - Relative accuracy (`\alpha`) @ `{11.25`<sup>o</sup>`, 22.5`<sup>o</sup>`, 30`<sup>o</sup>`}`
+        - Relative accuracy (`\alpha`) @ {`11.25`<sup>o</sup>, `22.5`<sup>o</sup>, `30`<sup>o</sup>}
 2. Out-of-distribution & Zero-shot cross dataset transfer:
     - Different depth distribution test set
     - Varying scene context test set
@@ -49,6 +49,18 @@ We generate a dataset (using GibsonV2) and provide baselines for holistic perfor
 ### Data
 
 #### Download
+To download the data, follow the instructions at [vcl3d.github.io/Pano3D/download/](https://vcl3d.github.io/Pano3D/download/).
+> Please note that getting access to the data download links is a **two** step process as the dataset is a derivative and compliance with the original dataset's terms and usage agreements is required. Therefore:
+1. You first need to fill in this [Google Form](https://forms.gle/SJUqLZYmu8sogwrAA).
+2. And, then, you need to perform an access request at each one of the Zenodo repositories (depending on which dataset partition you need):
+    - [Matterport3D Train & Test (/w Filmic) High Resolution (`1024 x 512`)](https://zenodo.org/record/4957413#.YM9GRfkzaUk)
+    - [GibsonV2 Full (w/o normals) High Resolution (`1024 x 512`)](https://zenodo.org/record/4986012#.YM9K1fkzaUl)
+    - [GibsonV2 Tiny, Medium & Fullplus (w/o normals) High Resolution (`1024 x 512`)](https://zenodo.org/record/4991961#.YM9K3fkzaUl)
+    - [Matterport3D Train & Test (/w Filmic) Low Resolution (`512 x 256`)](https://zenodo.org/record/4957305#.YM9K6PkzaUl)
+    - [GibsonV2 Full Low Resolution (`512 x 256`)](https://zenodo.org/record/4966769#.YM9K6fkzaUl)
+    - [GibsonV2 Tiny, Medium & Fullplus (/w Filmic) Low Resolution (`512 x 256`)](https://zenodo.org/record/4966684#.YM9K6fkzaUl)
+
+After both these steps are completed, you will soon receive the download links for each dataset partition.
 
 #### Loader
 
