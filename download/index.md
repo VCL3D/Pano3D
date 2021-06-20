@@ -94,18 +94,18 @@ The dataset offers `3` different modalities as indicated below:
                               <ol>
                                 <li>`1024 x 512` Resolution
                                     <ul>
-                                      <li>Matterport3D Train & Test</li>
-                                      <li>GibsonV2 Full (<b>w/o normals</b>)</li>
-                                      <li>GibsonV2 Tiny, Medium & Fullplus (<b>w/o normals</b>)</li>
-                                      <li>GibsonV2 Full <b>normals only</b></li>
-                                      <li>GibsonV2 Tiny, Medium & Fullplus <b>normals only</b></li>
+                                      <li><a href="https://zenodo.org/record/4957413#.YM9GRfkzaUk">Matterport3D Train & Test (/w Filmic)</a></li>
+                                      <li><a href="https://zenodo.org/record/4986012#.YM9GXvkzaUk">GibsonV2 Full (<b>w/o normals</b>)</a></li>
+                                      <li><a href="https://zenodo.org/record/4991961#.YM9Gf_kzaUk">GibsonV2 Tiny, Medium & Fullplus (<b>w/o normals</b>)</a></li>
+                                      <!--<li>GibsonV2 Full <b>normals only</b></li>-->
+                                      <!--<li>GibsonV2 Tiny, Medium & Fullplus <b>normals only</b></li>-->
                                   </ul>
                                 </li>
                                 <li>`512 x 256` Resolution
                                     <ul>
-                                      <li>Matterport3D Train & Test</li>
-                                      <li>GibsonV2 Full</li>
-                                      <li>GibsonV2 Tiny, Medium & Fullplus</li>
+                                      <li><a href="https://zenodo.org/record/4957305#.YM9FkfkzaUk">Matterport3D Train & Test (/w Filmic)</a></li>
+                                      <li><a href="https://zenodo.org/record/4966769#.YM9GG_kzaUk">GibsonV2 Full</a></li>
+                                      <li><a href="https://zenodo.org/record/4966684#.YM9F_fkzaUk">GibsonV2 Tiny, Medium & Fullplus (/w Filmic)</a></li>
                                   </ul>
                                 </li>
                               </ol>
@@ -121,7 +121,7 @@ The dataset offers `3` different modalities as indicated below:
 </p>
 
 <p style="text-align: justify;">
-Each volume is broken down in several <code>.zip</code> files (2GB each) for more convinient downloading on low bandwidth connections. You need all the <code>.zip</code> archives of each volume in order to extract the containing files, recommendably with <a href="https://www.7-zip.org/">7zip's GUI</a>.
+Each volume is broken down in several <code>.zip</code> files (2GB or 4GB each) for more convinient downloading on low bandwidth connections. You need all the <code>.zip</code> archives of each volume in order to extract the containing files, recommendably with <a href="https://www.7-zip.org/">7zip's GUI</a>.
 </p>
 
  <h2> Data splits </h2>
