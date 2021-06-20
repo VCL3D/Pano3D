@@ -25,7 +25,7 @@ We generate a dataset (using GibsonV2) and provide baselines for holistic perfor
         - (w)RMSLE
         - AbsRel
         - SqRel
-        - (w)Relative accuracy (`\delta`) @ {`1.05`, `1.1`, `1.25`, `1.25`<sup>2</sup>, `1.25`<sup>3</sup> }`
+        - (w)Relative accuracy (`\delta`) @ {`1.05`, `1.1`, `1.25`, `1.25`<sup>2</sup>, `1.25`<sup>3</sup> }
     - Boundary **discontinuity** preservation:
         - Precision @ {`0.25`, `0.5`, `1.0`}m
         - Recall @ {`0.25`, `0.5`, `1.0`}m
