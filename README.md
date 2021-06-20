@@ -42,7 +42,7 @@ We generate a dataset (using GibsonV2) and provide baselines for holistic perfor
 
 ### TODO
 
-- [ ] Data & Loader
+- [ ] Loader & Splits
 - [ ] Models Weights & Code
 - [ ] Metrics Code
 
