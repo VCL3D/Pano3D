@@ -121,7 +121,7 @@ The dataset offers `3` different modalities as indicated below:
 </p>
 
 <p style="text-align: justify;">
-Each volume is broken down in several <code>.zip</code> files (2GB or 4GB each) for more convinient downloading on low bandwidth connections. You need all the <code>.zip</code> archives of each volume in order to extract the containing files, recommendably with <a href="https://www.7-zip.org/" target="_blank" rel="noopener noreferrer">7zip's GUI</a>.
+Each volume is delivered as multi-part archive and broken down in several <code>.7z</code> files (2GB or 4GB each) for more convinient downloading on low bandwidth connections. You need all the <code>.7z</code> archives of each volume in order to extract the containing files, recommendably with <a href="https://www.7-zip.org/" target="_blank" rel="noopener noreferrer">7zip's GUI</a>.
 </p>
 
  <h2> Data splits </h2>
