@@ -10,12 +10,12 @@
 [![Maintaner](https://img.shields.io/badge/maintainer-Giorgos_Albanis-blue)](http://tzole1155.github.io)
 [![Maintaner](https://img.shields.io/badge/maintainer-Nikolaos_Zioulis-lightblue)](http://zokin.github.io)
 
-![Pano3D Intro](./assets/img/intro.png)
-
 <!-- https://academia.stackexchange.com/questions/27341/flair-badge-for-arxiv-paper -->
 <!-- https://zenodo.org/badge/doi/10.5281/zenodo.4018965.svg?color=yellow -->
 <!-- https://github.com/bionanoimaging/UC2-GIT/issues/44
 -->
+
+![Pano3D Intro](./assets/img/intro.png)
 
 > Pano3D  is a new benchmark for depth estimation from spherical panoramas. 
 We generate a dataset (using GibsonV2) and provide baselines for holistic performance assessment, offering:
