@@ -2,7 +2,7 @@
 
 <p style="text-align: justify;">
   
-The <b>Pano3D</b> 360<sup>o</sup> depth estimation benchmark provides a standard <a href="https://niessner.github.io/Matterport/">Matterport3D</a> train and test split, as well as a secondary <a href="http://gibsonenv.stanford.edu/database/">GibsonV2</a> partioning for testing and training as well.
+The <b>Pano3D</b> 360<sup>o</sup> depth estimation benchmark provides a standard <a href="https://niessner.github.io/Matterport/" target="_blank" rel="noopener noreferrer">Matterport3D</a> train and test split, as well as a secondary <a href="http://gibsonenv.stanford.edu/database/" target="_blank" rel="noopener noreferrer">GibsonV2</a> partioning for testing and training as well.
 
 The latter is used for zero-shot cross dataset transfer performance assessment and decomposes it into 3 different splits, each one focusing on a specific generalization axis.
 
@@ -86,7 +86,7 @@ The dataset offers `3` different modalities as indicated below:
   To download the <b>Pano3D</b> dataset a two-step process is employed as the rendered dataset is a derivative of third party 3D datasets. To get access to download the dataset two <b>parallel</b> steps are required:
                         <ol>
                             <li style="text-align: justify;">
-                                First, to agree with the terms and conditions for each of the 3D datasets that were used to create (i.e. render) it, and more specifically, Matterport3D and GibsonV2. This is accomplished by filling in this <a href="https://forms.gle/SJUqLZYmu8sogwrAA">request form</a>.
+                                First, to agree with the terms and conditions for each of the 3D datasets that were used to create (i.e. render) it, and more specifically, Matterport3D and GibsonV2. This is accomplished by filling in this <a href="https://forms.gle/SJUqLZYmu8sogwrAA" target="_blank" rel="noopener noreferrer">request form</a>.
                             </li>
                             <li style="text-align: justify;">
                                 Second, a request for access to the respective Zenodo repositories where the data are hosted is required, one for each split/part.
@@ -94,18 +94,18 @@ The dataset offers `3` different modalities as indicated below:
                               <ol>
                                 <li>`1024 x 512` Resolution
                                     <ul>
-                                      <li><a href="https://zenodo.org/record/4957413#.YM9GRfkzaUk">Matterport3D Train & Test (/w Filmic)</a></li>
-                                      <li><a href="https://zenodo.org/record/4986012#.YM9GXvkzaUk">GibsonV2 Full (<b>w/o normals</b>)</a></li>
-                                      <li><a href="https://zenodo.org/record/4991961#.YM9Gf_kzaUk">GibsonV2 Tiny, Medium & Fullplus (<b>w/o normals</b>)</a></li>
+                                      <li><a href="https://zenodo.org/record/4957413#.YM9GRfkzaUk" target="_blank" rel="noopener noreferrer">Matterport3D Train & Test (/w Filmic)</a></li>
+                                      <li><a href="https://zenodo.org/record/4986012#.YM9GXvkzaUk" target="_blank" rel="noopener noreferrer">GibsonV2 Full (<b>w/o normals</b>)</a></li>
+                                      <li><a href="https://zenodo.org/record/4991961#.YM9Gf_kzaUk" target="_blank" rel="noopener noreferrer">GibsonV2 Tiny, Medium & Fullplus (<b>w/o normals</b>)</a></li>
                                       <!--<li>GibsonV2 Full <b>normals only</b></li>-->
                                       <!--<li>GibsonV2 Tiny, Medium & Fullplus <b>normals only</b></li>-->
                                   </ul>
                                 </li>
                                 <li>`512 x 256` Resolution
                                     <ul>
-                                      <li><a href="https://zenodo.org/record/4957305#.YM9FkfkzaUk">Matterport3D Train & Test (/w Filmic)</a></li>
-                                      <li><a href="https://zenodo.org/record/4966769#.YM9GG_kzaUk">GibsonV2 Full</a></li>
-                                      <li><a href="https://zenodo.org/record/4966684#.YM9F_fkzaUk">GibsonV2 Tiny, Medium & Fullplus (/w Filmic)</a></li>
+                                      <li><a href="https://zenodo.org/record/4957305#.YM9FkfkzaUk" target="_blank" rel="noopener noreferrer">Matterport3D Train & Test (/w Filmic)</a></li>
+                                      <li><a href="https://zenodo.org/record/4966769#.YM9GG_kzaUk" target="_blank" rel="noopener noreferrer">GibsonV2 Full</a></li>
+                                      <li><a href="https://zenodo.org/record/4966684#.YM9F_fkzaUk" target="_blank" rel="noopener noreferrer">GibsonV2 Tiny, Medium & Fullplus (/w Filmic)</a></li>
                                   </ul>
                                 </li>
                               </ol>
@@ -121,7 +121,7 @@ The dataset offers `3` different modalities as indicated below:
 </p>
 
 <p style="text-align: justify;">
-Each volume is broken down in several <code>.zip</code> files (2GB or 4GB each) for more convinient downloading on low bandwidth connections. You need all the <code>.zip</code> archives of each volume in order to extract the containing files, recommendably with <a href="https://www.7-zip.org/">7zip's GUI</a>.
+Each volume is broken down in several <code>.zip</code> files (2GB or 4GB each) for more convinient downloading on low bandwidth connections. You need all the <code>.zip</code> archives of each volume in order to extract the containing files, recommendably with <a href="https://www.7-zip.org/" target="_blank" rel="noopener noreferrer">7zip's GUI</a>.
 </p>
 
  <h2> Data splits </h2>
@@ -142,4 +142,4 @@ Each volume is broken down in several <code>.zip</code> files (2GB or 4GB each) 
  This dataset has been generated within the European Union’s Horizon 2020 innovation programme [ATLANTIS](https://atlantis-ar.eu/) under grant agreement No 951900.
  <br>
 
- <a href="https://atlantis-ar.eu/"><img src="../assets/images/atlantis_logo.png" alt="atlantis" width="75%" ></a><img src="../assets/images/eu_logo.png" alt="eu" width="25%" class="center">
+ <a href="https://atlantis-ar.eu/" target="_blank" rel="noopener noreferrer"><img src="../assets/images/atlantis_logo.png" alt="atlantis" width="75%" ></a><img src="../assets/images/eu_logo.png" alt="eu" width="25%" class="center">
