@@ -51,23 +51,23 @@ The dataset offers `3` different modalities as indicated below:
   </tr>
   <tr>
     <td class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:center; margin-right:1%;"></td>
-    <td class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:center; margin-right:1%;"></td>
+    <td class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_medium.gif" width="100%" style="float:center; margin-right:1%;"></td>
   </tr>
   <tr>
     <td class="tg-9cbo" style="padding: 0px;">GibsonV2 Fullplus</td>
     <td class="tg-7c40" style="padding: 0px;">GibsonV2 Full</td>
   </tr>
   <tr>
-    <td class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:center; margin-right:1%;"></td>
-    <td class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:center; margin-right:1%;"></td>
+    <td class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_fullplus.gif" width="100%" style="float:center; margin-right:1%;"></td>
+    <td class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_full.gif" width="100%" style="float:center; margin-right:1%;"></td>
   </tr>
   <tr>
     <td class="tg-kzsc" style="padding: 0px;">GibsonV2 Tiny Filmic</td>
     <td class="tg-kzsc" style="padding: 0px;">GibsonV2 Fullplus Filmic</td>
   </tr>
   <tr>
-    <td class="tg-baqh" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:center; margin-right:1%;"></td>
-    <td class="tg-baqh" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:center; margin-right:1%;"></td>
+    <td class="tg-baqh" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny_filmic.gif" width="100%" style="float:center; margin-right:1%;"></td>
+    <td class="tg-baqh" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_fullplus_filmic.gif" width="100%" style="float:center; margin-right:1%;"></td>
   </tr>
 </tbody>
 </table>
