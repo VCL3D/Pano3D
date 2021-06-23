@@ -57,6 +57,7 @@ To download the data, follow the instructions at [vcl3d.github.io/Pano3D/downloa
     - [Matterport3D Train & Test (/w Filmic) High Resolution (`1024 x 512`)](https://zenodo.org/record/4957413#.YM9GRfkzaUk)
     - [GibsonV2 Full (w/o normals) High Resolution (`1024 x 512`)](https://zenodo.org/record/4986012#.YM9K1fkzaUl)
     - [GibsonV2 Tiny, Medium & Fullplus (w/o normals) High Resolution (`1024 x 512`)](https://zenodo.org/record/4991961#.YM9K3fkzaUl)
+    - [GibsonV2 Tiny & Fullplus Filmic High Resolution (`1024 x 512`)](https://zenodo.org/record/5016572#.YNMv7_kzaUk)
     - [Matterport3D Train & Test (/w Filmic) Low Resolution (`512 x 256`)](https://zenodo.org/record/4957305#.YM9K6PkzaUl)
     - [GibsonV2 Full Low Resolution (`512 x 256`)](https://zenodo.org/record/4966769#.YM9K6fkzaUl)
     - [GibsonV2 Tiny, Medium & Fullplus (/w Filmic) Low Resolution (`512 x 256`)](https://zenodo.org/record/4966684#.YM9K6fkzaUl)
