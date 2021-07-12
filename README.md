@@ -44,7 +44,9 @@ We generate a dataset (using GibsonV2) and provide baselines for holistic perfor
 ### TODO
 - [x] Data Download
 - [ ] Loader & Splits
-- [ ] Models Weights & Code
+- [ ] Models Weights Download
+- [ ] Model Serve Code
+- [ ] Model Hub Code
 - [ ] Metrics Code
 
 ### Data
