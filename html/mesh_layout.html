@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - OBJ</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta http-equiv="Cache-control" content="no-cache">
+		
+
+	</head>
+	<body>
+
+	
+
+		<script type="module">
+window.history.forward()
+import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/build/three.module.js';
+import {OrbitControls} from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/examples/jsm/controls/OrbitControls.js';
+import {OBJLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/examples/jsm/loaders/OBJLoader.js';
+import {MTLLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/examples/jsm/loaders/MTLLoader.js';
+
+let container, stats;
+let camera, cameraTarget, scene, renderer;
+
+THREE.Cache.enabled = false
+
+main();
+animate();
+
+function main() {
+  container = document.createElement( 'div' );
+  document.body.appendChild( container );
+  renderer = new THREE.WebGLRenderer();
+  renderer.setPixelRatio( window.devicePixelRatio );
+  renderer.setSize( window.innerWidth, window.innerHeight );
+
+  camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 1, 15 );
+  camera.position.set( 3, 0.15, 3 );
+
+  const controls = new OrbitControls(camera, container);
+  //controls.target.set(0, 5, 0);
+  controls.update();
+
+  scene = new THREE.Scene();
+  //scene.background = new THREE.Color('black');
+  scene.background = new THREE.Color( 0x72645b );
+
+  {
+    const skyColor = 0xB1E1FF;  // light blue
+    const groundColor = 0xB97A20;  // brownish orange
+    const intensity = 1;
+    const light = new THREE.HemisphereLight(skyColor, groundColor, intensity);
+    scene.add(light);
+  }
+
+  {
+    const color = 0xFFFFFF;
+    const intensity = 1;
+    const light = new THREE.DirectionalLight(color, intensity);
+    light.position.set(5, 10, 2);
+    scene.add(light);
+    scene.add(light.target);
+  }
+
+  {
+      const mtlLoader = new MTLLoader();
+      mtlLoader.load('pano_1.mtl', (mtl) => {
+      mtl.preload();
+      let objLoader = new OBJLoader();
+      objLoader.setMaterials(mtl);
+      objLoader.load('pano_1.obj', (mesh) => {
+		mesh.position.x = 0;
+		mesh.position.y = -1;
+		mesh.position.z = 0;
+    mesh.rotateX(Math.PI / 2);
+    mesh.rotateY(Math.PI);
+		mesh.scale.multiplyScalar(0.5 );
+		mesh.castShadow = true;
+		mesh.receiveShadow = true;
+		scene.add(mesh);
+		mesh = null;
+      });
+    });
+	//objLoader = null;
+  }
+
+  container.appendChild( renderer.domElement );
+
+  window.addEventListener( 'resize', onWindowResize );
+
+//  console.log("init obj");
+//  console.log(renderer.info);
+
+ 
+
+//   function render() {
+
+//     renderer.render(scene, camera);
+
+//     requestAnimationFrame(render);
+//   }
+
+  
+
+}
+
+function onWindowResize(renderer) {
+	camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+  }
+
+function animate() {
+		requestAnimationFrame( animate );
+		render();}
+
+		function render() {
+				//camera.lookAt( cameraTarget );
+				renderer.dispose();
+				renderer.resetGLState();
+				renderer.clear()
+				renderer.render( scene, camera );
+			}
+
+
+		</script>
+	</body>
+</html>

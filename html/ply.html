@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - PLY</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Expires" content="-1" />
+
+	</head>
+	<body>
+	
+
+		<script type="module">
+
+			import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js';
+			import { PLYLoader } from 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/loaders/PLYLoader.js';
+            import { OrbitControls } from 'https://tzole1155.github.io/360depth/js/controls/OrbitControls.js';
+            let container, stats;
+			let camera, cameraTarget, scene, renderer;
+
+            THREE.Cache.enabled = false
+
+			init();
+			animate();
+
+			function init() {
+
+                //console.log(THREE.Cache.files);
+
+                THREE.Cache.clear(); 
+
+				container = document.createElement( 'div' );
+				document.body.appendChild( container );
+				camera = new THREE.PerspectiveCamera( 20, window.innerWidth / window.innerHeight, 1, 15 );
+				camera.position.set( 4.25, 2.92, 6.56 );
+				cameraTarget = new THREE.Vector3( 0, - 0.1, 0 );
+				scene = new THREE.Scene();
+				// scene.background = new THREE.Color( 0x72645b );
+				scene.background = new THREE.Color( 0x333F49);
+                const controls = new OrbitControls(camera, container);
+                controls.enableDamping = true;
+	
+				// PLY file
+
+                //                 function loadJSON(url) {
+                //   return new Promise(resolve => {
+                //     new THREE.JSONLoader.load(url, resolve);
+                //   });
+                // }
+
+				let loader = new PLYLoader();
+				loader.load( 'pred_pointcloud.ply', function ( geometry ) {
+					geometry.computeFaceNormals();
+
+					let material = new THREE.PointsMaterial( {size: 0.01} );
+					material.vertexColors = true; 
+                    material.needsUpdate = true;
+                    geometry.needsUpdate = true;
+					let mesh = new THREE.Points( geometry, material );
+					mesh.position.x = 0;
+					mesh.position.y = -1;
+					mesh.position.z = 0;
+                    mesh.rotateY(Math.PI / 2);
+                    mesh.rotateZ(Math.PI);
+                    //mesh.rotateX(-90);
+                    //mesh.rotateZ(-90);
+                    //mesh.rotateZ(90);
+					mesh.scale.multiplyScalar(0.5 );
+					mesh.castShadow = true;
+					mesh.receiveShadow = true;
+					scene.add( mesh );
+                    //mesh = null;
+                    //geometry = null;
+                    // geometry.dispose();
+                    // material.dispose();
+                    //mesh.dispose();
+
+				} );
+
+                //loader = null;
+
+				// Lights
+
+				scene.add( new THREE.HemisphereLight( 0x443333, 0x111122 ) );
+
+				addShadowedLight( 1, 1, 1, 0xffffff, 1.35 );
+				addShadowedLight( 0.5, 1, - 1, 0xffaa00, 1 );
+
+				// renderer
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+                // console.log("init ply");
+                // console.log(renderer.info);
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				renderer.outputEncoding = THREE.sRGBEncoding;
+				renderer.shadowMap.enabled = true;
+				container.appendChild( renderer.domElement );
+
+				// resize
+				window.addEventListener( 'resize', onWindowResize );
+
+			}
+
+			function addShadowedLight( x, y, z, color, intensity ) {
+
+				const directionalLight = new THREE.DirectionalLight( color, intensity );
+				directionalLight.position.set( x, y, z );
+				scene.add( directionalLight );
+
+				directionalLight.castShadow = true;
+
+				const d = 1;
+				directionalLight.shadow.camera.left = - d;
+				directionalLight.shadow.camera.right = d;
+				directionalLight.shadow.camera.top = d;
+				directionalLight.shadow.camera.bottom = - d;
+
+				directionalLight.shadow.camera.near = 1;
+				directionalLight.shadow.camera.far = 4;
+
+				directionalLight.shadow.mapSize.width = 1024;
+				directionalLight.shadow.mapSize.height = 1024;
+
+				directionalLight.shadow.bias = - 0.001;
+
+			}
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			function animate() {
+				requestAnimationFrame( animate );
+				render();
+				//console.log(camera.position);
+				// console.log(camera.rotation);
+
+			}
+
+			function render() {
+				//camera.lookAt( cameraTarget );
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+	</body>
+</html>
