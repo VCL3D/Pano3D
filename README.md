@@ -10,7 +10,7 @@
 [![Maintaner](https://img.shields.io/badge/maintainer-Giorgos_Albanis-blue)](http://tzole1155.github.io)
 [![Maintaner](https://img.shields.io/badge/maintainer-Nikolaos_Zioulis-lightblue)](http://zokin.github.io)
 
-![Pano3D Intro](./assets/img/intro.png)
+<!-- ![Pano3D Intro](./assets/img/intro.png) -->
 
 > Source code for running Pano3D models in streamlit.
 
