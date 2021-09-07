@@ -9,6 +9,7 @@
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Maintaner](https://img.shields.io/badge/maintainer-Giorgos_Albanis-blue)](http://tzole1155.github.io)
 [![Maintaner](https://img.shields.io/badge/maintainer-Nikolaos_Zioulis-lightblue)](http://zokin.github.io)
+
 [![Streamlit Demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/tzole1155/threedit)
 
 <!-- https://academia.stackexchange.com/questions/27341/flair-badge-for-arxiv-paper -->
@@ -49,6 +50,12 @@ We generate a dataset (using GibsonV2) and provide baselines for holistic perfor
 - [ ] Model Serve Code
 - [ ] Model Hub Code
 - [ ] Metrics Code
+
+### Demo
+
+A publicly hosted demo of the baseline models can be found [here](https://share.streamlit.io/tzole1155/threedit).
+Using the web app, it is possible to upload a panorama and download a 3D reconstructed mesh of the scene using the derived depth map.
+> Note that due to the external host's caching issues, it might be necessary to refresh your browser's cache in between runs to update the 3D models.
 
 ### Data
 
