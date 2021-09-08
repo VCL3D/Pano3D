@@ -44,6 +44,7 @@ We generate a dataset (using GibsonV2) and provide baselines for holistic perfor
 > Using Pano3D to search for a solid baseline results in an acknowledgement of exploiting complementary error terms, adding encoder-decoder skip connections and using photometric augmentations.
 
 ### TODO
+- [x] Web Demo
 - [x] Data Download
 - [ ] Loader & Splits
 - [ ] Models Weights Download
