@@ -65,13 +65,13 @@ To download the data, follow the instructions at [vcl3d.github.io/Pano3D/downloa
 > Please note that getting access to the data download links is a **two** step process as the dataset is a derivative and compliance with the original dataset's terms and usage agreements is required. Therefore:
 1. You first need to fill in this [Google Form](https://forms.gle/SJUqLZYmu8sogwrAA).
 2. And, then, you need to perform an access request at each one of the Zenodo repositories (depending on which dataset partition you need):
-    - [Matterport3D Train & Test (/w Filmic) High Resolution (`1024 x 512`)](https://zenodo.org/record/4957413#.YM9GRfkzaUk)
-    - [GibsonV2 Full (w/o normals) High Resolution (`1024 x 512`)](https://zenodo.org/record/4986012#.YM9K1fkzaUl)
-    - [GibsonV2 Tiny, Medium & Fullplus (w/o normals) High Resolution (`1024 x 512`)](https://zenodo.org/record/4991961#.YM9K3fkzaUl)
-    - [GibsonV2 Tiny & Fullplus Filmic High Resolution (`1024 x 512`)](https://zenodo.org/record/5016572#.YNMv7_kzaUk)
-    - [Matterport3D Train & Test (/w Filmic) Low Resolution (`512 x 256`)](https://zenodo.org/record/4957305#.YM9K6PkzaUl)
-    - [GibsonV2 Full Low Resolution (`512 x 256`)](https://zenodo.org/record/4966769#.YM9K6fkzaUl)
-    - [GibsonV2 Tiny, Medium & Fullplus (/w Filmic) Low Resolution (`512 x 256`)](https://zenodo.org/record/4966684#.YM9K6fkzaUl)
+    - [![](https://zenodo.org/badge/doi/10.5281/zenodo.4957413.svg)](https://zenodo.org/record/4957413#.YM9GRfkzaUk) [Matterport3D Train & Test (/w Filmic) High Resolution (`1024 x 512`)](https://zenodo.org/record/4957413#.YM9GRfkzaUk)
+    - [![](https://zenodo.org/badge/doi/10.5281/zenodo.4986012.svg)](https://zenodo.org/record/4986012#.YM9K1fkzaUl) [GibsonV2 Full (w/o normals) High Resolution (`1024 x 512`)](https://zenodo.org/record/4986012#.YM9K1fkzaUl)
+    - [![](https://zenodo.org/badge/doi/10.5281/zenodo.4991961.svg)](https://zenodo.org/record/4991961#.YM9K3fkzaUl) [GibsonV2 Tiny, Medium & Fullplus (w/o normals) High Resolution (`1024 x 512`)](https://zenodo.org/record/4991961#.YM9K3fkzaUl)
+    - [![](https://zenodo.org/badge/doi/10.5281/zenodo.5016572.svg)](https://zenodo.org/record/5016572#.YNMv7_kzaUk) [GibsonV2 Tiny & Fullplus Filmic High Resolution (`1024 x 512`)](https://zenodo.org/record/5016572#.YNMv7_kzaUk)
+    - [![](https://zenodo.org/badge/doi/10.5281/zenodo.4957305.svg)](https://zenodo.org/record/4957305#.YM9K6PkzaUl) [Matterport3D Train & Test (/w Filmic) Low Resolution (`512 x 256`)](https://zenodo.org/record/4957305#.YM9K6PkzaUl)
+    - [![](https://zenodo.org/badge/doi/10.5281/zenodo.4966769.svg)](https://zenodo.org/record/4966769#.YM9K6fkzaUl) [GibsonV2 Full Low Resolution (`512 x 256`)](https://zenodo.org/record/4966769#.YM9K6fkzaUl)
+    - [![](https://zenodo.org/badge/doi/10.5281/zenodo.4966684.svg)](https://zenodo.org/record/4966684#.YM9K6fkzaUl) [GibsonV2 Tiny, Medium & Fullplus (/w Filmic) Low Resolution (`512 x 256`)](https://zenodo.org/record/4966684#.YM9K6fkzaUl)
 
 After both these steps are completed, you will soon receive the download links for each dataset partition.
 
