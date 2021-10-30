@@ -11,6 +11,7 @@
 [![Maintaner](https://img.shields.io/badge/maintainer-Nikolaos_Zioulis-lightblue)](http://zokin.github.io)
 
 [![Streamlit Demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/tzole1155/threedit)
+[![YouTube Video Views](https://img.shields.io/youtube/views/xa7Fl2mD4CA?style=social)](https://www.youtube.com/watch?v=xa7Fl2mD4CA&t=9031s)
 
 <!-- https://academia.stackexchange.com/questions/27341/flair-badge-for-arxiv-paper -->
 <!-- https://zenodo.org/badge/doi/10.5281/zenodo.4018965.svg?color=yellow -->
