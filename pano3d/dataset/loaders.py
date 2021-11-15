@@ -36,8 +36,8 @@ def load_semantic(filename: str, **kwargs) -> torch.Tensor:
         filename = filename.replace('center', kwargs['position'])
     return {
         'semantic': torch.from_numpy(cv2.imread(
-            filename.replace('emission', 'semantic').replace('.png', '.exr')
-        )).long()
+            filename.replace('emission', 'semantic_map').replace('.png', '.exr')
+        )).long()[:,:,0]
     }
 
 def load_structure(filename: str, **kwargs) -> torch.Tensor:
