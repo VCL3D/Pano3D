@@ -94,7 +94,7 @@ The dataset offers `3` different modalities as indicated below:
                               <ol>
                                 <li>`1024 x 512` Resolution
                                     <ul>
-                                      <li><a href="https://zenodo.org/record/4957413#.YM9GRfkzaUk" target="_blank" rel="noopener noreferrer">Matterport3D Train & Test (/w Filmic)</a></li>
+                                      <li><a href="https://zenodo.org/record/5707345#.YZY3-2BByUk" target="_blank" rel="noopener noreferrer">Matterport3D Train & Test (/w Filmic)</a></li>
                                       <li><a href="https://zenodo.org/record/4986012#.YM9GXvkzaUk" target="_blank" rel="noopener noreferrer">GibsonV2 Full (<b>w/o normals</b>)</a></li>
                                       <li><a href="https://zenodo.org/record/4991961#.YM9Gf_kzaUk" target="_blank" rel="noopener noreferrer">GibsonV2 Tiny, Medium & Fullplus (<b>w/o normals</b>)</a></li>
                                       <li><a href="https://zenodo.org/record/5016572#.YNMv7_kzaUk" target="_blank" rel="noopener noreferrer">GibsonV2 Tiny & Fullplus Filmic</a></li>                                      
