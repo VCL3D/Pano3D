@@ -1,8 +1,10 @@
 import typing
 import torch
+from torch.functional import norm
 import torchvision
 import cv2
 import numpy
+import os
 
 def load_color(filename: str, **kwargs) -> torch.Tensor:    
     if 'position' in kwargs:
@@ -12,10 +14,12 @@ def load_color(filename: str, **kwargs) -> torch.Tensor:
 def load_depth(filename: str, max_depth: float=8.0, **kwargs) -> torch.Tensor:
     if 'position' in kwargs:
         filename = filename.replace('center', kwargs['position'])
-    depth = torch.from_numpy(cv2.imread(
-        filename.replace('emission', 'depth').replace('.png', '.exr'), 
-        cv2.IMREAD_ANYDEPTH
-    )).unsqueeze(0)
+    depth_filename = filename.replace('emission', 'depth').replace('.png', '.exr')
+    if 'filmic' in os.path.split(depth_filename)[-3]:
+        depth_filename = depth_filename.replace('_filmic', '')
+    depth = torch.from_numpy(
+        cv2.imread(depth_filename, cv2.IMREAD_ANYDEPTH)
+    ).unsqueeze(0)
     depth[depth > max_depth] = 0.0
     return {
         'depth': depth
@@ -24,9 +28,11 @@ def load_depth(filename: str, max_depth: float=8.0, **kwargs) -> torch.Tensor:
 def load_normal(filename: str, **kwargs) -> torch.Tensor:
     if 'position' in kwargs:
         filename = filename.replace('center', kwargs['position'])
+    normal_filename = filename.replace('emission', 'normal_map').replace('.png', '.exr')
+    if 'filmic' in os.path.split(normal_filename)[-3]:
+        normal_filename = normal_filename.replace('_filmic', '')
     return {
-        'normal': torch.from_numpy(cv2.imread(
-            filename.replace('emission', 'normal_map').replace('.png', '.exr'), 
+        'normal': torch.from_numpy(cv2.imread(normal_filename, 
             cv2.IMREAD_ANYDEPTH | cv2.IMREAD_ANYCOLOR
         ).transpose(2, 0, 1))
     }
