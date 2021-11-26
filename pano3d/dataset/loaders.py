@@ -15,7 +15,7 @@ def load_depth(filename: str, max_depth: float=8.0, **kwargs) -> torch.Tensor:
     if 'position' in kwargs:
         filename = filename.replace('center', kwargs['position'])
     depth_filename = filename.replace('emission', 'depth').replace('.png', '.exr')
-    if 'filmic' in os.path.split(depth_filename)[-3]:
+    if 'filmic' in depth_filename.split(os.sep)[-3]:
         depth_filename = depth_filename.replace('_filmic', '')
     depth = torch.from_numpy(
         cv2.imread(depth_filename, cv2.IMREAD_ANYDEPTH)
@@ -29,7 +29,7 @@ def load_normal(filename: str, **kwargs) -> torch.Tensor:
     if 'position' in kwargs:
         filename = filename.replace('center', kwargs['position'])
     normal_filename = filename.replace('emission', 'normal_map').replace('.png', '.exr')
-    if 'filmic' in os.path.split(normal_filename)[-3]:
+    if 'filmic' in normal_filename.split(os.sep)[-3]:
         normal_filename = normal_filename.replace('_filmic', '')
     return {
         'normal': torch.from_numpy(cv2.imread(normal_filename, 
