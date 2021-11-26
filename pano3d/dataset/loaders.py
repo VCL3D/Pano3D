@@ -20,7 +20,8 @@ def load_depth(filename: str, max_depth: float=8.0, **kwargs) -> torch.Tensor:
     depth = torch.from_numpy(
         cv2.imread(depth_filename, cv2.IMREAD_ANYDEPTH)
     ).unsqueeze(0)
-    depth[depth > max_depth] = 0.0
+    #NOTE: add a micro meter to allow for thresholding to extact the valid mask
+    depth[depth > max_depth] = max_depth + 1e-6
     return {
         'depth': depth
     }
