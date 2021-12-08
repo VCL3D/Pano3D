@@ -205,7 +205,7 @@
             <div class="section-title">Data Generation</div>
                 <div class="content">
                     <p>
-			    Using Matterport3D [<a href="#Matterport3D"><b>1</b></a>] for training and the \(\textbf{Pano3D}\) GibsonV2 [<a href="#GibsonV2"><b>2</b></a>] splits for testing, 
+			    Using Matterport3D (M3D) [<a href="#Matterport3D"><b>1</b></a>] for training and the \(\textbf{Pano3D}\) GibsonV2 (GV2) [<a href="#GibsonV2"><b>2</b></a>] splits for testing, 
                         the benchmark delivers a zero-shot cross-dataset transfer evaluation that can be 
                         applied to different generalization settings on-demand. In addition, 
                         \(\textbf{Pano3D}\) offers renders in two resolutions (\(1024 \times 512\) and \(512 \times 256\)). 
@@ -603,12 +603,81 @@
                         </tr>
                     </table>
                 </p>
-                <!-- ## Refining Depth Estimates: -->
+
+<!--DRAK START-->
+
+<div class="section-title">Studying generalization</div>
+    <h3>Three types of distribution shift</h3>
+    <p>Going beyond zero-shot cross-dataset transfer [<a href="#DF"><b>23</b></a>] and generalized distribution shift, we identify three types of distribution 
+        shift [<a href="#DF"><b>24</b></a>,<a href="#DF"><b>25</b></a>,<a href="#DF"><b>26</b></a>] 
+        <span style="color: #ff66ff"><b>covariate</b></span>, <span style="color: #cc9900"><b>prior</b></span> and <span style="color: #69cc99"><b>concept</b></span>, 
+        and design an experimental framework to study the impact of each type in isolation or combined. This way, we can investigate the apparent stackability of 
+        various shifts, measure the effectivenes of common mitigation techniques, such as pretraining and photometric augmentation, and unfold their performance 
+        envelope in a granular and precisely controlled way gushing valuable insight.
+    </p>
+    <h3>Targeted-shift dataset creation</h3>
+    <p>
+        Exploiting data selection and rendering synthesis, we crafted five test-sets that, in conjunction with the original M3D train-set, exhibit targeted distribution shift 
+        along one or more of the aforementioned axes.
+        <p></p>
+        <span style="color: #ff66ff"><b>Covariate</b></span> shift concerns the input domain. In our case, this corresponds to the color of the input images. 
+        By rendering the original M3D test-set with the Blender&trade;'s filmic-view transform, we create a split that is identical to the original but differs only in the 
+        pixel-color statistics, transpiring a cinematic sense. 
+        <p></p>
+        <span style="color: #cc9900"><b>Prior</b></span> shift concerns the output domain. In our case, this corresponds to the depth distribution of the scenes involved and 
+        as a consequence, the respective predictions of the models to be output. After analyzing the GV2 dataset, we identified a data-split that exhibits significantly different 
+        depth distribution compared to the original M3D train-set. By rendering it with the standard color transfer function, the same we used to render the original M3D train-set, 
+        we create a split that is kindred to that, apart from their depth statistics.
+        <p></p>
+        <span style="color: #69cc99"><b>Concept</b></span> shift refers to the relationship between the input and output distributions. In our case, this translates to the 
+        type of the buildings presented in our data. While the original M3D train-set is comprised of residential buildings, we identified a GV2 data-split that despite exhibiting 
+        similar depth-statistics, it includes industrial and other non-residential premises (i.e. garages, commercial stores and under-construction sites) as well. 
+        By rendering this split in the usual manner and using it to test a model trained on the original M3D train-set, we can closely emulate a concept drift scenario.
+        <p></p>
+        Lastly, by manipulating rendering and data-splitting the way we showcased, we created two more test-sets exhibiting combined shift of either 
+        <span style="color: #ff66ff"><b>covariate</b></span> & <span style="color: #cc9900"><b>prior</b></span> or 
+        <span style="color: #ff66ff"><b>covariate</b></span> & <span style="color: #69cc99"><b>concept</b></span>, enabling the study of their theorized stackability.
+        <p></p>
+        All the aforementioned data-spits can be found in our <a href="https://vcl3d.github.io/Pano3D/download/">download page</a>.
+        <img src="images/distro-shift/data-splits-dishes.png" width="97%">
+        <p></p>
+    </p>
+    <h3>Benchmarking</h3>
+    <p>
+        Using our composite performance indicators, we put to the test all five data-splits, evaluating the baseline UNet model.
+        Initially, we evaluate the performance drop each distribution shift bears, in regards to all three quality indicators analyzed.
+        Then, we apply two commonly exercised methods for addressing distribution-shift, pretraining and photometric augmentation, 
+        and decompose their apparent beneficiary behaviour in an attempt to deeply understand and reason the underlying workings of their success.
+        <h4>Performance across distribution shifts</h4>
+        <img src="images/distro-shift/indicators-baseline.png" width="97%">
+        <ul>
+            <li>Distribution shift of any kind degrades performance.</li>
+            <li>Concept shift is the most challenging to mitigate.</li>
+            <li>Shifts are, evidently, stackable.</li>
+        </ul>
+        <h4>Photometric augmentations</h4>
+        <img src="images/distro-shift/indicators-augmentations.png" width="97%">
+        <ul>
+            <li>Significant performance boost when covariate shift manifests.</li>
+            <li>Boost is higher when covariate shift is dealt in isolation but lower when it is mixed with others.</li>
+        </ul>
+        <h4>Pretrained initialization</h4>
+        <img src="images/distro-shift/indicators-pretrain.png" width="97%">
+        <ul>
+            <li>We employ the PNAS model pretrained on ImageNet.</li>
+            <li>Pretraining boosts direct performance on the original test-set.</li>
+            <li>It mitigates covariate shift in regard to all quality traits, but only in isolation, as combinations proved too hard.</li>
+            <li>Evidently, the model only benefits from higher quality parameter initialization rather than gaining generalization capacity.</li>
+        </ul>
+    </p>
+    <p></p>
+
+<!--DRAK END-->
+
 <div class="section-title">Refining Depth Estimates</div>                
 <!--<h2 class="section-title">Refining Depth Estimates</h2>-->
                 <div class="side-text">
                 <p>
-                    
                     Taking into account the developments for depth refinement, \(\textbf{Pano3D}\) also includes an analysis of a 
                     recent work using displacement fields [<a href="#DF"><b>18</b></a>], which is properly adapted to the spherical domain, 
                     to periodic displacement fields. <br>
@@ -831,13 +900,13 @@
                     <li>
                         <a href="https://arxiv.org/pdf/1804.00607.pdf" id="GradLoss" target="_blank" rel="noopener noreferrer"/>Li, Z. and Snavely, N., 2018. Megadepth: Learning single-view depth prediction from internet photos. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 2041-2050).
                     </li>
-		    <li>
+		            <li>
                         <a href="https://arxiv.org/pdf/1411.4958.pdf" id="DeepNormals" target="_blank" rel="noopener noreferrer"/>Wang, X., Fouhey, D. and Gupta, A., 2015. Designing deep networks for surface normal estimation. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (pp. 539-547).
                     </li>
                     <li>
                         <a href="https://arxiv.org/pdf/1907.12209.pdf" id="VNL" target="_blank" rel="noopener noreferrer"/>Yin, W., Liu, Y., Shen, C. and Yan, Y., 2019. Enforcing geometric constraints of virtual normal for depth prediction. In Proceedings of the IEEE/CVF International Conference on Computer Vision (pp. 5684-5693).
                     </li>
-		    <li>
+		            <li>
                         <a href="https://arxiv.org/pdf/1406.2283.pdf" id="Eigen" target="_blank" rel="noopener noreferrer"/>Eigen, D., Puhrsch, C. and Fergus, R., 2014. Depth map prediction from a single image using a multi-scale deep network. arXiv preprint arXiv:1406.2283.
                     </li>
                     <li>
@@ -861,9 +930,9 @@
                     <li>
                         <a href="https://arxiv.org/pdf/2002.12730.pdf" id="DF" target="_blank" rel="noopener noreferrer"/>Ramamonjisoa, M., Du, Y. and Lepetit, V., 2020. Predicting sharp and accurate occlusion boundaries in monocular depth estimation using displacement fields. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 14648-14657).
                     </li>
-		    <li>
-			    <a href="https://arxiv.org/pdf/1703.06868.pdf" id="AdaIN" target="_blank" rel="noopener noreferrer"/>Huang, X. and Belongie, S., 2017. Arbitrary style transfer in real-time with adaptive instance normalization. In Proceedings of the IEEE International Conference on Computer Vision (pp. 1501-1510).
-		    </li>
+		            <li>
+			            <a href="https://arxiv.org/pdf/1703.06868.pdf" id="AdaIN" target="_blank" rel="noopener noreferrer"/>Huang, X. and Belongie, S., 2017. Arbitrary style transfer in real-time with adaptive instance normalization. In Proceedings of the IEEE International Conference on Computer Vision (pp. 1501-1510).
+		            </li>
                     <li>
                         <a href="https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123620766.pdf" id="Rebalancing" target="_blank" rel="noopener noreferrer"/>Lee, J. and Kim, C.S., 2020, August. Multi-loss Rebalancing Algorithm for Monocular Depth Estimation. In ECCV (17) (pp. 785-801).
                     </li>
@@ -872,6 +941,19 @@
                     </li>
                     <li>
                         <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_BiFuse_Monocular_360_Depth_Estimation_via_Bi-Projection_Fusion_CVPR_2020_paper.pdf" id="BiFuse" target="_blank" rel="noopener noreferrer"/>Wang, F.E., Yeh, Y.H., Sun, M., Chiu, W.C. and Tsai, Y.H., 2020. Bifuse: Monocular 360 depth estimation via bi-projection fusion. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 462-471).
+                    </li>
+                    <!--Beneath is ref nunber [23]-->
+                    <li>
+                        <a href="https://arxiv.org/pdf/1907.01341.pdf" id="ZeroShot" target="_blank" rel="noopener noreferrer"/>Ranftl, R., Lasinger, K., Hafner, D., Schindle, K. and Koltun, V., 2020. Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-shot Cross-dataset Transfer. arXiv:1907.01341
+                    </li>
+                    <li>
+                        <a href="https://arxiv.org/pdf/2111.09190.pdf" id="DistroShift" target="_blank" rel="noopener noreferrer"/>Hu, R., Sang , J., Wang, J., Hu, R. and Jiang, C., 2021. Understanding and Testing Generalization of Deep Networks on Out-of-Distribution Data. arXiv:2111.09190
+                    </li>
+                    <li>
+                        <a href="https://arxiv.org/pdf/2106.03783.pdf" id="DistroShift2" target="_blank" rel="noopener noreferrer"/>Federici, M., Tomioka, R. and Forré, P, 2021. An Information-theoretic Approach to Distribution Shifts. arXiv:2106.03783
+                    </li>
+                    <li>
+                        <a href="https://arxiv.org/pdf/2110.11328.pdf" id="DistroShift3" target="_blank" rel="noopener noreferrer"/>Wiles, O., Gowal, S., Stimberg, F. and Alvise-Rebuffi, S., 2021. A Fine-Grained Analysis on Distribution Shift. arXiv:2110.11328
                     </li>
                 </ol>
             </div>
