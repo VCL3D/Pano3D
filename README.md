@@ -1,10 +1,6 @@
 # Pano3D
-<<<<<<< HEAD
-<<<<<<< HEAD
 This repo contains the source code for project's web page.
-=======
-=======
->>>>>>> main
+
 ## A Holistic Benchmark and a Solid Baseline for 360<sup>o</sup> Depth Estimation
 
 [![](https://img.shields.io/badge/CVPR21-OmniCV-blueviolet)](https://sites.google.com/view/omnicv2021/home)
@@ -21,8 +17,7 @@ This repo contains the source code for project's web page.
 
 <!-- https://academia.stackexchange.com/questions/27341/flair-badge-for-arxiv-paper -->
 <!-- https://zenodo.org/badge/doi/10.5281/zenodo.4018965.svg?color=yellow -->
-<!-- https://github.com/bionanoimaging/UC2-GIT/issues/44
--->
+<!-- https://github.com/bionanoimaging/UC2-GIT/issues/44 -->
 
 ![Pano3D Intro](./assets/img/intro.png)
 
@@ -86,7 +81,6 @@ After both these steps are completed, you will soon receive the download links f
 
 #### Splits
 
-
 ### Models
 
 #### Download
@@ -94,7 +88,6 @@ After both these steps are completed, you will soon receive the download links f
 #### Inference
 
 #### Serve
-
 
 ### Metrics
 
@@ -104,10 +97,4 @@ After both these steps are completed, you will soon receive the download links f
 
 #### Smoothness
 
-
 ### Results
-
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> main
