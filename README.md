@@ -1,7 +1,10 @@
 # Pano3D
 <<<<<<< HEAD
+<<<<<<< HEAD
 This repo contains the source code for project's web page.
 =======
+=======
+>>>>>>> main
 ## A Holistic Benchmark and a Solid Baseline for 360<sup>o</sup> Depth Estimation
 
 [![](https://img.shields.io/badge/CVPR21-OmniCV-blueviolet)](https://sites.google.com/view/omnicv2021/home)
@@ -104,4 +107,7 @@ After both these steps are completed, you will soon receive the download links f
 
 ### Results
 
+<<<<<<< HEAD
+>>>>>>> main
+=======
 >>>>>>> main
