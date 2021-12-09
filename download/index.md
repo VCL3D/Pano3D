@@ -36,7 +36,9 @@ The dataset offers `3` different modalities as indicated below:
 .tg .tg-baqh{text-align:center;vertical-align:top}
 .tg .tg-7c40{background-color:#986536;border-color:inherit;font-family:"Lucida Console", Monaco, monospace !important;;
   font-weight:bold;text-align:center;vertical-align:top;color:#efefef}
-.tg .tg-kzsc{background-color:#e7298a;color:#efefef;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-kzsc{background-color:#E9967A;color:#efefef;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-kzsc2{background-color:#5D3954;color:#efefef;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-kzsc3{background-color:#e7298a;color:#efefef;font-weight:bold;text-align:center;vertical-align:top}
 .tg .tg-xhg5{border-color:inherit;font-family:"Lucida Console", Monaco, monospace !important;;text-align:center;vertical-align:top}
 .tg .tg-9cbo{background-color:#b3de69;border-color:inherit;font-family:"Lucida Console", Monaco, monospace !important;;
   font-weight:bold;text-align:center;vertical-align:top}
@@ -46,6 +48,12 @@ The dataset offers `3` different modalities as indicated below:
 <table class="tg">
 <tbody>
   <tr style="padding: 0px;">
+    <td class="tg-kzsc3" style="padding: 0px;">M3D Filmic</td>
+  </tr>
+  <tr>
+    <td class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:center; margin-right:1%;"></td>
+  </tr>
+  <tr style="padding: 0px;">
     <td class="tg-yz71" style="padding: 0px;">GibsonV2 Tiny</td>
     <td class="tg-290e" style="padding: 0px;">GibsonV2 Medium</td>
   </tr>
@@ -54,8 +62,8 @@ The dataset offers `3` different modalities as indicated below:
     <td class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_medium.gif" width="100%" style="float:center; margin-right:1%;"></td>
   </tr>
   <tr>
-    <td class="tg-9cbo" style="padding: 0px;">GibsonV2 Fullplus</td>
     <td class="tg-7c40" style="padding: 0px;">GibsonV2 Full</td>
+    <td class="tg-9cbo" style="padding: 0px;">GibsonV2 Fullplus</td>
   </tr>
   <tr>
     <td class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_fullplus.gif" width="100%" style="float:center; margin-right:1%;"></td>
@@ -63,21 +71,31 @@ The dataset offers `3` different modalities as indicated below:
   </tr>
   <tr>
     <td class="tg-kzsc" style="padding: 0px;">GibsonV2 Tiny Filmic</td>
-    <td class="tg-kzsc" style="padding: 0px;">GibsonV2 Fullplus Filmic</td>
+    <td class="tg-kzsc2" style="padding: 0px;">GibsonV2 Fullplus Filmic</td>
   </tr>
   <tr>
-    <td class="tg-baqh" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny_filmic.gif" width="100%" style="float:center; margin-right:1%;"></td>
-    <td class="tg-baqh" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_fullplus_filmic.gif" width="100%" style="float:center; margin-right:1%;"></td>
+    <td class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny_filmic.gif" width="100%" style="float:center; margin-right:1%;"></td>
+    <td class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_fullplus_filmic.gif" width="100%" style="float:center; margin-right:1%;"></td>
   </tr>
 </tbody>
 </table>
   
   When training on Matterport3D the above splits offer:
-  - <b><span style="color: #1b9e77;">Tiny</span></b>: <b>Same</b> context (residential buildings) but <b>different</b> depth distribution
-  - <b><span style="color: #1f78b4;">Medium</span></b>: <b>Same</b> context (residential buildings) but <b>different</b> depth distribution
-  - <b><span style="color: #b3de69;">Fullplus</span></b>: <b>Different</b> context (non exclusively residential buildings) but of the <b>same</b> depth distribution
-  - <b><span style="color: #e7298a;">Filmic</span></b>: <b>Same</b> as the original splits but with a <b>shifted</b> camera (color) domain
-  - <b><span style="color: #986536;">Full</span></b>: An <b>expanded</b> (`~ x3` compared to Matterport3D) training set
+  - <b><span style="color: #1f78b4;">Medium</span></b>: <b>Same</b> context (residential buildings) but <b>different</b> depth distribution.<br>
+  - <b><span style="color: #986536;">Full</span></b>: An <b>expanded</b> (`~3x` compared to Matterport3D) training set.<br>
+  - <b><span style="color: #e7298a;">Filmic</span></b>: <b>Same</b> as the original splits but with a <b>shifted</b> camera (color) domain. 
+  This corresponds to the <span style="color: #ff66ff"><b>covariate</b></span> shift of our decomposed distribution shifts benchmark.<br>
+  <center><img src="../images/distro-shift/shift-covariate.png" width="55%"></center>
+  - <b><span style="color: #1b9e77;">Tiny</span></b>: <b>Same</b> context (residential buildings) but <b>different</b> depth distribution. 
+  This corresponds to the <span style="color: #cc9900"><b>prior</b></span> shift of our decomposed distribution shifts benchmark.<br>
+  <center><img src="../images/distro-shift/shift-prior.png" width="55%"></center>
+  - <b><span style="color: #b3de69;">Fullplus</span></b>: <b>Different</b> context (non exclusively residential buildings) but of the <b>same</b> depth distribution. 
+  This corresponds to the <span style="color: #69cc99"><b>concept</b></span> shift of our decomposed distribution shifts benchmark.<br>
+  <center><img src="../images/distro-shift/shift-concept.png" width="55%"></center>
+  - <b><span style="color: #E9967A;">Tiny Filmic</span></b>: <b>Same</b> as the <b><span style="color: #1b9e77;">Tiny</span></b> split but with a <b>shifted</b> camera (color) domain.
+  This corresponds to the <span style="color: #ff66ff"><b>covariate</b></span> & <span style="color: #cc9900"><b>prior</b></span> shift of our decomposed distribution shifts benchmark.<br>
+  - <b><span style="color: #5D3954;">Fullplus Filmic</span></b>: <b>Same</b> as the <b><span style="color: #b3de69;">Fullplus</span></b> split but with a <b>shifted</b> camera (color) domain. This corresponds to the <span style="color: #ff66ff"><b>covariate</b></span> & <span style="color: #69cc99"><b>concept</b></span> shift of our decomposed distribution shifts benchmark.<br>
+  <p></p>
 
  <a id="Download"/>
  <h1> Download Data </h1>
@@ -110,7 +128,6 @@ The dataset offers `3` different modalities as indicated below:
                                   </ul>
                                 </li>
                               </ol>
-                               
                             </li>
                         </ol>
                         <p style="text-align: justify;">Therefore, a separate request for access needs to be made to each repository in order to download 
