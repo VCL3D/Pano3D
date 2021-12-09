@@ -48,10 +48,10 @@ The dataset offers `3` different modalities as indicated below:
 <table class="tg">
 <tbody>
   <tr style="padding: 0px;">
-    <td class="tg-kzsc3" style="padding: 0px;">M3D Filmic</td>
+    <td colspan="2" class="tg-kzsc3" style="padding: 0px;">M3D Filmic</td>
   </tr>
   <tr>
-    <td class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:center; margin-right:1%;"></td>
+    <td colspan="2" class="tg-xhg5" style="padding: 0px;"> <img src="../assets/data_gifs/gv2_tiny.gif" width="100%" style="float:center; margin-right:1%;"></td>
   </tr>
   <tr style="padding: 0px;">
     <td class="tg-yz71" style="padding: 0px;">GibsonV2 Tiny</td>
@@ -85,13 +85,13 @@ The dataset offers `3` different modalities as indicated below:
   - <b><span style="color: #986536;">Full</span></b>: An <b>expanded</b> (`~3x` compared to Matterport3D) training set.<br>
   - <b><span style="color: #e7298a;">Filmic</span></b>: <b>Same</b> as the original splits but with a <b>shifted</b> camera (color) domain. 
   This corresponds to the <span style="color: #ff66ff"><b>covariate</b></span> shift of our decomposed distribution shifts benchmark.<br>
-  <center><img src="../images/distro-shift/shift-covariate.png" width="55%"></center>
+  <center><img src="../images/distro-shift/shift-covariate.png" width="100%"></center>
   - <b><span style="color: #1b9e77;">Tiny</span></b>: <b>Same</b> context (residential buildings) but <b>different</b> depth distribution. 
   This corresponds to the <span style="color: #cc9900"><b>prior</b></span> shift of our decomposed distribution shifts benchmark.<br>
-  <center><img src="../images/distro-shift/shift-prior.png" width="55%"></center>
+  <center><img src="../images/distro-shift/shift-prior.png" width="100%"></center>
   - <b><span style="color: #b3de69;">Fullplus</span></b>: <b>Different</b> context (non exclusively residential buildings) but of the <b>same</b> depth distribution. 
   This corresponds to the <span style="color: #69cc99"><b>concept</b></span> shift of our decomposed distribution shifts benchmark.<br>
-  <center><img src="../images/distro-shift/shift-concept.png" width="55%"></center>
+  <center><img src="../images/distro-shift/shift-concept.png" width="100%"></center>
   - <b><span style="color: #E9967A;">Tiny Filmic</span></b>: <b>Same</b> as the <b><span style="color: #1b9e77;">Tiny</span></b> split but with a <b>shifted</b> camera (color) domain.
   This corresponds to the <span style="color: #ff66ff"><b>covariate</b></span> & <span style="color: #cc9900"><b>prior</b></span> shift of our decomposed distribution shifts benchmark.<br>
   - <b><span style="color: #5D3954;">Fullplus Filmic</span></b>: <b>Same</b> as the <b><span style="color: #b3de69;">Fullplus</span></b> split but with a <b>shifted</b> camera (color) domain. This corresponds to the <span style="color: #ff66ff"><b>covariate</b></span> & <span style="color: #69cc99"><b>concept</b></span> shift of our decomposed distribution shifts benchmark.<br>
