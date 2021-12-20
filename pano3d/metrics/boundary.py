@@ -16,27 +16,27 @@ class DbeCom(torch.nn.Module):
         self.max_dist_thr = max_dist_thr
 
     def forward(self, 
-        gt_edges:          torch.Tensor,
-        pred_edges:       torch.Tensor,
+        gt:          torch.Tensor, #gt edges
+        pred:       torch.Tensor, #pred edges
     ):        
         # compute distance transform for chamfer metric
-        D_gt  = ndimage.distance_transform_edt(1-gt_edges.cpu())
-        D_est = ndimage.distance_transform_edt(1-pred_edges.cpu())
+        D_gt  = ndimage.distance_transform_edt(1-gt.cpu())
+        D_est = ndimage.distance_transform_edt(1-pred.cpu())
 
         mask_D_gt = D_gt<self.max_dist_thr # truncate distance transform map
 
-        E_fin_est_filt = pred_edges.cpu()*mask_D_gt # compute shortest distance for all predicted edges
+        E_fin_est_filt = pred.cpu()*mask_D_gt # compute shortest distance for all predicted edges
 
         if E_fin_est_filt.sum() == 0: # assign MAX value if no edges could be detected in prediction
             dbe_com =  torch.tensor(self.max_dist_thr)
         else:
             # completeness: sum of undirected chamfer distances of predicted and gt edges
-            ch1 = torch.from_numpy(D_gt)*pred_edges.cpu() 
+            ch1 = torch.from_numpy(D_gt)*pred.cpu() 
             ch1[ch1>self.max_dist_thr] = self.max_dist_thr #truncate distances
-            ch2 = torch.from_numpy(D_est)*gt_edges.cpu()
+            ch2 = torch.from_numpy(D_est)*gt.cpu()
             ch2[ch2>self.max_dist_thr] = self.max_dist_thr # truncate distances
             res = ch1+ch2 # summed distances
-            dbe_com = torch.sum(res, dim = (1,2,3)) / (torch.sum(pred_edges.cpu(),dim = (1,2,3)) + torch.sum(gt_edges.cpu(),dim = (1,2,3))).mean()
+            dbe_com = torch.sum(res, dim = (1,2,3)) / (torch.sum(pred.cpu(),dim = (1,2,3)) + torch.sum(gt.cpu(),dim = (1,2,3))).mean()
 
         return dbe_com
 
@@ -54,16 +54,16 @@ class DbeAcc(torch.nn.Module):
         self.max_dist_thr = max_dist_thr
 
     def forward(self, 
-        gt_edges:         torch.Tensor,
-        pred_edges:       torch.Tensor,
+        gt:         torch.Tensor,
+        pred:       torch.Tensor,
     ):        
         # compute distance transform for chamfer metric
-        D_gt  = ndimage.distance_transform_edt(1-gt_edges.cpu())
-        D_est = ndimage.distance_transform_edt(1-pred_edges.cpu())
+        D_gt  = ndimage.distance_transform_edt(1-gt.cpu())
+        #D_est = ndimage.distance_transform_edt(1-pred.cpu())
 
         mask_D_gt = D_gt<self.max_dist_thr # truncate distance transform map
 
-        E_fin_est_filt = pred_edges.cpu()*mask_D_gt # compute shortest distance for all predicted edges
+        E_fin_est_filt = pred.cpu()*mask_D_gt # compute shortest distance for all predicted edges
 
         if E_fin_est_filt.sum() == 0: # assign MAX value if no edges could be detected in prediction
             dbe_acc = torch.tensor(self.max_dist_thr)
