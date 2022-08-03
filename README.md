@@ -49,16 +49,19 @@ We generate a dataset (using GibsonV2) and provide baselines for holistic perfor
 - [x] Web Demo
 - [x] Data Download
 - [x] Loader & Splits
-- [ ] Models Weights Download
+- [x] Model Code & Models Weights
 - [ ] Model Serve Code
 - [ ] Model Hub Code
-- [ ] Metrics Code
+- [x] Metrics Code
 
 ### Demo
 
 A publicly hosted demo of the baseline models can be found [here](https://share.streamlit.io/tzole1155/threedit).
 Using the web app, it is possible to upload a panorama and download a 3D reconstructed mesh of the scene using the derived depth map.
+
 > Note that due to the external host's caching issues, it might be necessary to refresh your browser's cache in between runs to update the 3D models.
+
+> The model's [code](https://github.com/tzole1155/ThreeDit/blob/master/unet/model.py) and [weights](https://github.com/tzole1155/ThreeDit/releases/download/Unet/unet.pth) are also available in our demo.
 
 ### Data
 
