@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+title: >-
+  Pano3D: A holistic benchmark and a solid baseline for 360 depth estimation
+message: >-
+  If you use this dataset, please cite it using the metadata from this file.
+type: conference-paper
+collection-title: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition
+start: '3727'
+end: '3737'
+conference:
+  name: IEEE/CVF Conference on Computer Vision and Pattern Recognition
+  address: Virtual
+year: '2021'
+publisher:
+  name: IEEE
+authors:
+  - given-names: Georgios
+    family-names: Albanis
+    email: giorgos_al10@hotmail.com
+    affiliation: Centre for Research and Technology Hellas
+    orcid: 'https://orcid.org/0000-0002-2032-6767'
+  - given-names: Nikolaos
+    family-names: Zioulis
+    email: nzioulis@gmail.com
+    affiliation: Centre for Research and Technology Hellas
+    orcid: 'https://orcid.org/0000-0002-7898-9344'
+  - given-names: Petros
+    family-names: Drakoulis
+    email: petros.drakoulis@iti.gr
+    affiliation: Centre for Research and Technology Hellas
+  - given-names: Vasileios
+    family-names: Gkitsas
+    email: gkitsasv@iti.gr
+    affiliation: Centre for Research and Technology Hellas
+  - given-names: Vladimiros
+    family-names: Sterzentsenko
+    email: vladster@iti.gr
+    affiliation: Centre for Research and Technology Hellas
+  - given-names: Federico
+    family-names: Alvarez
+    email: federico.alvarez@upm.es
+    affiliation: Universidad Politechnica de Madrid
+  - given-names: Dimitrios
+    family-names: Zarpalas
+    email: zarpalas@iti.gr
+    affiliation: Centre for Research and Technology Hellas
+  - given-names: Petros
+    family-names: Daras
+    email: daras@iti.gr
+    affiliation: Centre for Research and Technology Hellas
+version: 2.0.4
+doi: 10.1109/CVPRW53098.2021.00413
+url: "https://github.com/VCL3D/Pano3D"
